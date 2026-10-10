@@ -27,7 +27,6 @@ export type Project = {
 	role: string[];
 	links: { label: string; url: string }[];
 	media: Media[];
-	featured?: boolean;
 };
 
 export const allProjects: Project[] = [
@@ -45,8 +44,7 @@ export const allProjects: Project[] = [
 			{ kind: 'image', src: 'media/ar-magazine/shot-2.webp', aspect: 1.778, alt: 'AR Magazine (Klikuark!): a phone showing an AR map over a magazine page.' },
 			{ kind: 'image', src: 'media/ar-magazine/shot-3.webp', aspect: 0.919, alt: 'AR Magazine (Klikuark!): the Kuark mascot giving a thumbs up.' },
 			{ kind: 'image', src: 'media/ar-magazine/shot-4.webp', aspect: 1.545, alt: 'AR Magazine (Klikuark!): Google Play and App Store download badges.' }
-		],
-		featured: true
+		]
 	},
 	{
 		slug: 'senalapan-mold-cleaner',
@@ -143,8 +141,7 @@ export const allProjects: Project[] = [
 			{ kind: 'image', src: 'media/math-adventure/shot-1.webp', aspect: 1.998, thumb: 'media/math-adventure/shot-1-thumb.webp', alt: 'Math-Adventure: a character select screen in a lab.' },
 			{ kind: 'image', src: 'media/math-adventure/shot-2.webp', aspect: 2.012, alt: 'Math-Adventure: the island map with three town markers.' },
 			{ kind: 'image', src: 'media/math-adventure/shot-3.webp', aspect: 1.993, alt: 'Math-Adventure: the plank-crossing level with the timer running.' }
-		],
-		featured: true
+		]
 	},
 	{
 		slug: 'explore-math',
@@ -256,8 +253,7 @@ export const allProjects: Project[] = [
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/ffs-demo' }],
 		media: [
 			{ kind: 'image', src: 'media/far-from-shore/shot-1.webp', aspect: 1.794, thumb: 'media/far-from-shore/shot-1-thumb.webp', alt: 'Far From Shore: the starting room with the main character on day one.' }
-		],
-		featured: true
+		]
 	},
 	{
 		slug: 'little-muslim-heroes-edufic',
@@ -426,7 +422,11 @@ export const allProjects: Project[] = [
 	}
 ];
 
-export const featuredProjects: Project[] = allProjects.filter((project) => project.featured);
+// The home featured trio, in display order. The first one also fills the hero frame.
+const featuredSlugs = ['math-adventure', 'petal-pals', 'ar-magazine'];
+export const featuredProjects: Project[] = featuredSlugs
+	.map((slug) => projectBySlug(slug))
+	.filter((project): project is Project => project !== undefined);
 
 export function projectBySlug(slug: string): Project | undefined {
 	return allProjects.find((project) => project.slug === slug);

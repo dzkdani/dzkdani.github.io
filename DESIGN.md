@@ -306,7 +306,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
-**Featured on home:** AR Magazine (AR), Math-Adventure (EdTech), and Far From Shore (WebGL). Together they cover the three focus areas.
+**Featured on home:** Math-Adventure (EdTech), Petal Pals (Games), and AR Magazine (AR).
 
 **Inventory.** The Notes column shows the source of each row. "Deck only" means the resume doesn't mention it, so the owner should confirm it. Rows marked "confirm" in the Link column were shown as "Access here" hyperlinks in the deck, and the URLs were not readable. Rows marked "resume link" have a link on the resume, but the URL was not readable either.
 
@@ -372,7 +372,6 @@ type Project = {
   role: string[];            // what I built, short bullets
   links: { label: string; url: string }[];
   media: { src: string; alt: string; kind: 'image' | 'video' | 'webgl' }[];
-  featured?: boolean;
 };
 ```
 
