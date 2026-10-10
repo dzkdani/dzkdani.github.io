@@ -13,11 +13,14 @@
 
 	const hasMedia = $derived(media !== null && media.kind !== 'webgl');
 
+	// Media renders at its native aspect ratio; the aspect prop is the placeholder fallback.
+	const ratio = $derived(media && media.aspect ? String(media.aspect) : aspect);
+
 	// asset() is typed against the files that exist in static/ today; media paths arrive as data strings.
 	const url = (path: string) => asset(path as Parameters<typeof asset>[0]);
 </script>
 
-<div class="frame" class:placeholder={!hasMedia} style="aspect-ratio: {aspect}">
+<div class="frame" class:placeholder={!hasMedia} style="aspect-ratio: {ratio}">
 	{#if media && media.kind === 'video'}
 		<video
 			autoplay
