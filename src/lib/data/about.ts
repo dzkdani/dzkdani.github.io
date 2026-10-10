@@ -30,7 +30,9 @@ export const experience: Experience[] = [
 		points: [
 			'Far From Shore, from proof of concept to demo',
 			'Mining mini-game for the idle game Goddess Summoner: Katsi Idle',
-			'3D character customization proof of concept, with UMA 2'
+			'3D character customization proof of concept, with UMA 2',
+			'AR client builds, including AR Magazine for PT Kuark International',
+			'AR and VR builds for PT Bersama Kreatif Teknologi and GIZ'
 		]
 	},
 	{
@@ -100,8 +102,7 @@ export const experience: Experience[] = [
 	}
 ];
 
-// Deck-only entries, kept out of the rendered page until DESIGN §14 is decided:
-// TODO(owner): §14 #4 — PT Bersama Kreatif Teknologi (role and dates unknown).
+// Deck-only entry, kept out of the rendered page until DESIGN §14 is decided:
 // TODO(owner): §14 #8 — Agate Academy (trainer line, dates unknown).
 
 // About intro (draft v0.2, DESIGN §10).
@@ -115,12 +116,10 @@ export const whatITakeOn: string[] = [
 	'Multiplayer games with Photon Fusion',
 	'Casual and hypercasual mobile games with AdMob, Unity Ads, and in-app purchases',
 	'Mechanics, game flow, and UI/UX design, plus the gameplay code',
-	'REST API integration into Unity'
+	'REST API integration into Unity',
+	'AR apps with Unity AR Foundation, ARCore, and Vuforia',
+	'VR training builds in Unity'
 ];
-
-// Deck only in DESIGN §10, held back from the rendered list until confirmed (DESIGN §14 #4).
-// TODO(owner): 'AR apps with Unity AR Foundation, ARCore, and Vuforia (deck only; confirm)'
-// TODO(owner): 'VR training and 360 tours with Mapbox (deck only; confirm)'
 
 // One line from the resume (DESIGN §1).
 export const education =
@@ -235,7 +234,7 @@ export const certificates: Certificate[] = [
 	}
 ];
 
-// Contact. The Upwork and LinkedIn links come from the resume; the email stays empty until §14 #2 is answered.
-export const email = '';
+// Contact. The email, Upwork, and LinkedIn come from the resume and the owner's §14 #2 answer.
+export const email = 'dzaky.adani@gmail.com';
 export const upworkUrl = 'https://www.upwork.com/freelancers/~0158789aca333502f2?mp_source=share';
 export const linkedinUrl = 'https://www.linkedin.com/in/dzkdani/';

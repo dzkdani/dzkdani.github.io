@@ -79,7 +79,6 @@
 			{#if email}
 				<a href={`mailto:${email}`}>{email}</a>
 			{:else}
-				<!-- TODO(owner): email. -->
 				<span>Email</span>
 			{/if}
 			{#if upworkUrl}

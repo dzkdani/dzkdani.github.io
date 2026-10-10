@@ -19,18 +19,15 @@
 <section class="hero">
 	<div class="inner">
 		<div class="copy">
-			<!-- TODO(owner): name spelling is the DESIGN §14 #1 default. -->
 			<h1>Dzaki Adani</h1>
-			<!-- TODO(owner): hero copy is the DESIGN §14 #3 default (option A). -->
-			<p class="lead">I build educational games, AR and WebGL projects in Unity.</p>
+			<p class="lead">I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients.</p>
 			<p class="support">
 				Shipped apps, client builds, and game jam projects. Each one links to a build or a preview
 				where the client allows it.
 			</p>
 			<div class="actions">
 				<a class="fill" href="/work/">See the work</a>
-				<!-- TODO(owner): point "Email me" at the real address once DESIGN §14 #2 is decided. -->
-				<a class="outline" href="#contact">Email me</a>
+				<a class="outline" href="mailto:dzaky.adani@gmail.com">Email me</a>
 			</div>
 		</div>
 

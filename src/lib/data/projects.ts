@@ -306,8 +306,8 @@ export const allProjects: Project[] = [
 		slug: 'goddess-summoner-katsi-idle',
 		title: 'Goddess Summoner: Katsi Idle, mining mini-game',
 		area: 'game',
-		tech: [], // TODO(owner): tech
-		status: 'tba', // TODO(owner): status
+		tech: ['Unity'],
+		status: 'live',
 		summary: 'A mining mini-game designed and built for the idle game Goddess Summoner: Katsi Idle.',
 		role: ['Designed the mini-game', 'Built the mini-game'],
 		links: [
@@ -323,11 +323,13 @@ export const allProjects: Project[] = [
 		title: 'Zepeto multiplayer 3D game',
 		area: 'game',
 		tech: ['Unity', 'TypeScript'],
-		status: 'tba', // TODO(owner): status
+		status: 'live',
 		summary: 'A multiplayer 3D game built for Zepeto in Unity and TypeScript.',
 		role: ['Built the multiplayer 3D game', 'Gameplay code in TypeScript'],
 		links: [{ label: 'Watch on YouTube', url: 'https://www.youtube.com/watch?v=RqYrIkYTong' }],
-		media: [] // TODO(owner): screenshots
+		media: [
+			{ kind: 'image', src: 'media/zepeto-multiplayer-3d-game/shot-1.webp', aspect: 1.778, thumb: 'media/zepeto-multiplayer-3d-game/shot-1-thumb.webp', alt: 'Zepeto multiplayer 3D game: the BFF Signal title card, five Zepeto avatars in a classroom, with the Agate and Zepeto collaboration banner.' }
+		]
 	},
 	{
 		slug: 'juggler-endless-3d',
@@ -375,7 +377,7 @@ export const allProjects: Project[] = [
 		title: 'FlappyRabbit',
 		area: 'game',
 		tech: ['Unity 2D', 'IAP', 'AdMob'],
-		status: 'tba', // TODO(owner): status
+		status: 'live',
 		summary: 'A hypercasual game built in Unity 2D with in-app purchases and AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
@@ -391,7 +393,7 @@ export const allProjects: Project[] = [
 		title: 'G-Escape',
 		area: 'game',
 		tech: ['Unity 2D', 'IAP'],
-		status: 'tba', // TODO(owner): status
+		status: 'live',
 		summary: 'An action shooter for a client, built in Unity 2D with in-app purchases.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
@@ -409,7 +411,7 @@ export const allProjects: Project[] = [
 		tech: [], // Love Wars is not digital, so there is no tech stack.
 		status: 'tba', // TODO(owner): status
 		summary: 'A tabletop card game, not a digital build.',
-		role: ['TODO(owner): role'],
+		role: ['Game designer'],
 		links: [
 			{
 				label: 'Open the rulebook',

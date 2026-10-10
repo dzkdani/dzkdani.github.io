@@ -1,7 +1,6 @@
 <footer id="contact" class="footer">
 	<p class="meta">Dzaki Adani, 2026</p>
-	<!-- TODO(owner): add the real email address; DESIGN §6 wants it as a mailto link in the footer. -->
-	<p class="email">Email</p>
+	<a class="email" href="mailto:dzaky.adani@gmail.com">dzaky.adani@gmail.com</a>
 </footer>
 
 <style>

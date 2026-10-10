@@ -273,16 +273,13 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 **Buttons** say what happens: "See the work," "Email me," "Play demo," "Open on Google Play."
 
-**Hero options:**
-
-- A: "I build educational games, AR and WebGL projects in Unity."
-- B: "Unity developer for learning games, AR training, and browser builds."
+**Hero line (owner, from the resume and deck):** "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
 
 **Support line:** "Shipped apps, client builds, and game jam projects. Each one links to a build or a preview where the client allows it."
 
 **About intro (draft v0.2):** "I'm a Unity developer, and I've been building games since 2020. Most of my work is educational games, browser builds, and multiplayer, for studios, clients, and my own projects. On client projects I write the gameplay and scenario code, and I design mechanics and game flow when a brief needs it."
 
-**What I take on (draft v0.2, confirm before publishing):**
+**What I take on:**
 
 - Educational games in Unity 2D, Construct, and Phaser, including browser builds
 - WebGL builds with Unity WebGL optimization, playable in a browser
@@ -290,8 +287,8 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - Casual and hypercasual mobile games with AdMob, Unity Ads, and in-app purchases
 - Mechanics, game flow, and UI/UX design, plus the gameplay code
 - REST API integration into Unity
-- AR apps with Unity AR Foundation, ARCore, and Vuforia (deck only; confirm)
-- VR training and 360 tours with Mapbox (deck only; confirm)
+- AR apps with Unity AR Foundation, ARCore, and Vuforia
+- VR training builds in Unity
 
 ---
 
@@ -299,7 +296,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 **Status values:**
 
-- `live`: playable or downloadable now
+- `live`: released; a build or listing may not still be public
 - `demo`: playable in browser, may be partial
 - `preview`: preview link only
 - `restricted`: client work, no build shown
@@ -331,13 +328,13 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | Little Muslim Heroes, Edufic | Islamic EdTech | Unity WebGL | wip | resume link | Resume: Edufic, Sept 2025 to present, web platform. Status changed from tba. |
 | Purring Post & Delivery | Management, narrative | Unity 2D | wip | resume link | GameJam+ Best Pitch nominee (2023). Deck: in progress. |
 | Petal Pals | Desktop companion, monster collection | Unity 2D | wip | resume link | Resume: Script Smelter Studio's IP, not freelance. In playtests. Deck said TBA. |
-| Goddess Summoner: Katsi Idle, mining mini-game | Idle game mini-game | TODO(owner) | confirm | resume link | Resume: designed and built the mini-game, Upwork freelance. Added from resume. |
-| Zepeto multiplayer 3D game | Multiplayer | Unity, TypeScript | confirm | resume link | Resume: Agate International, 2022 to 2023. Added from resume. |
+| Goddess Summoner: Katsi Idle, mining mini-game | Idle game mini-game | Unity | live | resume link | Resume: designed and built the mini-game, Upwork freelance. Added from resume. |
+| Zepeto multiplayer 3D game | Multiplayer | Unity, TypeScript | live | resume link | Resume: Agate International, 2022 to 2023. Cover from the demo video thumbnail. Added from resume. |
 | Juggler (Endless 3D) | Casual 3D | Unity 3D | live | confirm | Deck only. |
 | Buto Beat | Music shooter | Unity 2D | live | confirm | Deck only. |
 | Paradixe City | Local co-op shooter | Construct 2 | live | confirm | Deck only. MAGE 2017 finalist. |
-| FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | confirm | confirm | Deck only. Still unconfirmed. |
-| G-Escape | Action shooter, client work | Unity 2D, IAP | confirm | confirm | Deck only. Still unconfirmed. |
+| FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | live | confirm | Deck only. Released; the Google Play listing is gone. |
+| G-Escape | Action shooter, client work | Unity 2D, IAP | live | confirm | Deck only. Released; the Google Play listing is gone. |
 | Love Wars | Tabletop card game | Not digital | rulebook link | confirm | Deck only. Resume lists Chief of Tabletop Community. |
 
 **Client work without a public build** (experience only, not in the inventory):
@@ -393,12 +390,12 @@ type Project = {
 
 ## 14. Open questions for the owner
 
-1. **Name spelling.** The resume header says "Dzaki Adani," the deck says "Muhammad Dzaki Adani," and the resume email is dzaky.adani@gmail.com. Which spelling goes on the site? The email stays as written.
-2. **Contact and location.** Use dzaky.adani@gmail.com as the public email? Show "Surabaya, Indonesia" on the site? (LinkedIn and Upwork are wired.)
-3. **Hero line.** Option A, option B, or your own?
-4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, GIZ, Senalapan, PT Kuark, or any VR work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
-5. **Client names.** May the site name Kuark, Senalapan, GIZ, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
+1. **Name spelling.** Resolved: Dzaki Adani everywhere on the site. The email stays dzaky.adani@gmail.com.
+2. **Contact and location.** Resolved: dzaky.adani@gmail.com is public (the footer, About, and the home "Email me" button). The location stays off the site. (LinkedIn and Upwork are wired.)
+3. **Hero line.** Resolved: replaced with the owner's line, summarized from the resume and deck: "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
+4. **Work missing from the resume.** Resolved: the deck-only projects are freelance work, not another employer. Their lines sit under the ongoing freelance entry on About; no dates were given, so none are shown.
+5. **Client names.** Resolved: no projects are restricted. The About freelance entry names PT Kuark International, PT Senalapan Perkasa, PT Bersama Kreatif Teknologi, and GIZ.
 6. **Math-Adventure.** Resolved: Math-Adventure is the Falkana Studio game.
-7. **Links.** The deck supplied the missing URLs. The Google Play listings for FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories return Not Found (checked October 2026), so their link buttons are stripped. Re-add any link once a live listing exists.
+7. **Links.** The deck supplied the missing URLs. The Google Play listings for FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories return Not Found (checked October 2026), so their link buttons are stripped, and no recovery links exist, so they stay stripped. Goddess Summoner's developer-page button stays as the only link for that mini-game. Re-add any listing link once it is live again.
 8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? Resolved: FTIf 2017 is "top 20"; the Upwork freelance work is ongoing.
 9. **Language.** Resolved: English only.
