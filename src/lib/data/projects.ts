@@ -41,10 +41,10 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Gameplay flow', 'Asset integration', 'Scene mapping', 'Marker setup'],
 		links: [{ label: 'Open the build', url: 'bit.ly/Klikuark' }],
 		media: [
-			{ kind: 'image', src: 'media/ar-magazine/shot-1.webp', thumb: 'media/ar-magazine/shot-1-thumb.webp', alt: 'AR Magazine (Klikuark!): the app title card.' },
-			{ kind: 'image', src: 'media/ar-magazine/shot-2.webp', alt: 'AR Magazine (Klikuark!): a phone showing an AR map over a magazine page.' },
-			{ kind: 'image', src: 'media/ar-magazine/shot-3.webp', alt: 'AR Magazine (Klikuark!): the Kuark mascot giving a thumbs up.' },
-			{ kind: 'image', src: 'media/ar-magazine/shot-4.webp', alt: 'AR Magazine (Klikuark!): Google Play and App Store download badges.' }
+			{ kind: 'image', src: 'media/ar-magazine/shot-1.webp', aspect: 1.51, thumb: 'media/ar-magazine/shot-1-thumb.webp', alt: 'AR Magazine (Klikuark!): the app title card.' },
+			{ kind: 'image', src: 'media/ar-magazine/shot-2.webp', aspect: 1.778, alt: 'AR Magazine (Klikuark!): a phone showing an AR map over a magazine page.' },
+			{ kind: 'image', src: 'media/ar-magazine/shot-3.webp', aspect: 0.919, alt: 'AR Magazine (Klikuark!): the Kuark mascot giving a thumbs up.' },
+			{ kind: 'image', src: 'media/ar-magazine/shot-4.webp', aspect: 1.545, alt: 'AR Magazine (Klikuark!): Google Play and App Store download badges.' }
 		],
 		featured: true
 	},
@@ -58,9 +58,9 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the build', url: 'bit.ly/2NJUJzi' }],
 		media: [
-			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-1.webp', thumb: 'media/senalapan-mold-cleaner/shot-1-thumb.webp', alt: 'SENALAPAN Mold Cleaner Instructions: a phone showing the cleaning procedure in AR over the machine.' },
-			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-2.webp', alt: 'SENALAPAN Mold Cleaner Instructions: a government ministry logo.' },
-			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-3.webp', alt: 'SENALAPAN Mold Cleaner Instructions: a red wordmark logo.' }
+			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-1.webp', aspect: 1.333, thumb: 'media/senalapan-mold-cleaner/shot-1-thumb.webp', alt: 'SENALAPAN Mold Cleaner Instructions: a phone showing the cleaning procedure in AR over the machine.' },
+			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-2.webp', aspect: 3.289, alt: 'SENALAPAN Mold Cleaner Instructions: a government ministry logo.' },
+			{ kind: 'image', src: 'media/senalapan-mold-cleaner/shot-3.webp', aspect: 4.672, alt: 'SENALAPAN Mold Cleaner Instructions: a red wordmark logo.' }
 		]
 	},
 	{
@@ -73,7 +73,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow', 'Marker setup'],
 		links: [{ label: 'Open the build', url: 'bit.ly/AR_NameCard' }],
 		media: [
-			{ kind: 'image', src: 'media/ar-name-card/shot-1.webp', thumb: 'media/ar-name-card/shot-1-thumb.webp', alt: 'AR Name Card: the robot mascot standing on an AR card held in hand.' }
+			{ kind: 'image', src: 'media/ar-name-card/shot-1.webp', aspect: 0.993, thumb: 'media/ar-name-card/shot-1-thumb.webp', alt: 'AR Name Card: the robot mascot standing on an AR card held in hand.' }
 		]
 	},
 	{
@@ -86,8 +86,8 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the build', url: 'bit.ly/3fDQ7EW' }],
 		media: [
-			{ kind: 'image', src: 'media/3d-house-ar-showcase/shot-1.webp', thumb: 'media/3d-house-ar-showcase/shot-1-thumb.webp', alt: '3D House AR Showcase: the furnished room in AR with view controls.' },
-			{ kind: 'image', src: 'media/3d-house-ar-showcase/shot-2.webp', alt: '3D House AR Showcase: the house exterior in AR with floor controls.' }
+			{ kind: 'image', src: 'media/3d-house-ar-showcase/shot-1.webp', aspect: 0.45, thumb: 'media/3d-house-ar-showcase/shot-1-thumb.webp', alt: '3D House AR Showcase: the furnished room in AR with view controls.' },
+			{ kind: 'image', src: 'media/3d-house-ar-showcase/shot-2.webp', aspect: 0.45, alt: '3D House AR Showcase: the house exterior in AR with floor controls.' }
 		]
 	},
 	{
@@ -100,7 +100,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the build', url: 'bit.ly/3f8WVM1' }],
 		media: [
-			{ kind: 'image', src: 'media/3d-ar-covid-19-education/shot-1.webp', thumb: 'media/3d-ar-covid-19-education/shot-1-thumb.webp', alt: '3D AR COVID-19 Education: a torso model placed in the room in AR.' }
+			{ kind: 'image', src: 'media/3d-ar-covid-19-education/shot-1.webp', aspect: 0.45, thumb: 'media/3d-ar-covid-19-education/shot-1-thumb.webp', alt: '3D AR COVID-19 Education: a torso model placed in the room in AR.' }
 		]
 	},
 	{
@@ -113,7 +113,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the build', url: 'bit.ly/3bIQEEA' }],
 		media: [
-			{ kind: 'image', src: 'media/3d-ar-tarpaulin-pond/shot-1.webp', thumb: 'media/3d-ar-tarpaulin-pond/shot-1-thumb.webp', alt: '3D AR Tarpaulin Pond, Lobster Cultivation: the green pond structure placed in a room.' }
+			{ kind: 'image', src: 'media/3d-ar-tarpaulin-pond/shot-1.webp', aspect: 0.45, thumb: 'media/3d-ar-tarpaulin-pond/shot-1-thumb.webp', alt: '3D AR Tarpaulin Pond, Lobster Cultivation: the green pond structure placed in a room.' }
 		]
 	},
 	{
@@ -126,8 +126,8 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the preview', url: 'bit.ly/37xRt0L' }],
 		media: [
-			{ kind: 'image', src: 'media/giz-solar-panel-vr/shot-1.webp', thumb: 'media/giz-solar-panel-vr/shot-1-thumb.webp', alt: 'GIZ Solar Panel VR: a solar panel row with a measuring device in view.' },
-			{ kind: 'image', src: 'media/giz-solar-panel-vr/shot-2.webp', alt: 'GIZ Solar Panel VR: gloved hands testing wiring with a multimeter.' }
+			{ kind: 'image', src: 'media/giz-solar-panel-vr/shot-1.webp', aspect: 1.778, thumb: 'media/giz-solar-panel-vr/shot-1-thumb.webp', alt: 'GIZ Solar Panel VR: a solar panel row with a measuring device in view.' },
+			{ kind: 'image', src: 'media/giz-solar-panel-vr/shot-2.webp', aspect: 1.778, alt: 'GIZ Solar Panel VR: gloved hands testing wiring with a multimeter.' }
 		]
 	},
 	{
@@ -151,9 +151,9 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the site', url: 'https://www.smartadventure.id/' }],
 		media: [
-			{ kind: 'image', src: 'media/math-adventure/shot-1.webp', thumb: 'media/math-adventure/shot-1-thumb.webp', alt: 'Math-Adventure: a character select screen in a lab.' },
-			{ kind: 'image', src: 'media/math-adventure/shot-2.webp', alt: 'Math-Adventure: the island map with three town markers.' },
-			{ kind: 'image', src: 'media/math-adventure/shot-3.webp', alt: 'Math-Adventure: the plank-crossing level with the timer running.' }
+			{ kind: 'image', src: 'media/math-adventure/shot-1.webp', aspect: 1.998, thumb: 'media/math-adventure/shot-1-thumb.webp', alt: 'Math-Adventure: a character select screen in a lab.' },
+			{ kind: 'image', src: 'media/math-adventure/shot-2.webp', aspect: 2.012, alt: 'Math-Adventure: the island map with three town markers.' },
+			{ kind: 'image', src: 'media/math-adventure/shot-3.webp', aspect: 1.993, alt: 'Math-Adventure: the plank-crossing level with the timer running.' }
 		],
 		featured: true
 	},
@@ -172,8 +172,8 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/explore-math/shot-1.webp', thumb: 'media/explore-math/shot-1-thumb.webp', alt: 'Explore Math: the desk scene with the study items laid out.' },
-			{ kind: 'image', src: 'media/explore-math/shot-2.webp', alt: 'Explore Math: the map with a challenge dialog pointing to a spot.' }
+			{ kind: 'image', src: 'media/explore-math/shot-1.webp', aspect: 1.768, thumb: 'media/explore-math/shot-1-thumb.webp', alt: 'Explore Math: the desk scene with the study items laid out.' },
+			{ kind: 'image', src: 'media/explore-math/shot-2.webp', aspect: 1.789, alt: 'Explore Math: the map with a challenge dialog pointing to a spot.' }
 		]
 	},
 	{
@@ -186,8 +186,8 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/running-chem' }],
 		media: [
-			{ kind: 'image', src: 'media/chem/shot-1.webp', thumb: 'media/chem/shot-1-thumb.webp', alt: 'Chem: a classroom scene with the dialogue box open.' },
-			{ kind: 'image', src: 'media/chem/shot-2.webp', alt: 'Chem: the running level with the score and item counters.' }
+			{ kind: 'image', src: 'media/chem/shot-1.webp', aspect: 0.564, thumb: 'media/chem/shot-1-thumb.webp', alt: 'Chem: a classroom scene with the dialogue box open.' },
+			{ kind: 'image', src: 'media/chem/shot-2.webp', aspect: 0.556, alt: 'Chem: the running level with the score and item counters.' }
 		]
 	},
 	{
@@ -200,8 +200,8 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/quiz-kimia' }],
 		media: [
-			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-1.webp', thumb: 'media/simple-mini-quiz-game/shot-1-thumb.webp', alt: 'Simple Mini Quiz Game: a dialogue scene with a student and an element tile.' },
-			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-2.webp', alt: 'Simple Mini Quiz Game: a quiz screen with three answer buttons.' }
+			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-1.webp', aspect: 0.561, thumb: 'media/simple-mini-quiz-game/shot-1-thumb.webp', alt: 'Simple Mini Quiz Game: a dialogue scene with a student and an element tile.' },
+			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-2.webp', aspect: 0.542, alt: 'Simple Mini Quiz Game: a quiz screen with three answer buttons.' }
 		]
 	},
 	{
@@ -219,7 +219,7 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/guess-color-quiz/shot-1.webp', thumb: 'media/guess-color-quiz/shot-1-thumb.webp', alt: 'Guess Color Quiz: the title screen with normal and time survival modes.' }
+			{ kind: 'image', src: 'media/guess-color-quiz/shot-1.webp', aspect: 1.838, thumb: 'media/guess-color-quiz/shot-1-thumb.webp', alt: 'Guess Color Quiz: the title screen with normal and time survival modes.' }
 		]
 	},
 	{
@@ -254,8 +254,8 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/wonder-word/shot-1.webp', thumb: 'media/wonder-word/shot-1-thumb.webp', alt: 'Wonder Word: the category list with the animal pack in progress.' },
-			{ kind: 'image', src: 'media/wonder-word/shot-2.webp', alt: 'Wonder Word: a fox silhouette and the letter tiles to spell it.' }
+			{ kind: 'image', src: 'media/wonder-word/shot-1.webp', aspect: 0.5, thumb: 'media/wonder-word/shot-1-thumb.webp', alt: 'Wonder Word: the category list with the animal pack in progress.' },
+			{ kind: 'image', src: 'media/wonder-word/shot-2.webp', aspect: 0.5, alt: 'Wonder Word: a fox silhouette and the letter tiles to spell it.' }
 		]
 	},
 	{
@@ -267,7 +267,7 @@ export const allProjects: Project[] = [
 		summary: 'A trivia game built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [], // TODO(owner): link
-		media: [{ kind: 'image', src: 'media/forestdom/shot-1.webp', thumb: 'media/forestdom/shot-1-thumb.webp', alt: 'Forestdom: the title screen in a jungle scene with a play button.' }],
+		media: [{ kind: 'image', src: 'media/forestdom/shot-1.webp', aspect: 1.833, thumb: 'media/forestdom/shot-1-thumb.webp', alt: 'Forestdom: the title screen in a jungle scene with a play button.' }],
 	},
 	{
 		slug: 'memories',
@@ -284,8 +284,8 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/memories/shot-1.webp', thumb: 'media/memories/shot-1-thumb.webp', alt: 'Memories: My Story My Choices: the story list in the reading app.' },
-			{ kind: 'image', src: 'media/memories/shot-2.webp', alt: 'Memories: My Story My Choices: the credits listing Muhammad Dzaki Adani as game programmer.' }
+			{ kind: 'image', src: 'media/memories/shot-1.webp', aspect: 0.45, thumb: 'media/memories/shot-1-thumb.webp', alt: 'Memories: My Story My Choices: the story list in the reading app.' },
+			{ kind: 'image', src: 'media/memories/shot-2.webp', aspect: 2.489, alt: 'Memories: My Story My Choices: the credits listing Muhammad Dzaki Adani as game programmer.' }
 		]
 	},
 	{
@@ -298,7 +298,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/ffs-demo' }],
 		media: [
-			{ kind: 'image', src: 'media/far-from-shore/shot-1.webp', thumb: 'media/far-from-shore/shot-1-thumb.webp', alt: 'Far From Shore: the starting room with the main character on day one.' }
+			{ kind: 'image', src: 'media/far-from-shore/shot-1.webp', aspect: 1.794, thumb: 'media/far-from-shore/shot-1-thumb.webp', alt: 'Far From Shore: the starting room with the main character on day one.' }
 		],
 		featured: true
 	},
@@ -312,9 +312,9 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open the site', url: 'game.eduficglobal.id' }],
 		media: [
-			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-1.webp', thumb: 'media/little-muslim-heroes-edufic/shot-1-thumb.webp', alt: 'Little Muslim Heroes, Edufic: the level select with easy, medium, and hard modes.' },
-			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-2.webp', alt: 'Little Muslim Heroes, Edufic: a puzzle about the parents of the Prophet.' },
-			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-3.webp', alt: 'Little Muslim Heroes, Edufic: the answer screen naming Abdullah and Aminah.' }
+			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-1.webp', aspect: 2.244, thumb: 'media/little-muslim-heroes-edufic/shot-1-thumb.webp', alt: 'Little Muslim Heroes, Edufic: the level select with easy, medium, and hard modes.' },
+			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-2.webp', aspect: 1.804, alt: 'Little Muslim Heroes, Edufic: a puzzle about the parents of the Prophet.' },
+			{ kind: 'image', src: 'media/little-muslim-heroes-edufic/shot-3.webp', aspect: 1.797, alt: 'Little Muslim Heroes, Edufic: the answer screen naming Abdullah and Aminah.' }
 		]
 	},
 	{
@@ -329,10 +329,10 @@ export const allProjects: Project[] = [
 			{ label: 'Open on itch.io', url: 'https://dhaniy.itch.io/purring-post-and-delivery' }
 		],
 		media: [
-			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-1.webp', thumb: 'media/purring-post-and-delivery/shot-1-thumb.webp', alt: 'Purring Post & Delivery: a delivery request card for Tashi the rabbit.' },
-			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-2.webp', alt: 'Purring Post & Delivery: the post office with the cat clerk.' },
-			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-3.webp', alt: 'Purring Post & Delivery: the order counter for picking a delivery run.' },
-			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-4.webp', alt: 'Purring Post & Delivery: the kitchen room with a delivery dialog.' }
+			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-1.webp', aspect: 1.778, thumb: 'media/purring-post-and-delivery/shot-1-thumb.webp', alt: 'Purring Post & Delivery: a delivery request card for Tashi the rabbit.' },
+			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-2.webp', aspect: 1.779, alt: 'Purring Post & Delivery: the post office with the cat clerk.' },
+			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-3.webp', aspect: 1.779, alt: 'Purring Post & Delivery: the order counter for picking a delivery run.' },
+			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-4.webp', aspect: 1.778, alt: 'Purring Post & Delivery: the kitchen room with a delivery dialog.' }
 		]
 	},
 	{
@@ -345,8 +345,8 @@ export const allProjects: Project[] = [
 		role: ['Feature updates', 'Bug fixes during playtests', 'Feature design, including gacha and evolution'],
 		links: [{ label: 'Open on Steam', url: 'https://store.steampowered.com/app/4146150/Petal_Pals' }],
 		media: [
-			{ kind: 'image', src: 'media/petal-pals/shot-1.webp', thumb: 'media/petal-pals/shot-1-thumb.webp', alt: 'Petal Pals: the pets resting along the desktop taskbar.' },
-			{ kind: 'image', src: 'media/petal-pals/shot-2.webp', alt: 'Petal Pals: the pets among flowers in the desktop scene.' }
+			{ kind: 'image', src: 'media/petal-pals/shot-1.webp', aspect: 1.778, thumb: 'media/petal-pals/shot-1-thumb.webp', alt: 'Petal Pals: the pets resting along the desktop taskbar.' },
+			{ kind: 'image', src: 'media/petal-pals/shot-2.webp', aspect: 1.778, alt: 'Petal Pals: the pets among flowers in the desktop scene.' }
 		]
 	},
 	{
@@ -386,8 +386,8 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/juggler-endless-3d/shot-1.webp', thumb: 'media/juggler-endless-3d/shot-1-thumb.webp', alt: 'Juggler (Endless 3D): the ball balanced on a goal post during play.' },
-			{ kind: 'image', src: 'media/juggler-endless-3d/shot-2.webp', alt: 'Juggler (Endless 3D): the title screen with a play button.' }
+			{ kind: 'image', src: 'media/juggler-endless-3d/shot-1.webp', aspect: 0.537, thumb: 'media/juggler-endless-3d/shot-1-thumb.webp', alt: 'Juggler (Endless 3D): the ball balanced on a goal post during play.' },
+			{ kind: 'image', src: 'media/juggler-endless-3d/shot-2.webp', aspect: 0.547, alt: 'Juggler (Endless 3D): the title screen with a play button.' }
 		]
 	},
 	{
@@ -400,7 +400,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/buto-beat' }],
 		media: [
-			{ kind: 'image', src: 'media/buto-beat/shot-1.webp', thumb: 'media/buto-beat/shot-1-thumb.webp', alt: 'Buto Beat: the menu and two gameplay runs with monster faces.' }
+			{ kind: 'image', src: 'media/buto-beat/shot-1.webp', aspect: 1.985, thumb: 'media/buto-beat/shot-1-thumb.webp', alt: 'Buto Beat: the menu and two gameplay runs with monster faces.' }
 		]
 	},
 	{
@@ -413,7 +413,7 @@ export const allProjects: Project[] = [
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/p-tank' }],
 		media: [
-			{ kind: 'image', src: 'media/paradixe-city/shot-1.webp', thumb: 'media/paradixe-city/shot-1-thumb.webp', alt: 'Paradixe City: the glitched logo over a neon block skyline.' }
+			{ kind: 'image', src: 'media/paradixe-city/shot-1.webp', aspect: 1.767, thumb: 'media/paradixe-city/shot-1-thumb.webp', alt: 'Paradixe City: the glitched logo over a neon block skyline.' }
 		]
 	},
 	{
@@ -431,9 +431,9 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/flappyrabbit/shot-1.webp', thumb: 'media/flappyrabbit/shot-1-thumb.webp', alt: 'FlappyRabbit: the rabbit hopping between posts.' },
-			{ kind: 'image', src: 'media/flappyrabbit/shot-2.webp', alt: 'FlappyRabbit: the shop with four character skins.' },
-			{ kind: 'image', src: 'media/flappyrabbit/shot-3.webp', alt: 'FlappyRabbit: the title screen with play and shop buttons.' }
+			{ kind: 'image', src: 'media/flappyrabbit/shot-1.webp', aspect: 0.442, thumb: 'media/flappyrabbit/shot-1-thumb.webp', alt: 'FlappyRabbit: the rabbit hopping between posts.' },
+			{ kind: 'image', src: 'media/flappyrabbit/shot-2.webp', aspect: 0.454, alt: 'FlappyRabbit: the shop with four character skins.' },
+			{ kind: 'image', src: 'media/flappyrabbit/shot-3.webp', aspect: 0.447, alt: 'FlappyRabbit: the title screen with play and shop buttons.' }
 		]
 	},
 	{
@@ -451,9 +451,9 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/g-escape/shot-1.webp', thumb: 'media/g-escape/shot-1-thumb.webp', alt: 'G-Escape: the app icon with a rocket and arrows.' },
-			{ kind: 'image', src: 'media/g-escape/shot-2.webp', alt: 'G-Escape: the title screen with the rocket logo and play button.' },
-			{ kind: 'image', src: 'media/g-escape/shot-3.webp', alt: 'G-Escape: split gameplay lanes with the tap-to-move prompt.' }
+			{ kind: 'image', src: 'media/g-escape/shot-1.webp', aspect: 1, thumb: 'media/g-escape/shot-1-thumb.webp', alt: 'G-Escape: the app icon with a rocket and arrows.' },
+			{ kind: 'image', src: 'media/g-escape/shot-2.webp', aspect: 0.487, alt: 'G-Escape: the title screen with the rocket logo and play button.' },
+			{ kind: 'image', src: 'media/g-escape/shot-3.webp', aspect: 0.482, alt: 'G-Escape: split gameplay lanes with the tap-to-move prompt.' }
 		]
 	},
 	{
@@ -471,7 +471,7 @@ export const allProjects: Project[] = [
 			}
 		],
 		media: [
-			{ kind: 'image', src: 'media/love-wars/shot-1.webp', thumb: 'media/love-wars/shot-1-thumb.webp', alt: 'Love Wars: the game logo on a pastel sky.' }
+			{ kind: 'image', src: 'media/love-wars/shot-1.webp', aspect: 0.988, thumb: 'media/love-wars/shot-1-thumb.webp', alt: 'Love Wars: the game logo on a pastel sky.' }
 		]
 	}
 ];
