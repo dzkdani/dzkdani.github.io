@@ -340,7 +340,12 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'A mining mini-game designed and built for the idle game Goddess Summoner: Katsi Idle.',
 		role: ['Designed the mini-game', 'Built the mini-game'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/developer?id=KITSIKATSI&hl=en'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -351,7 +356,7 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'A multiplayer 3D game built for Zepeto in Unity and TypeScript.',
 		role: ['Built the multiplayer 3D game', 'Gameplay code in TypeScript'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Watch on YouTube', url: 'https://www.youtube.com/watch?v=RqYrIkYTong' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{

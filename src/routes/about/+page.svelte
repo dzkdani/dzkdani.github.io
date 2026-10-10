@@ -57,6 +57,11 @@
 			{/each}
 		</ul>
 
+		<h2>Other</h2>
+		<ul class="other">
+			<li><a href="/work/love-wars/">Love Wars</a>, a tabletop card game, not a digital build.</li>
+		</ul>
+
 		<h2>Contact</h2>
 		<p class="contact">
 			{#if email}
@@ -137,7 +142,8 @@
 	}
 
 	.takeon,
-	.recognition {
+	.recognition,
+	.other {
 		margin: 32px 0 0;
 	}
 
