@@ -1,2 +1,265 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { featuredProjects, type Project } from '#lib/data/projects.ts';
+
+	const areaLabels: Record<Project['area'], string> = {
+		edtech: 'EdTech',
+		ar: 'AR',
+		vr: 'VR',
+		webgl: 'WebGL',
+		game: 'Games',
+		other: 'Other'
+	};
+
+	const statusLabels: Record<Project['status'], string> = {
+		live: 'Live',
+		demo: 'Demo',
+		preview: 'Preview',
+		restricted: 'Restricted',
+		wip: 'In progress',
+		tba: 'In development'
+	};
+
+	const heroFrame = featuredProjects[0];
+</script>
+
+<section class="hero">
+	<div class="inner">
+		<div class="copy">
+			<!-- TODO(owner): hero copy is the DESIGN §14 #3 default (option A). -->
+			<h1>I build educational games, AR and WebGL projects in Unity.</h1>
+			<p class="support">
+				Shipped apps, client builds, and game jam projects. Each one links to a build or a preview
+				where the client allows it.
+			</p>
+			<div class="actions">
+				<a class="fill" href="/work/">See the work</a>
+				<!-- TODO(owner): point "Email me" at the real address once DESIGN §14 #2 is decided. -->
+				<a class="outline" href="#contact">Email me</a>
+			</div>
+		</div>
+
+		<!-- TODO(owner): screenshots. The featured frame is a neutral placeholder until real media exists (DESIGN §8). -->
+		<div class="frame">
+			<p class="frame-title">{heroFrame.title}</p>
+			<p class="frame-area">{areaLabels[heroFrame.area]}</p>
+		</div>
+	</div>
+
+	<svg class="curve" viewBox="0 0 100 41" preserveAspectRatio="none" aria-hidden="true">
+		<path d="M0,0 Q50,80 100,0 V41 H0 Z" />
+	</svg>
+</section>
+
+<section class="featured">
+	<div class="inner">
+		<h2>Featured work</h2>
+		<ul class="rows">
+			{#each featuredProjects as project (project.slug)}
+				<li>
+					<h3>{project.title}</h3>
+					<p class="meta">
+						<span>{areaLabels[project.area]}</span>
+						<span>{statusLabels[project.status]}</span>
+					</p>
+					<p class="summary">{project.summary}</p>
+				</li>
+			{/each}
+		</ul>
+	</div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		background: var(--night);
+		color: var(--paper);
+		/* Focus ring on night surfaces is pink, not magenta (DESIGN §9). */
+		--focus-ring: var(--pink);
+		padding: clamp(40px, 6vw, 72px) var(--pad-x) clamp(64px, 8vw, 80px);
+	}
+
+	.inner {
+		width: 100%;
+		max-width: var(--page-max);
+		margin-inline: auto;
+	}
+
+	.hero .inner {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: clamp(32px, 5vw, 64px);
+		align-items: start;
+	}
+
+	/* Option A is much longer than the hero name --text-hero was sized for (DESIGN §4);
+	   --text-h2 keeps the two-line composition from DESIGN §5 and §6. */
+	.hero h1 {
+		font-size: var(--text-h2);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		max-width: 30ch;
+	}
+
+	.support {
+		margin-top: var(--gutter);
+		max-width: 68ch;
+	}
+
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gutter);
+		margin-top: 32px;
+	}
+
+	.actions a {
+		display: inline-block;
+		padding: 12px 20px;
+		font-size: var(--text-small);
+		text-decoration: none;
+	}
+
+	.actions .fill {
+		background: var(--pink);
+		color: var(--night);
+	}
+
+	.actions .outline {
+		border: 1px solid var(--pink);
+		color: var(--pink);
+	}
+
+	.frame {
+		width: 280px;
+		max-width: 100%;
+		aspect-ratio: 9 / 16;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		padding: 20px;
+		background: var(--paper);
+		color: var(--ink);
+		border: 1px solid var(--divider-paper);
+		border-radius: var(--radius-phone);
+		position: relative;
+		z-index: 1;
+	}
+
+	.frame-title {
+		font-weight: 600;
+	}
+
+	.frame-area {
+		font-size: var(--text-small);
+		color: var(--muted);
+	}
+
+	.curve {
+		display: block;
+		position: absolute;
+		inset: auto 0 0 0;
+		width: 100%;
+		height: 41px;
+		fill: var(--paper);
+	}
+
+	.featured {
+		padding: clamp(64px, 9vw, 112px) var(--pad-x) clamp(64px, 9vw, 96px);
+	}
+
+	.featured h2 {
+		font-size: var(--text-h2);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		margin-bottom: var(--gutter);
+	}
+
+	.rows {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.rows li {
+		border-top: 1px solid var(--divider-paper);
+		padding: var(--gutter) 0;
+	}
+
+	.rows h3 {
+		font-size: var(--text-h3);
+		font-weight: 600;
+	}
+
+	.meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gutter);
+		margin-top: 6px;
+		font-size: var(--text-caption);
+		color: var(--muted);
+	}
+
+	.summary {
+		margin-top: 8px;
+		max-width: 68ch;
+	}
+
+	@media (min-width: 960px) {
+		.hero .inner {
+			grid-template-columns: minmax(0, 1fr) auto;
+			gap: clamp(24px, 4vw, 64px);
+		}
+
+		.frame {
+			/* Crosses the curved bottom edge (DESIGN §5 and §6). */
+			margin-bottom: -90px;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.hero {
+			animation: hero-band-in 600ms var(--ease-out) both;
+		}
+
+		.hero h1 {
+			animation: hero-name-in var(--dur-medium) var(--ease-out) 120ms both;
+		}
+
+		.frame {
+			animation: frame-in var(--dur-load) var(--ease-out) 240ms both;
+		}
+
+		@keyframes hero-band-in {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes hero-name-in {
+			from {
+				opacity: 0;
+				transform: translateY(16px);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		@keyframes frame-in {
+			from {
+				opacity: 0;
+				transform: translateY(40px);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+	}
+</style>
