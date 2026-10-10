@@ -144,7 +144,8 @@ export const recognition: RecognitionItem[] = [
 		text: 'Gameloft Indonesia workshop on producership and project management (Oct 2016)',
 		confirmed: false
 	},
-	{ text: 'Chief of Tabletop Community (TODO(owner): details)', confirmed: false }
+	// Undated items go last. Chief of Tabletop Community is undated; details still TODO(owner).
+	{ text: 'Chief of Tabletop Community', confirmed: true }
 ];
 
 // Deck-only recognition line, held back until DESIGN §14 #8 is decided:
