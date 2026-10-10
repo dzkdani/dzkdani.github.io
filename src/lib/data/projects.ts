@@ -238,7 +238,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A trivia game built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		// TODO(owner): link. The deck points to the Guess Animal listing (com.siakew.guessanimal), which is no longer on Google Play.
+		links: [],
 		media: [{ kind: 'image', src: 'media/forestdom/shot-1.webp', aspect: 1.833, thumb: 'media/forestdom/shot-1-thumb.webp', alt: 'Forestdom: the title screen in a jungle scene with a play button.' }],
 	},
 	{
