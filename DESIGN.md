@@ -319,7 +319,6 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | 3D AR COVID-19 Education | AR, education | Unity AR Foundation | live | bit.ly/3f8WVM1 | Deck only. Same employer as above. |
 | 3D AR Tarpaulin Pond, Lobster Cultivation | AR | Unity AR Foundation | live | bit.ly/3bIQEEA | Deck only. Same employer as above. |
 | GIZ Solar Panel VR | VR training | Unity VR | preview | bit.ly/37xRt0L | Deck only. Client work. |
-| Petro 360 Tour | 360 tour, maps | Unity, Mapbox, REST API | restricted | none | Deck only. Client work. |
 | Math-Adventure | EdTech | Unity 2D, Addressables, IAP | live | confirm | Deck: client project. May be the Falkana game (§14). |
 | Explore Math | EdTech | Unity 2D, drag and drop | live | confirm | Deck: freelance. |
 | Chem | EdTech | Unity 2D | live | confirm | Deck: freelance. |
@@ -398,8 +397,8 @@ type Project = {
 1. **Name spelling.** The resume header says "Dzaki Adani," the deck says "Muhammad Dzaki Adani," and the resume email is dzaky.adani@gmail.com. Which spelling goes on the site? The email stays as written.
 2. **Contact and location.** Use dzaky.adani@gmail.com as the public email? Send the LinkedIn and Upwork URLs, since they aren't in the PDF text. Show "Surabaya, Indonesia" on the site?
 3. **Hero line.** Option A, option B, or your own?
-4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, Petrokimia, GIZ, Senalapan, PT Kuark, or any VR or 360-tour work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
-5. **Client names.** May the site name Kuark, Senalapan, GIZ, Petrokimia, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
+4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, GIZ, Senalapan, PT Kuark, or any VR work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
+5. **Client names.** May the site name Kuark, Senalapan, GIZ, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
 6. **Math-Adventure.** Is it the Falkana educational game, or is that Explore Math or Chem?
 7. **Links.** Send the URLs for the "resume link" rows. Still missing: FlappyRabbit, G-Escape, and Love Wars. Confirm that the Memories and Far From Shore links still work.
 8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? For FTIf 2017, use "finalist" or "top 20"? What dates did the Upwork freelance work run?
