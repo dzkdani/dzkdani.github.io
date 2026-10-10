@@ -9,7 +9,7 @@ export type Experience = {
 	points: string[];
 };
 
-// Newest first (DESIGN §1). The last two entries are deck-only work waiting on DESIGN §14.
+// The 8 roles from the resume (DESIGN §1), newest first.
 export const experience: Experience[] = [
 	{
 		company: 'Edufic',
@@ -60,8 +60,7 @@ export const experience: Experience[] = [
 		location: 'Bandung',
 		points: [
 			'Researched Photon Fusion and wrote internal documentation',
-			'Reworked and maintained Memories: My Story My Choices',
-			'UI rework with the UI/UX designer, plus bug fixes from QC reports',
+			'Reworked and maintained Memories: My Story My Choices, including a UI rework and QC bug fixes',
 			'Built a multiplayer 3D game for Zepeto in Unity and TypeScript'
 		]
 	},
@@ -96,20 +95,12 @@ export const experience: Experience[] = [
 			'A B2B AR/VR app',
 			'A social media filter'
 		]
-	},
-	{
-		company: 'Agate Academy',
-		role: 'Trainer',
-		years: 'TODO(owner): years',
-		points: []
-	},
-	{
-		company: 'PT Bersama Kreatif Teknologi',
-		role: 'TODO(owner): role',
-		years: 'TODO(owner): years',
-		points: []
 	}
 ];
+
+// Deck-only entries, kept out of the rendered page until DESIGN §14 is decided:
+// TODO(owner): §14 #4 — PT Bersama Kreatif Teknologi (role and dates unknown).
+// TODO(owner): §14 #8 — Agate Academy (trainer line, dates unknown).
 
 // About intro (draft v0.2, DESIGN §10).
 export const intro =
@@ -122,10 +113,12 @@ export const whatITakeOn: string[] = [
 	'Multiplayer games with Photon Fusion',
 	'Casual and hypercasual mobile games with AdMob, Unity Ads, and in-app purchases',
 	'Mechanics, game flow, and UI/UX design, plus the gameplay code',
-	'REST API integration into Unity',
-	'AR apps with Unity AR Foundation, ARCore, and Vuforia (deck only; confirm)',
-	'VR training and 360 tours with Mapbox (deck only; confirm)'
+	'REST API integration into Unity'
 ];
+
+// Deck only in DESIGN §10, held back from the rendered list until confirmed (DESIGN §14 #4).
+// TODO(owner): 'AR apps with Unity AR Foundation, ARCore, and Vuforia (deck only; confirm)'
+// TODO(owner): 'VR training and 360 tours with Mapbox (deck only; confirm)'
 
 // One line from the resume (DESIGN §1).
 export const education =
@@ -151,9 +144,11 @@ export const recognition: RecognitionItem[] = [
 		text: 'Gameloft Indonesia workshop on producership and project management (Oct 2016)',
 		confirmed: false
 	},
-	{ text: 'Chief of Tabletop Community (TODO(owner): details)', confirmed: false },
-	{ text: 'Trainer at Agate Academy', confirmed: false }
+	{ text: 'Chief of Tabletop Community (TODO(owner): details)', confirmed: false }
 ];
+
+// Deck-only recognition line, held back until DESIGN §14 #8 is decided:
+// TODO(owner): §14 #8 — 'Trainer at Agate Academy'.
 
 // Contact. DESIGN §14 #2 is still open: the email stays empty and the page shows a plain placeholder.
 export const email = '';
