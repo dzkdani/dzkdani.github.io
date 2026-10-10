@@ -25,8 +25,10 @@
 <section class="hero">
 	<div class="inner">
 		<div class="copy">
+			<!-- TODO(owner): name spelling is the DESIGN §14 #1 default. -->
+			<h1>Dzaki Adani</h1>
 			<!-- TODO(owner): hero copy is the DESIGN §14 #3 default (option A). -->
-			<h1>I build educational games, AR and WebGL projects in Unity.</h1>
+			<p class="lead">I build educational games, AR and WebGL projects in Unity.</p>
 			<p class="support">
 				Shipped apps, client builds, and game jam projects. Each one links to a build or a preview
 				where the client allows it.
@@ -91,11 +93,16 @@
 		align-items: start;
 	}
 
-	/* Option A is much longer than the hero name --text-hero was sized for (DESIGN §4);
-	   --text-h2 keeps the two-line composition from DESIGN §5 and §6. */
 	.hero h1 {
-		font-size: var(--text-h2);
+		font-size: var(--text-hero);
 		font-weight: 600;
+		line-height: 0.95;
+		letter-spacing: -0.035em;
+	}
+
+	.lead {
+		margin-top: 32px;
+		font-size: var(--text-h2);
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 		max-width: 30ch;
