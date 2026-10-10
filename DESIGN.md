@@ -400,6 +400,6 @@ type Project = {
 4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, GIZ, Senalapan, PT Kuark, or any VR work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
 5. **Client names.** May the site name Kuark, Senalapan, GIZ, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
 6. **Math-Adventure.** Resolved: Math-Adventure is the Falkana Studio game.
-7. **Links.** The deck supplied the missing URLs. A check in October 2026 found these Google Play listings gone: FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories. Keep the links, or strip them until the apps are back?
+7. **Links.** The deck supplied the missing URLs. The Google Play listings for FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories return Not Found (checked October 2026), so their link buttons are stripped. Re-add any link once a live listing exists.
 8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? Resolved: FTIf 2017 is "top 20"; the Upwork freelance work is ongoing.
 9. **Language.** Resolved: English only.

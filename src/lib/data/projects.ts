@@ -154,12 +154,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational math game built in Unity 2D with drag-and-drop interactions.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.LFourTech.ExploreMath'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/explore-math/shot-1.webp', aspect: 1.768, thumb: 'media/explore-math/shot-1-thumb.webp', alt: 'Explore Math: the desk scene with the study items laid out.' },
 			{ kind: 'image', src: 'media/explore-math/shot-2.webp', aspect: 1.789, alt: 'Explore Math: the map with a challenge dialog pointing to a spot.' }
@@ -201,12 +197,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational trivia game about guessing colors, built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.sepay.kidsguesscolor'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/guess-color-quiz/shot-1.webp', aspect: 1.838, thumb: 'media/guess-color-quiz/shot-1-thumb.webp', alt: 'Guess Color Quiz: the title screen with normal and time survival modes.' }
 		]
@@ -219,12 +211,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational word game built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.siakew.WonderWord'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/wonder-word/shot-1.webp', aspect: 0.5, thumb: 'media/wonder-word/shot-1-thumb.webp', alt: 'Wonder Word: the category list with the animal pack in progress.' },
 			{ kind: 'image', src: 'media/wonder-word/shot-2.webp', aspect: 0.5, alt: 'Wonder Word: a fox silhouette and the letter tiles to spell it.' }
@@ -250,12 +238,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A visual novel kept up to date with a UI rework and bug fixes from QC reports.',
 		role: ['Reworked and maintained the game', 'UI rework with the UI/UX designer', 'Bug fixes from QC reports'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.agatestudio.ciayostories&pcampaignid=web_share'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/memories/shot-1.webp', aspect: 0.45, thumb: 'media/memories/shot-1-thumb.webp', alt: 'Memories: My Story My Choices: the story list in the reading app.' },
 			{ kind: 'image', src: 'media/memories/shot-2.webp', aspect: 2.489, alt: 'Memories: My Story My Choices: the credits listing Muhammad Dzaki Adani as game programmer.' }
@@ -357,12 +341,8 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A casual endless 3D game built in Unity 3D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.kelompok4.balljuggler'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/juggler-endless-3d/shot-1.webp', aspect: 0.537, thumb: 'media/juggler-endless-3d/shot-1-thumb.webp', alt: 'Juggler (Endless 3D): the ball balanced on a goal post during play.' },
 			{ kind: 'image', src: 'media/juggler-endless-3d/shot-2.webp', aspect: 0.547, alt: 'Juggler (Endless 3D): the title screen with a play button.' }
@@ -402,12 +382,8 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'A hypercasual game built in Unity 2D with in-app purchases and AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.siakew.FlappyRabbit'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/flappyrabbit/shot-1.webp', aspect: 0.442, thumb: 'media/flappyrabbit/shot-1-thumb.webp', alt: 'FlappyRabbit: the rabbit hopping between posts.' },
 			{ kind: 'image', src: 'media/flappyrabbit/shot-2.webp', aspect: 0.454, alt: 'FlappyRabbit: the shop with four character skins.' },
@@ -422,12 +398,8 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'An action shooter for a client, built in Unity 2D with in-app purchases.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.StrategyMax.GEscape'
-			}
-		],
+		// TODO(owner): link. The Google Play listing returns Not Found (checked October 2026).
+		links: [],
 		media: [
 			{ kind: 'image', src: 'media/g-escape/shot-1.webp', aspect: 1, thumb: 'media/g-escape/shot-1-thumb.webp', alt: 'G-Escape: the app icon with a rocket and arrows.' },
 			{ kind: 'image', src: 'media/g-escape/shot-2.webp', aspect: 0.487, alt: 'G-Escape: the title screen with the rocket logo and play button.' },
