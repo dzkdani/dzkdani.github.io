@@ -86,8 +86,8 @@
 						<p class="note">Client project. The build can't be shown under the client's agreement. Details on request.</p>
 					{:else if links.length > 0}
 						<p class="links">
-							{#each links as link (link.url)}
-								<a href={href(link.url)}>{link.label}</a>
+							{#each links as link, i (link.url)}
+								<a class:primary={i === 0} href={href(link.url)}>{link.label}</a>
 							{/each}
 						</p>
 					{/if}
@@ -100,13 +100,17 @@
 							<p class="frame-title">{project.title}</p>
 							<p class="frame-area">{areaLabels[project.area]}</p>
 						</div>
-						{#if playing}
-							<div class="player" in:openDemo>
-								<!-- TODO(owner): the demo URL comes from links[0] in projects.ts (currently TODO(owner): link). -->
-								<iframe src={demoUrl} loading="lazy" title={`Playable demo of ${project.title}`}></iframe>
-							</div>
+						{#if demoUrl}
+							{#if playing}
+								<div class="player" in:openDemo>
+									<iframe src={demoUrl} loading="lazy" title={`Playable demo of ${project.title}`}></iframe>
+								</div>
+							{:else}
+								<button type="button" class="play" onclick={() => (playing = true)}>Play demo</button>
+							{/if}
 						{:else}
-							<button type="button" class="play" onclick={() => (playing = true)}>Play demo</button>
+							<!-- TODO(owner): demo URL. -->
+							<p class="note">Playable demo link coming soon.</p>
 						{/if}
 					{:else}
 						<div class="frames">
@@ -205,6 +209,12 @@
 		color: var(--magenta);
 		font-size: var(--text-small);
 		text-decoration: none;
+	}
+
+	/* Primary action: magenta fill with paper text, 5.9:1 per DESIGN §3. */
+	.links a.primary {
+		background: var(--magenta);
+		color: var(--paper);
 	}
 
 	.frames {
