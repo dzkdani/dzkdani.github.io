@@ -1,9 +1,7 @@
 <script lang="ts">
 	import {
 		certificates,
-		education,
 		email,
-		experience,
 		intro,
 		linkedinUrl,
 		recognition,
@@ -20,37 +18,12 @@
 		<!-- TODO(owner): portrait (optional, DESIGN §6). -->
 		<p class="intro">{intro}</p>
 
-		<h2>Experience</h2>
-		<ul class="experience">
-			{#each experience as job (job.company)}
-				<li>
-					<h3>{job.role}, {job.company}</h3>
-					<p class="meta">
-						<span>{job.years}</span>
-						{#if job.location}
-							<span>{job.location}</span>
-						{/if}
-					</p>
-					{#if job.points.length > 0}
-						<ul class="points">
-							{#each job.points as point (point)}
-								<li>{point}</li>
-							{/each}
-						</ul>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-
 		<h2>What I take on</h2>
 		<ul class="takeon">
 			{#each whatITakeOn as item (item)}
 				<li>{item}</li>
 			{/each}
 		</ul>
-
-		<h2>Education</h2>
-		<p class="education">{education}</p>
 
 		<h2>Recognition</h2>
 		<ul class="recognition">
@@ -124,34 +97,6 @@
 		font-weight: 600;
 	}
 
-	h3 {
-		font-size: var(--text-body);
-		font-weight: 600;
-	}
-
-	.experience {
-		margin: 32px 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.experience > li + li {
-		margin-top: 32px;
-	}
-
-	.meta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--gutter);
-		margin-top: 4px;
-		font-size: var(--text-caption);
-		color: var(--muted);
-	}
-
-	.points {
-		margin: var(--gutter) 0 0;
-	}
-
 	.takeon,
 	.recognition,
 	.other {
@@ -173,7 +118,6 @@
 		color: var(--muted);
 	}
 
-	.education,
 	.contact {
 		margin-top: 32px;
 	}

@@ -200,7 +200,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 ## 6. Components
 
-**Nav.** Wordmark "Dzaki Adani" on the left. Links: Work, About, Contact (Contact jumps to the contact block in the footer). The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
+**Nav.** Wordmark "Dzaki Adani" on the left. Links: Work, Experience, About, Contact (Contact jumps to the contact block in the footer). The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. On narrow screens the links wrap under the wordmark, so there is no hamburger.
 
 **Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). The featured frame sits on the right and crosses the curve from 960px up. Below 960px, it sits under the text.
 
@@ -208,7 +208,9 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
-**About.** One serif intro paragraph. Then experience (company, role, dates), a "What I take on" list, education, and the recognition list in reverse date order. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
+**About.** One serif intro paragraph. Then a "What I take on" list, the recognition list in reverse date order, and the certificate gallery. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
+
+**Experience.** Route `/experience`. The full role list (role and company as the heading, years and location, short bullets) followed by education.
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn if he wants them. The footer repeats the email.
 
@@ -351,7 +353,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 - SvelteKit with `adapter-static`. Prerender every route.
 - Use the repo `username.github.io` so the site sits at the root. If it's a project repo, set `paths.base`.
-- Routes: `/`, `/work`, `/work/[slug]`, `/about`. Contact lives on `/about` and in the footer.
+- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives on `/about` and in the footer.
 - Project data lives in `src/lib/data/projects.ts`, typed as below. Pages read from it. No CMS.
 - Global tokens go in `src/app.css` as `:root` custom properties. Component styles stay scoped. No UI component library.
 - Filter state lives in the URL query string.
