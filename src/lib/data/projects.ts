@@ -223,23 +223,6 @@ export const allProjects: Project[] = [
 		]
 	},
 	{
-		slug: 'guess-animal',
-		title: 'Guess Animal',
-		area: 'edtech',
-		tech: ['Unity 2D', 'AdMob'],
-		status: 'live',
-		summary:
-			'An educational guessing game built in Unity 2D with randomly generated content and AdMob ads.',
-		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [
-			{
-				label: 'Open on Google Play',
-				url: 'https://play.google.com/store/apps/details?id=com.siakew.guessanimal'
-			}
-		],
-		media: [], // TODO(owner): screenshots
-	},
-	{
 		slug: 'wonder-word',
 		title: 'Wonder Word',
 		area: 'edtech',
