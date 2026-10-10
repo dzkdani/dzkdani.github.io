@@ -63,6 +63,7 @@
 	<div class="inner">
 		<div class="head">
 			<h1>Work</h1>
+			<h2 class="visually-hidden">Projects</h2>
 			<div class="filters" role="group" aria-label="Filter by area">
 				{#each filters as filter (filter.label)}
 					<button
@@ -76,13 +77,18 @@
 			</div>
 		</div>
 
-		<!-- TODO(owner): link to /work/[slug] in step 4c. -->
 		<ul class="rows">
 			{#each visible as project (project.slug)}
 				<li in:fade={fadeOptions}>
 					<div class="thumb"></div>
 					<div class="body">
-						<h3>{project.title}</h3>
+						<h3>
+							{#if project.status === 'restricted'}
+								{project.title}
+							{:else}
+								<a href={`/work/${project.slug}/`}>{project.title}</a>
+							{/if}
+						</h3>
 						<p class="summary">{project.summary}</p>
 					</div>
 					<p class="meta">
@@ -177,10 +183,27 @@
 		grid-area: body;
 	}
 
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+		border: 0;
+	}
+
 	.rows h3 {
 		font-size: var(--text-h3);
 		font-weight: 600;
 		width: fit-content;
+	}
+
+	.rows h3 a {
+		color: var(--ink);
+		text-decoration: none;
 	}
 
 	.summary {
