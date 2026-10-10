@@ -1,6 +1,8 @@
 // About data: experience, what I take on, recognition, education, and contact.
 // Facts come only from DESIGN §1 and §10 (v0.2); missing facts are marked TODO(owner):.
 
+import type { Media } from '#lib/data/projects.ts';
+
 export type Experience = {
 	company: string;
 	role: string;
@@ -150,6 +152,88 @@ export const recognition: RecognitionItem[] = [
 
 // Deck-only recognition line, held back until DESIGN §14 #8 is decided:
 // TODO(owner): §14 #8 — 'Trainer at Agate Academy'.
+
+// Certificate images from the deck, newest first, matching the recognition list.
+// The images stay visible even where the matching text line is still TODO(owner).
+export type Certificate = {
+	caption: string;
+	image: Media;
+};
+
+export const certificates: Certificate[] = [
+	{
+		caption: 'GameJamPlus Indonesia 23/24',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-gamejamplus.webp',
+			aspect: 1.406,
+			alt: 'GameJamPlus Indonesia 23/24 certificate: it names Purring Post & Delivery the Best Pitch nominee.'
+		}
+	},
+	{
+		caption: 'PKMV 2020',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-pkmv.webp',
+			aspect: 1.557,
+			alt: 'PKMV 2020 certificate: the award certificate for the vocational entrepreneurship program funding.'
+		}
+	},
+	{
+		caption: 'Masterclass for Game Developers, 2020',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-masterclass.webp',
+			aspect: 1.413,
+			alt: 'Masterclass for Game Developers certificate: the Ministry of Tourism and Creative Economy masterclass on game design, August 2020.'
+		}
+	},
+	{
+		caption: 'MAGE 2017',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-mage.webp',
+			aspect: 1.446,
+			alt: 'MAGE 2017 certificate: the student Game Dev Competition finalist certificate.'
+		}
+	},
+	{
+		caption: 'FTIf GameDeff 2017',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-ftif.webp',
+			aspect: 1.413,
+			alt: 'FTIf GameDeff 2017 certificate: the game development festival certificate.'
+		}
+	},
+	{
+		caption: 'Gameloft Indonesia workshop, 2016',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-gameloft.webp',
+			aspect: 1.423,
+			alt: 'Gameloft Indonesia workshop certificate: producership and project management, October 2016.'
+		}
+	},
+	{
+		caption: 'UX design and product development webinar',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-ux-webinar.webp',
+			aspect: 1.35,
+			alt: 'UX design and product development webinar certificate: the participant certificate.'
+		}
+	},
+	{
+		caption: 'Agate Academy trainer card',
+		image: {
+			kind: 'image',
+			src: 'media/about/cert-agate-academy.webp',
+			aspect: 2.185,
+			alt: 'Agate Academy trainer card: it names Muhammad Dzaki Adani as Jr. Game Programmer.'
+		}
+	}
+];
 
 // Contact. The Upwork and LinkedIn links come from the resume; the email stays empty until §14 #2 is answered.
 export const email = '';

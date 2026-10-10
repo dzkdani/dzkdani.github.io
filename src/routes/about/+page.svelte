@@ -1,5 +1,6 @@
 <script lang="ts">
 	import {
+		certificates,
 		education,
 		email,
 		experience,
@@ -9,6 +10,7 @@
 		upworkUrl,
 		whatITakeOn
 	} from '#lib/data/about.ts';
+	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
 </script>
 
 <section class="about">
@@ -54,6 +56,16 @@
 		<ul class="recognition">
 			{#each recognition.filter((item) => item.confirmed) as item (item.text)}
 				<li>{item.text}</li>
+			{/each}
+		</ul>
+
+		<h2>Certificates</h2>
+		<ul class="certificates">
+			{#each certificates as item (item.caption)}
+				<li>
+					<ProjectFrame media={item.image} />
+					<p class="cert-caption">{item.caption}</p>
+				</li>
 			{/each}
 		</ul>
 
@@ -145,6 +157,21 @@
 	.recognition,
 	.other {
 		margin: 32px 0 0;
+	}
+
+	.certificates {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		gap: var(--gutter);
+		margin: 32px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.cert-caption {
+		margin-top: 8px;
+		font-size: var(--text-caption);
+		color: var(--muted);
 	}
 
 	.education,
