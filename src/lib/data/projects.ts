@@ -124,7 +124,7 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational math game built in Unity 2D with addressable content and in-app purchases.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open the site', url: 'https://www.smartadventure.id/' }],
 		media: [], // TODO(owner): screenshots
 		featured: true
 	},
@@ -136,7 +136,12 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational math game built in Unity 2D with drag-and-drop interactions.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.LFourTech.ExploreMath'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -147,7 +152,7 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational chemistry game built in Unity 2D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/running-chem' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -158,7 +163,7 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational quiz game built in Construct 2 with JSON-driven content.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/quiz-kimia' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -169,7 +174,12 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational trivia game about guessing colors, built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.sepay.kidsguesscolor'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -180,7 +190,12 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'An educational word game built in Unity 2D with AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.siakew.WonderWord'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -202,7 +217,12 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A visual novel kept up to date with a UI rework and bug fixes from QC reports.',
 		role: ['Reworked and maintained the game', 'UI rework with the UI/UX designer', 'Bug fixes from QC reports'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.agatestudio.ciayostories&pcampaignid=web_share'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -213,7 +233,7 @@ export const allProjects: Project[] = [
 		status: 'demo',
 		summary: 'A narrative survival game that plays in the browser, built in Unity with WebGL.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/ffs-demo' }],
 		media: [], // TODO(owner): screenshots
 		featured: true
 	},
@@ -225,7 +245,7 @@ export const allProjects: Project[] = [
 		status: 'wip',
 		summary: 'A gamified web platform about the journey of the Prophet Muhammad, built in Unity WebGL.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open the site', url: 'game.eduficglobal.id' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -236,7 +256,9 @@ export const allProjects: Project[] = [
 		status: 'wip',
 		summary: 'A narrative management game built in Unity 2D, nominated for Best Pitch at GameJam+ Indonesia 23/24.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{ label: 'Open on itch.io', url: 'https://dhaniy.itch.io/purring-post-and-delivery' }
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -247,7 +269,7 @@ export const allProjects: Project[] = [
 		status: 'wip',
 		summary: 'A desktop companion monster-collection game built in Unity 2D, updated during playtests.',
 		role: ['Feature updates', 'Bug fixes during playtests', 'Feature design, including gacha and evolution'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on Steam', url: 'https://store.steampowered.com/app/4146150/Petal_Pals' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -280,7 +302,12 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A casual endless 3D game built in Unity 3D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.kelompok4.balljuggler'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -291,7 +318,7 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A music shooter built in Unity 2D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/buto-beat' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -302,7 +329,7 @@ export const allProjects: Project[] = [
 		status: 'live',
 		summary: 'A local co-op shooter built in Construct 2.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/p-tank' }],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -313,7 +340,12 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'A hypercasual game built in Unity 2D with in-app purchases and AdMob ads.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.siakew.FlappyRabbit'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -324,7 +356,12 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'An action shooter for a client, built in Unity 2D with in-app purchases.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open on Google Play',
+				url: 'https://play.google.com/store/apps/details?id=com.StrategyMax.GEscape'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	},
 	{
@@ -335,7 +372,12 @@ export const allProjects: Project[] = [
 		status: 'tba', // TODO(owner): status
 		summary: 'A tabletop card game, not a digital build.',
 		role: ['TODO(owner): role'],
-		links: [], // TODO(owner): link
+		links: [
+			{
+				label: 'Open the rulebook',
+				url: 'https://drive.google.com/file/d/1TZ9LeB5DuWlcbH44nmbEVeOVRQai1IkJ/view?usp=sharing'
+			}
+		],
 		media: [] // TODO(owner): screenshots
 	}
 ];
