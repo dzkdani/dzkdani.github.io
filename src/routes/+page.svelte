@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { featuredProjects, type Project } from '#lib/data/projects.ts';
+	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { featuredProjects, projectStill, type Project } from '#lib/data/projects.ts';
 
 	const areaLabels: Record<Project['area'], string> = {
 		edtech: 'EdTech',
@@ -20,6 +21,7 @@
 	};
 
 	const heroFrame = featuredProjects[0];
+	const heroStill = projectStill(heroFrame);
 </script>
 
 <section class="hero">
@@ -41,9 +43,12 @@
 		</div>
 
 		<!-- TODO(owner): screenshots. The featured frame is a neutral placeholder until real media exists (DESIGN §8). -->
-		<div class="frame">
-			<p class="frame-title">{heroFrame.title}</p>
-			<p class="frame-area">{areaLabels[heroFrame.area]}</p>
+		<div class="hero-frame">
+			<ProjectFrame
+				media={heroStill}
+				title={heroFrame.title}
+				area={areaLabels[heroFrame.area]}
+			/>
 		</div>
 	</div>
 
@@ -137,29 +142,11 @@
 		color: var(--pink);
 	}
 
-	.frame {
+	.hero-frame {
 		width: 280px;
 		max-width: 100%;
-		aspect-ratio: 9 / 16;
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		padding: 20px;
-		background: var(--paper);
-		color: var(--ink);
-		border: 1px solid var(--divider-paper);
-		border-radius: var(--radius-phone);
 		position: relative;
 		z-index: 1;
-	}
-
-	.frame-title {
-		font-weight: 600;
-	}
-
-	.frame-area {
-		font-size: var(--text-small);
-		color: var(--muted);
 	}
 
 	.curve {
@@ -219,7 +206,7 @@
 			gap: clamp(24px, 4vw, 64px);
 		}
 
-		.frame {
+		.hero-frame {
 			/* Crosses the curved bottom edge (DESIGN §5 and §6). */
 			margin-bottom: -90px;
 		}
@@ -234,7 +221,7 @@
 			animation: hero-name-in var(--dur-medium) var(--ease-out) 120ms both;
 		}
 
-		.frame {
+		.hero-frame {
 			animation: frame-in var(--dur-load) var(--ease-out) 240ms both;
 		}
 

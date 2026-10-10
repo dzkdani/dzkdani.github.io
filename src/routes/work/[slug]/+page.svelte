@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { prefersReducedMotion } from 'svelte/motion';
-	import { projectBySlug, type Project } from '#lib/data/projects.ts';
+	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { projectBySlug, projectStill, type Project } from '#lib/data/projects.ts';
 
 	const project = $derived(projectBySlug(page.params.slug ?? ''));
+
+	const still = $derived(project ? projectStill(project) : null);
 
 	// The --ease-out token from DESIGN §7: cubic-bezier(0.22, 1, 0.36, 1).
 	function easeOut(t: number): number {
@@ -96,10 +99,12 @@
 				<div class="media">
 					{#if project.area === 'webgl'}
 						<!-- TODO(owner): screenshots. Neutral placeholder cover until media exists (DESIGN §8). -->
-						<div class="cover">
-							<p class="frame-title">{project.title}</p>
-							<p class="frame-area">{areaLabels[project.area]}</p>
-						</div>
+						<ProjectFrame
+							media={still}
+							title={project.title}
+							area={areaLabels[project.area]}
+							aspect="16 / 9"
+						/>
 						{#if demoUrl}
 							{#if playing}
 								<div class="player" in:openDemo>
@@ -112,14 +117,17 @@
 							<!-- TODO(owner): demo URL. -->
 							<p class="note">Playable demo link coming soon.</p>
 						{/if}
+					{:else if project.media.length > 0}
+						<div class="frames">
+							{#each project.media as item (item.src)}
+								<ProjectFrame media={item} />
+							{/each}
+						</div>
 					{:else}
+						<!-- TODO(owner): screenshots -->
 						<div class="frames">
 							{#each [1, 2] as n (n)}
-								<div class="frame">
-									<!-- TODO(owner): screenshots -->
-									<p class="frame-title">{project.title}</p>
-									<p class="frame-area">{areaLabels[project.area]}</p>
-								</div>
+								<ProjectFrame title={project.title} area={areaLabels[project.area]} />
 							{/each}
 						</div>
 					{/if}
@@ -221,35 +229,6 @@
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
 		gap: var(--gutter);
-	}
-
-	.frame,
-	.cover {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		padding: 20px;
-		background: var(--paper);
-		border: 1px solid var(--divider-paper);
-	}
-
-	.frame {
-		aspect-ratio: 9 / 16;
-		border-radius: var(--radius-phone);
-	}
-
-	.cover {
-		/* The WebGL cover keeps the game's native (landscape) aspect ratio (DESIGN §6). */
-		aspect-ratio: 16 / 9;
-	}
-
-	.frame-title {
-		font-weight: 600;
-	}
-
-	.frame-area {
-		font-size: var(--text-small);
-		color: var(--muted);
 	}
 
 	.play {

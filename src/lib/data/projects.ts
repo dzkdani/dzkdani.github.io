@@ -2,6 +2,16 @@
 // Facts come only from DESIGN §1 and §11; missing facts are marked TODO(owner):.
 // Rows with no valid status value in the inventory use 'tba' as a placeholder until the owner confirms.
 
+export type Media = {
+	src: string;
+	alt: string;
+	kind: 'image' | 'video' | 'webgl';
+	/** Video only: WebM source alongside the H.264 MP4 in src (DESIGN §8). */
+	webm?: string;
+	/** Video only: poster image shown before the clip plays (DESIGN §8). */
+	poster?: string;
+};
+
 export type Project = {
 	slug: string;
 	title: string;
@@ -12,7 +22,7 @@ export type Project = {
 	summary: string;
 	role: string[];
 	links: { label: string; url: string }[];
-	media: { src: string; alt: string; kind: 'image' | 'video' | 'webgl' }[];
+	media: Media[];
 	featured?: boolean;
 };
 
@@ -337,3 +347,12 @@ export function projectBySlug(slug: string): Project | undefined {
 }
 
 export const slugs: string[] = allProjects.map((project) => project.slug);
+
+// The still used by the hero frame and the work-index thumbnails:
+// the first image, or a video's poster when there is no image.
+export function projectStill(project: Project): Media | null {
+	const image = project.media.find((item) => item.kind === 'image');
+	if (image) return image;
+	const video = project.media.find((item) => item.kind === 'video' && item.poster);
+	return video && video.poster ? { src: video.poster, alt: video.alt, kind: 'image' } : null;
+}

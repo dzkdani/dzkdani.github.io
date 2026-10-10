@@ -3,7 +3,8 @@
 	import { page } from '$app/state';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { fade } from 'svelte/transition';
-	import { allProjects, type Project } from '#lib/data/projects.ts';
+	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { allProjects, projectStill, type Project } from '#lib/data/projects.ts';
 
 	type Filter = { label: string; value: Project['area'] | null };
 
@@ -80,7 +81,9 @@
 		<ul class="rows">
 			{#each visible as project (project.slug)}
 				<li in:fade={fadeOptions}>
-					<div class="thumb"></div>
+					<div class="thumb">
+						<ProjectFrame media={projectStill(project)} />
+					</div>
 					<div class="body">
 						<h3>
 							{#if project.status === 'restricted'}
@@ -173,10 +176,6 @@
 	.thumb {
 		grid-area: thumb;
 		width: 72px;
-		aspect-ratio: 9 / 16;
-		background: var(--paper);
-		border: 1px solid var(--divider-paper);
-		border-radius: var(--radius-phone);
 	}
 
 	.body {
