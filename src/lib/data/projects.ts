@@ -131,17 +131,6 @@ export const allProjects: Project[] = [
 		]
 	},
 	{
-		slug: 'petro-360-tour',
-		title: 'Petro 360 Tour',
-		area: 'other', // 360 tour does not fit the EdTech/AR/VR/WebGL/game areas.
-		tech: ['Unity', 'Mapbox', 'REST API'],
-		status: 'restricted',
-		summary: 'A Unity 360 tour linked to maps, built with Mapbox and a REST API.',
-		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
-		links: [],
-		media: [] // TODO(owner): screenshots (restricted project)
-	},
-	{
 		slug: 'math-adventure',
 		title: 'Math-Adventure',
 		area: 'edtech',
