@@ -26,7 +26,7 @@ export const experience: Experience[] = [
 	{
 		company: 'Upwork and others',
 		role: 'Freelance game developer',
-		years: 'TODO(owner): years',
+		years: 'Ongoing',
 		points: [
 			'Far From Shore, from proof of concept to demo',
 			'Mining mini-game for the idle game Goddess Summoner: Katsi Idle',
@@ -82,7 +82,7 @@ export const experience: Experience[] = [
 		years: 'Aug 2021 to July 2022',
 		location: 'Surabaya',
 		points: [
-			'A 2D interactive educational game for learning-course clients',
+			'Math-Adventure, a 2D interactive educational game for learning-course clients',
 			'Designed mechanics, game flow, and UI/UX',
 			'Integrated REST APIs into Unity'
 		]
@@ -141,7 +141,7 @@ export const recognition: RecognitionItem[] = [
 		confirmed: false
 	},
 	{ text: 'MAGE 2017: finalist, student Game Dev Competition', confirmed: true },
-	{ text: 'FTIf GameDeff 2017 (TODO(owner): finalist or top 20)', confirmed: false },
+	{ text: 'FTIf GameDeff 2017: top 20', confirmed: true },
 	{
 		text: 'Gameloft Indonesia workshop on producership and project management (Oct 2016)',
 		confirmed: false
@@ -203,7 +203,7 @@ export const certificates: Certificate[] = [
 			kind: 'image',
 			src: 'media/about/cert-ftif.webp',
 			aspect: 1.413,
-			alt: 'FTIf GameDeff 2017 certificate: the game development festival certificate.'
+			alt: 'FTIf GameDeff 2017 certificate: the top 20 placement in the game development festival.'
 		}
 	},
 	{

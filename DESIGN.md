@@ -45,12 +45,12 @@ Show that he has shipped working Unity builds in these areas. A visitor should b
 ### Experience (from the resume, newest first)
 
 - **Freelance Web Game Developer, Edufic.** Sept 2025 to present, Surabaya. Developing Little Muslim Heroes, a gamified web platform about the journey of the Prophet Muhammad. Part-time coding tutor for elementary students using Scratch.
-- **Freelance Game Developer, Upwork and others.** Dates: TODO(owner). Far From Shore, from proof of concept to demo. Mining mini-game for the idle game Goddess Summoner: Katsi Idle. Proof of concept for 3D character customization with UMA 2.
+- **Freelance Game Developer, Upwork and others.** Dates: ongoing. Far From Shore, from proof of concept to demo. Mining mini-game for the idle game Goddess Summoner: Katsi Idle. Proof of concept for 3D character customization with UMA 2.
 - **Unity Programmer, Script Smelter Studio.** Apr 2025 to Sept 2025, remote. Petal Pals, a desktop companion monster-collection game, the studio's own IP. Feature updates and bug fixes during playtests. Helped design features such as gacha and evolution.
 - **Game Programmer, Shireishi Production.** Nov 2023 to Apr 2024, Malang. Fast prototypes for the studio's B2B services. Several game genres in Unity. Worked with game designers and artists.
 - **Game Programmer, Agate International.** June 2022 to Nov 2023, Bandung. Researched Photon Fusion and wrote internal documentation. Reworked and maintained Memories: My Story My Choices with Majamojo, including the UI rework with the UI/UX designer and bug fixes from QC reports. Built a multiplayer 3D game for Zepeto in Unity using TypeScript.
 - **Game Developer (freelance), Coding Collective.** Sept 2023 to Oct 2023, remote. A 3D interactive web project and a 2D interactive hot-pot game for B2B clients.
-- **Game Developer, Falkana Studio.** Aug 2021 to July 2022, Surabaya. A 2D interactive educational game for learning-course clients. Designed mechanics, game flow, and UI/UX. Integrated REST APIs into Unity.
+- **Game Developer, Falkana Studio.** Aug 2021 to July 2022, Surabaya. Math-Adventure, a 2D interactive educational game for learning-course clients. Designed mechanics, game flow, and UI/UX. Integrated REST APIs into Unity.
 - **Unity Developer Intern, TicTech Studio.** Jan 2020 to Feb 2020, Surabaya. Interactive AR app, game-world layout in Unity, a B2B AR/VR app, and a social media filter.
 
 ### Education
@@ -70,7 +70,7 @@ B.Sc. in Applied Computer Science (S.Tr.Kom.), Politeknik Elektronika Negeri Sur
 - GameJam+ Indonesia 23/24 (resume: 2023): Best Pitch nominee, for Purring Post & Delivery
 - Chief of Tabletop Community (resume; details TODO(owner))
 - MAGE 2017: finalist, student Game Dev Competition
-- FTIf GameDeff 2017: the resume says "finalist," the certificate says top 20 (§14)
+- FTIf GameDeff 2017: top 20 (confirmed)
 - Penerima Pendanaan Program Kewirausahaan Mahasiswa Vokasi (PKMV) 2020, for Sepay Games (resume and certificate)
 - Deck only, not on the resume: Masterclass for Game Developers: Game Design, Ministry of Tourism and Creative Economy (Aug 2020); Gameloft Indonesia workshop on producership and project management (Oct 2016); trainer at Agate Academy (§14)
 
@@ -306,7 +306,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
-**Featured on home:** AR Magazine (AR), Math-Adventure (EdTech), and Far From Shore (WebGL). Together they cover the three focus areas. Double-check Math-Adventure, because it may be the Falkana game (§14).
+**Featured on home:** AR Magazine (AR), Math-Adventure (EdTech), and Far From Shore (WebGL). Together they cover the three focus areas.
 
 **Inventory.** The Notes column shows the source of each row. "Deck only" means the resume doesn't mention it, so the owner should confirm it. Rows marked "confirm" in the Link column were shown as "Access here" hyperlinks in the deck, and the URLs were not readable. Rows marked "resume link" have a link on the resume, but the URL was not readable either.
 
@@ -319,7 +319,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | 3D AR COVID-19 Education | AR, education | Unity AR Foundation | live | bit.ly/3f8WVM1 | Deck only. Same employer as above. |
 | 3D AR Tarpaulin Pond, Lobster Cultivation | AR | Unity AR Foundation | live | bit.ly/3bIQEEA | Deck only. Same employer as above. |
 | GIZ Solar Panel VR | VR training | Unity VR | preview | bit.ly/37xRt0L | Deck only. Client work. |
-| Math-Adventure | EdTech | Unity 2D, Addressables, IAP | live | confirm | Deck: client project. May be the Falkana game (§14). |
+| Math-Adventure | EdTech | Unity 2D, Addressables, IAP | live | confirm | Deck: client project; the Falkana Studio educational game. |
 | Explore Math | EdTech | Unity 2D, drag and drop | live | confirm | Deck: freelance. |
 | Chem | EdTech | Unity 2D | live | confirm | Deck: freelance. |
 | Simple Mini Quiz Game | EdTech, quiz | Construct 2, JSON | live | confirm | Deck only. |
@@ -343,9 +343,9 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 **Client work without a public build** (experience only, not in the inventory):
 
 - Coding Collective: a 3D interactive web project and a 2D hot-pot game for B2B clients (2023)
-- Falkana Studio: a 2D educational game for a learning-course client (2021 to 2022), unless it is one of the rows above (§14)
+- Falkana Studio: Math-Adventure, a 2D educational game for a learning-course client (2021 to 2022)
 - Shireishi Production: fast prototypes for B2B services (2023 to 2024)
-- UMA 2 character customization proof of concept (Upwork, dates TODO(owner))
+- UMA 2 character customization proof of concept (Upwork, ongoing)
 - Scratch coding tutoring for elementary students (Edufic, 2025)
 
 ---
@@ -395,11 +395,11 @@ type Project = {
 ## 14. Open questions for the owner
 
 1. **Name spelling.** The resume header says "Dzaki Adani," the deck says "Muhammad Dzaki Adani," and the resume email is dzaky.adani@gmail.com. Which spelling goes on the site? The email stays as written.
-2. **Contact and location.** Use dzaky.adani@gmail.com as the public email? Send the LinkedIn and Upwork URLs, since they aren't in the PDF text. Show "Surabaya, Indonesia" on the site?
+2. **Contact and location.** Use dzaky.adani@gmail.com as the public email? Show "Surabaya, Indonesia" on the site? (LinkedIn and Upwork are wired.)
 3. **Hero line.** Option A, option B, or your own?
 4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, GIZ, Senalapan, PT Kuark, or any VR work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
 5. **Client names.** May the site name Kuark, Senalapan, GIZ, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
-6. **Math-Adventure.** Is it the Falkana educational game, or is that Explore Math or Chem?
-7. **Links.** Send the URLs for the "resume link" rows. Still missing: FlappyRabbit, G-Escape, and Love Wars. Confirm that the Memories and Far From Shore links still work.
-8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? For FTIf 2017, use "finalist" or "top 20"? What dates did the Upwork freelance work run?
-9. **Language.** English only, or add Bahasa Indonesia?
+6. **Math-Adventure.** Resolved: Math-Adventure is the Falkana Studio game.
+7. **Links.** The deck supplied the missing URLs. A check in October 2026 found these Google Play listings gone: FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories. Keep the links, or strip them until the apps are back?
+8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? Resolved: FTIf 2017 is "top 20"; the Upwork freelance work is ongoing.
+9. **Language.** Resolved: English only.
