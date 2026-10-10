@@ -1,7 +1,16 @@
 # DESIGN.md: Muhammad Dzaki Adani portfolio
 
-Status: draft v0.1 for owner review.
+Status: draft v0.2, content updated from Resume.pdf.
 Read this before writing any UI. Treat the tokens and rules here as fixed until the owner changes them.
+
+Changes from v0.1 (content only):
+
+- §1 rebuilt from the resume: dated experience, education, tools, and updated recognition. It now includes game design work, not only programming.
+- §10 About intro and "What I take on" updated.
+- §11 inventory: added Goddess Summoner and the Zepeto game. Memories role corrected to rework and maintenance, status set to live. Little Muslim Heroes set to wip. Petal Pals corrected to Script Smelter Studio's IP. A Notes column shows where each row came from.
+- §14 open questions updated.
+
+Layout, color, type, motion, media, quality, Svelte notes, and the avoid list are unchanged from v0.1.
 
 ---
 
@@ -9,13 +18,19 @@ Read this before writing any UI. Treat the tokens and rules here as fixed until 
 
 ### Who he is
 
-Muhammad Dzaki Adani is a Unity game developer. Most of his work falls into three areas:
+Muhammad Dzaki Adani, shown as Dzaki Adani, is a Unity game developer based in Surabaya, Indonesia. He has been building games since 2020, starting as a Unity intern and later working as a game programmer at studios and as a freelancer. Whether the location appears on the site is an open question (§14).
 
-- **EdTech games.** Educational 2D games for schools, publishers, and training teams (Unity 2D).
-- **AR and VR.** Markerless and marker-based AR, plus VR training (Unity AR Foundation, Vuforia, Unity VR).
-- **WebGL.** Games that play in the browser.
+### What he works on
 
-He also has casual and hypercasual mobile games (AdMob, in-app purchases), a visual novel, a Unity and Mapbox 360 tour linked to maps, and a game jam pitch nominee. On client work he is usually the programmer: scenario code, asset integration, scene mapping, marker setup, and gameplay flow, built to the client's brief.
+- Educational games in Unity 2D, Construct, and Phaser (resume)
+- Browser and WebGL builds, with Unity WebGL optimization (resume)
+- Multiplayer games with Photon Fusion, including a Zepeto game (resume)
+- Casual and hypercasual mobile games with AdMob, Unity Ads, and in-app purchases (resume and deck)
+- Game mechanics, game flow, and UI/UX design, not only code (resume)
+- Backend integration with REST APIs (resume)
+- AR with Unity AR Foundation, ARCore, and Vuforia, VR training, and 360 tours with Mapbox (deck only, not on the resume; see §14)
+
+On client work he is often the programmer, but the resume shows he also designs mechanics, game flow, and features such as gacha and evolution systems.
 
 ### Who visits
 
@@ -27,15 +42,37 @@ He also has casual and hypercasual mobile games (AdMob, in-app purchases), a vis
 
 Show that he has shipped working Unity builds in these areas. A visitor should be able to play one within two clicks.
 
+### Experience (from the resume, newest first)
+
+- **Freelance Web Game Developer, Edufic.** Sept 2025 to present, Surabaya. Developing Little Muslim Heroes, a gamified web platform about the journey of the Prophet Muhammad. Part-time coding tutor for elementary students using Scratch.
+- **Freelance Game Developer, Upwork and others.** Dates: TODO(owner). Far From Shore, from proof of concept to demo. Mining mini-game for the idle game Goddess Summoner: Katsi Idle. Proof of concept for 3D character customization with UMA 2.
+- **Unity Programmer, Script Smelter Studio.** Apr 2025 to Sept 2025, remote. Petal Pals, a desktop companion monster-collection game, the studio's own IP. Feature updates and bug fixes during playtests. Helped design features such as gacha and evolution.
+- **Game Programmer, Shireishi Production.** Nov 2023 to Apr 2024, Malang. Fast prototypes for the studio's B2B services. Several game genres in Unity. Worked with game designers and artists.
+- **Game Programmer, Agate International.** June 2022 to Nov 2023, Bandung. Researched Photon Fusion and wrote internal documentation. Reworked and maintained Memories: My Story My Choices with Majamojo, including the UI rework with the UI/UX designer and bug fixes from QC reports. Built a multiplayer 3D game for Zepeto in Unity using TypeScript.
+- **Game Developer (freelance), Coding Collective.** Sept 2023 to Oct 2023, remote. A 3D interactive web project and a 2D interactive hot-pot game for B2B clients.
+- **Game Developer, Falkana Studio.** Aug 2021 to July 2022, Surabaya. A 2D interactive educational game for learning-course clients. Designed mechanics, game flow, and UI/UX. Integrated REST APIs into Unity.
+- **Unity Developer Intern, TicTech Studio.** Jan 2020 to Feb 2020, Surabaya. Interactive AR app, game-world layout in Unity, a B2B AR/VR app, and a social media filter.
+
+### Education
+
+B.Sc. in Applied Computer Science (S.Tr.Kom.), Politeknik Elektronika Negeri Surabaya (PENS), 2016 to 2021.
+
+### Tools (resume)
+
+- Languages: C#, JavaScript, TypeScript, Dart, Python, HTML5
+- Engines and frameworks: Unity, Phaser, Construct, Three.js
+- Services: Photon Fusion, AdMob, Unity Ads, Firebase, ARCore, AR Foundation
+- Data and tools: Git, PostgreSQL, SQLite, Notion, Jira, Figma
+- Other: Unity WebGL optimization, Unity DOTS, ScriptableObject data structures
+
 ### Recognition to surface
 
-- GameJamPlus Indonesia 23/24: Best Pitch nominee (Purring Post & Delivery)
-- Masterclass for Game Developers: Game Design, Ministry of Tourism and Creative Economy (August 2020)
-- Sepay Games funded by PKMV, the vocational student entrepreneurship program (September 2020)
+- GameJam+ Indonesia 23/24 (resume: 2023): Best Pitch nominee, for Purring Post & Delivery
+- Chief of Tabletop Community (resume; details TODO(owner))
 - MAGE 2017: finalist, student Game Dev Competition
-- FTIf GameDeff 2017: top 20
-- Gameloft Indonesia workshop: Producership and Project Management in Game Companies (October 2016)
-- Trainer at Agate Academy (listed as Jr. Game Programmer)
+- FTIf GameDeff 2017: the resume says "finalist," the certificate says top 20 (§14)
+- Penerima Pendanaan Program Kewirausahaan Mahasiswa Vokasi (PKMV) 2020, for Sepay Games (resume and certificate)
+- Deck only, not on the resume: Masterclass for Game Developers: Game Design, Ministry of Tourism and Creative Economy (Aug 2020); Gameloft Indonesia workshop on producership and project management (Oct 2016); trainer at Agate Academy (§14)
 
 ---
 
@@ -170,7 +207,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: 9:16 frames in a two-up grid on desktop and one column on mobile. WebGL projects keep the game's native aspect ratio, so landscape games are not forced into 9:16. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
-**About.** One serif intro paragraph. Then experience (company, role, years), a "What I take on" list, and the recognition list in reverse date order. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
+**About.** One serif intro paragraph. Then experience (company, role, dates), a "What I take on" list, education, and the recognition list in reverse date order. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn if he wants them. The footer repeats the email.
 
@@ -227,7 +264,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 ## 10. Copy
 
-**Voice:** plain, first person, specific. Use the work's own vocabulary: scenario code, asset integration, scene mapping, marker setup, gameplay flow.
+**Voice:** plain, first person, specific. Use the work's own vocabulary: scenario code, asset integration, scene mapping, marker setup, gameplay flow, mechanics.
 
 **Avoid:** "passionate," "innovative," "immersive," "cutting-edge," "seamless," "unlock," and any sentence that could appear on a stranger's portfolio.
 
@@ -242,15 +279,18 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 **Support line:** "Shipped apps, client builds, and game jam projects. Each one links to a build or a preview where the client allows it."
 
-**About intro (draft):** "I'm a Unity developer. Most of my work is educational games, AR, and VR training. On client projects I usually write the scenario and gameplay code, bring in assets, map scenes, and set up AR markers, working from the client's brief to a build."
+**About intro (draft v0.2):** "I'm a Unity developer, and I've been building games since 2020. Most of my work is educational games, browser builds, and multiplayer, for studios, clients, and my own projects. On client projects I write the gameplay and scenario code, and I design mechanics and game flow when a brief needs it."
 
-**What I take on (draft, confirm before publishing):**
+**What I take on (draft v0.2, confirm before publishing):**
 
-- Educational games in Unity 2D and WebGL
-- Markerless and marker-based AR (Unity AR Foundation, Vuforia)
-- VR training scenarios
-- 360 tours linked to maps (Unity with Mapbox)
-- Casual and hypercasual mobile games with ads and in-app purchases
+- Educational games in Unity 2D, Construct, and Phaser, including browser builds
+- WebGL builds with Unity WebGL optimization, playable in a browser
+- Multiplayer games with Photon Fusion
+- Casual and hypercasual mobile games with AdMob, Unity Ads, and in-app purchases
+- Mechanics, game flow, and UI/UX design, plus the gameplay code
+- REST API integration into Unity
+- AR apps with Unity AR Foundation, ARCore, and Vuforia (deck only; confirm)
+- VR training and 360 tours with Mapbox (deck only; confirm)
 
 ---
 
@@ -265,43 +305,48 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
-**Featured on home:** AR Magazine (AR), Math-Adventure (EdTech), and Far From Shore (WebGL). Together they cover the three focus areas with the strongest proof available.
+**Featured on home:** AR Magazine (AR), Math-Adventure (EdTech), and Far From Shore (WebGL). Together they cover the three focus areas. Double-check Math-Adventure, because it may be the Falkana game (§14).
 
-**Inventory.** Projects whose link is marked "confirm" were shown in the deck as "Access here" hyperlinks. The URLs were not readable, so please send them.
+**Inventory.** The Notes column shows the source of each row. "Deck only" means the resume doesn't mention it, so the owner should confirm it. Rows marked "confirm" in the Link column were shown as "Access here" hyperlinks in the deck, and the URLs were not readable. Rows marked "resume link" have a link on the resume, but the URL was not readable either.
 
-| Project | Area | Tech | Status | Link |
-|---|---|---|---|---|
-| AR Magazine (Klikuark!) | AR, education | Unity, Vuforia | live | Google Play, App Store, bit.ly/Klikuark |
-| SENALAPAN Mold Cleaner Instructions | AR, industrial training | Unity, markerless AR | live | bit.ly/2NJUJzi |
-| AR Name Card | AR | Unity, AR marker | live | bit.ly/AR_NameCard |
-| 3D House AR Showcase | AR, property | Unity AR Foundation | live | bit.ly/3fDQ7EW |
-| 3D AR COVID-19 Education | AR, education | Unity AR Foundation | live | bit.ly/3f8WVM1 |
-| 3D AR Tarpaulin Pond, Lobster Cultivation | AR | Unity AR Foundation | live | bit.ly/3bIQEEA |
-| GIZ Solar Panel VR | VR training | Unity VR | preview | bit.ly/37xRt0L |
-| Petro 360 Tour | 360 tour, maps | Unity, Mapbox, REST API | restricted | none |
-| Math-Adventure | EdTech | Unity 2D, Addressables, IAP | live | confirm |
-| Explore Math | EdTech | Unity 2D, drag and drop | live | confirm |
-| Chem | EdTech | Unity 2D | live | confirm |
-| Simple Mini Quiz Game | EdTech, quiz | Construct 2, JSON | live | confirm |
-| Guess Color Quiz | EdTech, trivia | Unity 2D, AdMob | live | confirm |
-| Wonder Word | EdTech, word game | Unity 2D, AdMob | live | confirm |
-| Forestdom | Trivia | Unity 2D, AdMob | live | confirm |
-| Memories | Visual novel | Unity 2D, API integration | confirm | confirm |
-| Far From Shore | Narrative survival | Unity, WebGL | demo | confirm |
-| Little Muslim Heroes, Edufic | Islamic EdTech | Unity WebGL | tba | none |
-| Purring Post & Delivery | Management, narrative | Unity 2D | wip | none |
-| Petal Pals | Desktop companion | Unity 2D | tba | none |
-| Juggler (Endless 3D) | Casual 3D | Unity 3D | live | confirm |
-| Buto Beat | Music shooter | Unity 2D | live | confirm |
-| Paradixe City | Local co-op shooter | Construct 2 | live | confirm |
-| FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | confirm | confirm |
-| G-Escape | Action shooter, client work | Unity 2D, IAP | confirm | confirm |
-| Love Wars | Tabletop card game | Not digital | rulebook link | confirm |
+| Project | Area | Tech | Status | Link | Notes |
+|---|---|---|---|---|---|
+| AR Magazine (Klikuark!) | AR, education | Unity, Vuforia | live | Google Play, App Store, bit.ly/Klikuark | Deck only. Built with TICTECH Studio for PT Kuark International. |
+| SENALAPAN Mold Cleaner Instructions | AR, industrial training | Unity, markerless AR | live | bit.ly/2NJUJzi | Deck only. For PT Senalapan Perkasa. |
+| AR Name Card | AR | Unity, AR marker | live | bit.ly/AR_NameCard | Deck only. |
+| 3D House AR Showcase | AR, property | Unity AR Foundation | live | bit.ly/3fDQ7EW | Deck only. Test project for PT Bersama Kreatif Teknologi. |
+| 3D AR COVID-19 Education | AR, education | Unity AR Foundation | live | bit.ly/3f8WVM1 | Deck only. Same employer as above. |
+| 3D AR Tarpaulin Pond, Lobster Cultivation | AR | Unity AR Foundation | live | bit.ly/3bIQEEA | Deck only. Same employer as above. |
+| GIZ Solar Panel VR | VR training | Unity VR | preview | bit.ly/37xRt0L | Deck only. Client work. |
+| Petro 360 Tour | 360 tour, maps | Unity, Mapbox, REST API | restricted | none | Deck only. Client work. |
+| Math-Adventure | EdTech | Unity 2D, Addressables, IAP | live | confirm | Deck: client project. May be the Falkana game (§14). |
+| Explore Math | EdTech | Unity 2D, drag and drop | live | confirm | Deck: freelance. |
+| Chem | EdTech | Unity 2D | live | confirm | Deck: freelance. |
+| Simple Mini Quiz Game | EdTech, quiz | Construct 2, JSON | live | confirm | Deck only. |
+| Guess Color Quiz | EdTech, trivia | Unity 2D, AdMob | live | confirm | Deck only. |
+| Wonder Word | EdTech, word game | Unity 2D, AdMob | live | confirm | Deck only. |
+| Forestdom | Trivia | Unity 2D, AdMob | live | confirm | Deck only. |
+| Memories: My Story My Choices | Visual novel | Unity 2D, API integration | live | resume link | Resume: Agate International, 2022 to 2023. Reworked UI with the UI/UX designer and maintained the game for Majamojo. Status set to live based on maintenance; verify. |
+| Far From Shore | Narrative survival | Unity, WebGL | demo | resume link | Resume: freelance, from proof of concept to demo. |
+| Little Muslim Heroes, Edufic | Islamic EdTech | Unity WebGL | wip | resume link | Resume: Edufic, Sept 2025 to present, web platform. Status changed from tba. |
+| Purring Post & Delivery | Management, narrative | Unity 2D | wip | resume link | GameJam+ Best Pitch nominee (2023). Deck: in progress. |
+| Petal Pals | Desktop companion, monster collection | Unity 2D | wip | resume link | Resume: Script Smelter Studio's IP, not freelance. In playtests. Deck said TBA. |
+| Goddess Summoner: Katsi Idle, mining mini-game | Idle game mini-game | TODO(owner) | confirm | resume link | Resume: designed and built the mini-game, Upwork freelance. Added from resume. |
+| Zepeto multiplayer 3D game | Multiplayer | Unity, TypeScript | confirm | resume link | Resume: Agate International, 2022 to 2023. Added from resume. |
+| Juggler (Endless 3D) | Casual 3D | Unity 3D | live | confirm | Deck only. |
+| Buto Beat | Music shooter | Unity 2D | live | confirm | Deck only. |
+| Paradixe City | Local co-op shooter | Construct 2 | live | confirm | Deck only. MAGE 2017 finalist. |
+| FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | confirm | confirm | Deck only. Still unconfirmed. |
+| G-Escape | Action shooter, client work | Unity 2D, IAP | confirm | confirm | Deck only. Still unconfirmed. |
+| Love Wars | Tabletop card game | Not digital | rulebook link | confirm | Deck only. Resume lists Chief of Tabletop Community. |
 
-Notes:
+**Client work without a public build** (experience only, not in the inventory):
 
-- Memories lists "Muhammad Dzaki Adani" under Game Programmer in its credits.
-- Love Wars is not digital. Show it in a short "Other" line on About, not in the filters.
+- Coding Collective: a 3D interactive web project and a 2D hot-pot game for B2B clients (2023)
+- Falkana Studio: a 2D educational game for a learning-course client (2021 to 2022), unless it is one of the rows above (§14)
+- Shireishi Production: fast prototypes for B2B services (2023 to 2024)
+- UMA 2 character customization proof of concept (Upwork, dates TODO(owner))
+- Scratch coding tutoring for elementary students (Edufic, 2025)
 
 ---
 
@@ -349,9 +394,12 @@ type Project = {
 
 ## 14. Open questions for the owner
 
-1. **Name on the site.** "Dzaki Adani" in the nav and hero, and "Muhammad Dzaki Adani" on About? Or the full name everywhere?
-2. **Hero line.** Option A, option B, or your own?
-3. **Client names and restrictions.** May I name Kuark, Senalapan, GIZ, and Petrokimia publicly? Are Petro 360 and GIZ Solar Panel VR restricted, and is the GIZ preview cleared?
-4. **Links.** Send the URLs behind the "Access here" links, and confirm the bit.ly links still work.
-5. **Contact and language.** Which email, Upwork profile, and LinkedIn go on the site? Do you want your city shown? English only, or add Bahasa Indonesia?
-6. **Certificates.** List as text (proposed) or show the certificate images?
+1. **Name spelling.** The resume header says "Dzaki Adani," the deck says "Muhammad Dzaki Adani," and the resume email is dzaky.adani@gmail.com. Which spelling goes on the site? The email stays as written.
+2. **Contact and location.** Use dzaky.adani@gmail.com as the public email? Send the LinkedIn and Upwork URLs, since they aren't in the PDF text. Show "Surabaya, Indonesia" on the site?
+3. **Hero line.** Option A, option B, or your own?
+4. **Work missing from the resume.** The resume doesn't list PT Bersama Kreatif Teknologi, Petrokimia, GIZ, Senalapan, PT Kuark, or any VR or 360-tour work. Did that come from TicTech freelance work after the 2020 internship, or from another employer? Send dates and I'll add the entries. Until then they stay marked "deck only."
+5. **Client names.** May the site name Kuark, Senalapan, GIZ, Petrokimia, Majamojo, Falkana, Coding Collective, Script Smelter, and TicTech? Which projects are restricted?
+6. **Math-Adventure.** Is it the Falkana educational game, or is that Explore Math or Chem?
+7. **Links.** Send the URLs for the "resume link" rows. Still missing: FlappyRabbit, G-Escape, and Love Wars. Confirm that the Memories and Far From Shore links still work.
+8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? For FTIf 2017, use "finalist" or "top 20"? What dates did the Upwork freelance work run?
+9. **Language.** English only, or add Bahasa Indonesia?
