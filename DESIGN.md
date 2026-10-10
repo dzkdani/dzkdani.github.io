@@ -166,14 +166,14 @@ Rules:
 **Work index, desktop**
 
 ```
-Work       All   EdTech   AR   VR   WebGL   Games
------------------------------------------------------------
-[thumb]    AR Magazine (Klikuark!)                AR      Live
-           AR lessons for a comic magazine
-[thumb]    Math-Adventure                         EdTech  Live
-           Map-based learning game with addressable content
-[thumb]    Far From Shore                         WebGL   Demo
-           Narrative survival game, plays in browser
+Work     All   EdTech   AR   VR   WebGL   Games
+--------------------------------------------------------
++------------+  +------------+  +------------+
+|  16:10     |  |  16:10     |  |  16:10     |
+|  cover     |  |  cover     |  |  cover     |
++------------+  +------------+  +------------+
+AR Magazine     Math-Adventure  Far From Shore
+AR      Live    EdTech  Live    WebGL   Demo
 ```
 
 **Project page, desktop**
@@ -204,7 +204,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). The featured frame sits on the right and crosses the curve from 960px up. Below 960px, it sits under the text.
 
-**Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are rows, not cards: a 72px-wide thumbnail, the title as h3, one sentence of summary, area and tech as plain text, and status as text. Rows are separated by 1px lines. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
+**Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
 **Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
@@ -222,7 +222,7 @@ Motion appears in three places only.
 
 1. **Load moment (once).** The hero band fades in over 600ms. The name rises 16px and fades in over 420ms, starting at 120ms. The featured frame rises 40px and fades in over 900ms, starting at 240ms. Use `--ease-out` and CSS keyframes with `animation-fill-mode: both`. Svelte's `in:` transitions do not run on first render by default, so keyframes are simpler here.
 2. **User-triggered UI (Svelte transitions).** Filter results fade over 180ms. The demo player opens with a height and opacity transition over 420ms. Nothing else animates on click.
-3. **Hover, work rows only.** The thumbnail moves 6px right. The title gets a magenta underline that draws left to right over 180ms.
+3. **Hover, work cards.** The title gets a magenta underline that draws left to right over 180ms. Cover images stay still.
 
 Not allowed: fade-up on every section, scroll-triggered reveals, parallax, hover lifts on every card, and looping background motion.
 
@@ -383,7 +383,7 @@ type Project = {
 - Cream background with a serif display face and terracotta accent. A common AI-design look.
 - Near-black with cold neon accents (acid green, electric cyan). The black here stays plum and pink.
 - A stats row with big numbers and small labels. Nothing here is a number-first story.
-- A card grid with identical rounded corners and soft shadows.
+- Soft shadows and hover lifts on cards. The work grid uses the site's flat frames and type instead of generic card chrome.
 - Numbered markers (01, 02, 03). Nothing on the site is a sequence.
 - Tracked all-caps eyebrows above headings.
 - Gradient blobs and glow.

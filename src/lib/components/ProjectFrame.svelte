@@ -7,14 +7,22 @@
 		title?: string;
 		area?: string;
 		aspect?: string;
+		/** Forces one ratio for grids that crop, like the work cards; without it, media keeps its native aspect. */
+		frameRatio?: string;
 	};
 
-	let { media = null, title = '', area = '', aspect = '9 / 16' }: Props = $props();
+	let {
+		media = null,
+		title = '',
+		area = '',
+		aspect = '9 / 16',
+		frameRatio = ''
+	}: Props = $props();
 
 	const hasMedia = $derived(media !== null && media.kind !== 'webgl');
 
 	// Media renders at its native aspect ratio; the aspect prop is the placeholder fallback.
-	const ratio = $derived(media && media.aspect ? String(media.aspect) : aspect);
+	const ratio = $derived(frameRatio || (media && media.aspect ? String(media.aspect) : aspect));
 
 	// asset() is typed against the files that exist in static/ today; media paths arrive as data strings.
 	const url = (path: string) => asset(path as Parameters<typeof asset>[0]);

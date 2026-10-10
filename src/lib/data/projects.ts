@@ -434,7 +434,7 @@ export function projectBySlug(slug: string): Project | undefined {
 
 export const slugs: string[] = allProjects.map((project) => project.slug);
 
-// The still used by the hero frame and the work-index thumbnails:
+// The still used by the hero frame and the work cards:
 // the first image, or a video's poster when there is no image.
 export function projectStill(project: Project): Media | null {
 	const image = project.media.find((item) => item.kind === 'image');

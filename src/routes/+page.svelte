@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import WorkCard from '#lib/components/WorkCard.svelte';
 	import { featuredProjects, projectStill, type Project } from '#lib/data/projects.ts';
 
 	const areaLabels: Record<Project['area'], string> = {
@@ -9,15 +10,6 @@
 		webgl: 'WebGL',
 		game: 'Games',
 		other: 'Other'
-	};
-
-	const statusLabels: Record<Project['status'], string> = {
-		live: 'Live',
-		demo: 'Demo',
-		preview: 'Preview',
-		restricted: 'Restricted',
-		wip: 'In progress',
-		tba: 'In development'
 	};
 
 	const heroFrame = featuredProjects[0];
@@ -60,16 +52,9 @@
 <section class="featured">
 	<div class="inner">
 		<h2>Featured work</h2>
-		<ul class="rows">
+		<ul class="cards">
 			{#each featuredProjects as project (project.slug)}
-				<li>
-					<h3>{project.title}</h3>
-					<p class="meta">
-						<span>{areaLabels[project.area]}</span>
-						<span>{statusLabels[project.status]}</span>
-					</p>
-					<p class="summary">{project.summary}</p>
-				</li>
+				<li><WorkCard {project} /></li>
 			{/each}
 		</ul>
 	</div>
@@ -170,34 +155,13 @@
 		margin-bottom: var(--gutter);
 	}
 
-	.rows {
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+		gap: var(--gutter);
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	}
-
-	.rows li {
-		border-top: 1px solid var(--divider);
-		padding: var(--gutter) 0;
-	}
-
-	.rows h3 {
-		font-size: var(--text-h3);
-		font-weight: 600;
-	}
-
-	.meta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--gutter);
-		margin-top: 6px;
-		font-size: var(--text-caption);
-		color: var(--muted);
-	}
-
-	.summary {
-		margin-top: 8px;
-		max-width: 68ch;
 	}
 
 	@media (min-width: 960px) {

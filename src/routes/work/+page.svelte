@@ -3,8 +3,8 @@
 	import { page } from '$app/state';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { fade } from 'svelte/transition';
-	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
-	import { allProjects, projectStill, type Project } from '#lib/data/projects.ts';
+	import WorkCard from '#lib/components/WorkCard.svelte';
+	import { allProjects, type Project } from '#lib/data/projects.ts';
 
 	type Filter = { label: string; value: Project['area'] | null };
 
@@ -16,24 +16,6 @@
 		{ label: 'WebGL', value: 'webgl' },
 		{ label: 'Games', value: 'game' }
 	];
-
-	const areaLabels: Record<Project['area'], string> = {
-		edtech: 'EdTech',
-		ar: 'AR',
-		vr: 'VR',
-		webgl: 'WebGL',
-		game: 'Games',
-		other: 'Other'
-	};
-
-	const statusLabels: Record<Project['status'], string> = {
-		live: 'Live',
-		demo: 'Demo',
-		preview: 'Preview',
-		restricted: 'Restricted',
-		wip: 'In progress',
-		tba: 'In development'
-	};
 
 	function parseFilter(value: string | null): Project['area'] | null {
 		return filters.find((filter) => filter.value !== null && filter.value === value)?.value ?? null;
@@ -78,29 +60,10 @@
 			</div>
 		</div>
 
-		<ul class="rows">
+		<ul class="cards">
 			{#each visible as project (project.slug)}
 				<li in:fade={fadeOptions}>
-					<div class="thumb">
-						<ProjectFrame media={projectStill(project)} />
-					</div>
-					<div class="body">
-						<h3>
-							{#if project.status === 'restricted'}
-								{project.title}
-							{:else}
-								<a href={`/work/${project.slug}/`}>{project.title}</a>
-							{/if}
-						</h3>
-						<p class="summary">{project.summary}</p>
-					</div>
-					<p class="meta">
-						<span>{areaLabels[project.area]}</span>
-						{#if project.tech.length > 0}
-							<span>{project.tech.join(', ')}</span>
-						{/if}
-						<span>{statusLabels[project.status]}</span>
-					</p>
+					<WorkCard {project} />
 				</li>
 			{/each}
 		</ul>
@@ -155,31 +118,13 @@
 		border-bottom-color: var(--magenta);
 	}
 
-	.rows {
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+		gap: var(--gutter);
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	}
-
-	.rows li {
-		display: grid;
-		grid-template-columns: 72px minmax(0, 1fr);
-		grid-template-areas:
-			'thumb body'
-			'thumb meta';
-		gap: var(--gutter);
-		align-items: start;
-		padding: var(--gutter) 0;
-		border-top: 1px solid var(--divider);
-	}
-
-	.thumb {
-		grid-area: thumb;
-		width: 72px;
-	}
-
-	.body {
-		grid-area: body;
 	}
 
 	.visually-hidden {
@@ -194,58 +139,5 @@
 		border: 0;
 	}
 
-	.rows h3 {
-		font-size: var(--text-h3);
-		font-weight: 600;
-		width: fit-content;
-	}
 
-	.rows h3 a {
-		color: var(--paper);
-		text-decoration: none;
-	}
-
-	.summary {
-		margin-top: 6px;
-		max-width: 68ch;
-	}
-
-	.meta {
-		grid-area: meta;
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--gutter);
-		align-self: start;
-		font-size: var(--text-caption);
-		color: var(--muted);
-	}
-
-	@media (min-width: 960px) {
-		.rows li {
-			grid-template-columns: 72px minmax(0, 1fr) max-content;
-			grid-template-areas: 'thumb body meta';
-		}
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.thumb {
-			transition: transform var(--dur-quick) var(--ease-out);
-		}
-
-		.rows h3 {
-			background-image: linear-gradient(var(--magenta), var(--magenta));
-			background-repeat: no-repeat;
-			background-position: 0 100%;
-			background-size: 0% 2px;
-			transition: background-size var(--dur-quick) var(--ease-out);
-		}
-
-		.rows li:hover .thumb {
-			transform: translateX(6px);
-		}
-
-		.rows li:hover h3 {
-			background-size: 100% 2px;
-		}
-	}
 </style>
