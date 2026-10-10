@@ -8,7 +8,7 @@ Personal portfolio for Muhammad Dzaki Adani, a Unity game developer. Static site
 
 ## Sources of truth
 
-- `DESIGN.md`: visual system, layout, motion, media, copy voice. Owner-reviewed (v0.1). Do not edit it without asking.
+- `DESIGN.md`: visual system, layout, motion, media, copy voice. Owner-reviewed (v0.2). Do not edit it without asking.
 - `AGENTS.md` (this file): process, structure, code rules.
 - `src/lib/data/projects.ts` and `src/lib/data/about.ts`: all content. Components contain no project facts.
 

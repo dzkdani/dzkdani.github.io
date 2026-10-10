@@ -1,6 +1,6 @@
-// Every project from the DESIGN.md §11 inventory.
+// Every project from the DESIGN.md §11 inventory (v0.2).
 // Facts come only from DESIGN §1 and §11; missing facts are marked TODO(owner):.
-// Rows whose inventory status reads "confirm" have no valid status value; 'tba' stands in until the owner confirms.
+// Rows with no valid status value in the inventory use 'tba' as a placeholder until the owner confirms.
 
 export type Project = {
 	slug: string;
@@ -186,12 +186,12 @@ export const allProjects: Project[] = [
 	},
 	{
 		slug: 'memories',
-		title: 'Memories',
+		title: 'Memories: My Story My Choices',
 		area: 'game',
 		tech: ['Unity 2D', 'API integration'],
-		status: 'tba', // TODO(owner): status
-		summary: 'A visual novel built in Unity 2D with API integration.',
-		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
+		status: 'live',
+		summary: 'A visual novel kept up to date with a UI rework and bug fixes from QC reports.',
+		role: ['Reworked and maintained the game', 'UI rework with the UI/UX designer', 'Bug fixes from QC reports'],
 		links: [], // TODO(owner): link
 		media: [] // TODO(owner): screenshots
 	},
@@ -212,8 +212,8 @@ export const allProjects: Project[] = [
 		title: 'Little Muslim Heroes, Edufic',
 		area: 'edtech',
 		tech: ['Unity WebGL'],
-		status: 'tba',
-		summary: 'An Islamic educational game built in Unity WebGL.',
+		status: 'wip',
+		summary: 'A gamified web platform about the journey of the Prophet Muhammad, built in Unity WebGL.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [], // TODO(owner): link
 		media: [] // TODO(owner): screenshots
@@ -224,7 +224,7 @@ export const allProjects: Project[] = [
 		area: 'game',
 		tech: ['Unity 2D'],
 		status: 'wip',
-		summary: 'A narrative management game built in Unity 2D, nominated for Best Pitch at GameJamPlus Indonesia 23/24.',
+		summary: 'A narrative management game built in Unity 2D, nominated for Best Pitch at GameJam+ Indonesia 23/24.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [], // TODO(owner): link
 		media: [] // TODO(owner): screenshots
@@ -234,9 +234,31 @@ export const allProjects: Project[] = [
 		title: 'Petal Pals',
 		area: 'game',
 		tech: ['Unity 2D'],
-		status: 'tba',
-		summary: 'A desktop companion built in Unity 2D.',
-		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
+		status: 'wip',
+		summary: 'A desktop companion monster-collection game built in Unity 2D, updated during playtests.',
+		role: ['Feature updates', 'Bug fixes during playtests', 'Feature design, including gacha and evolution'],
+		links: [], // TODO(owner): link
+		media: [] // TODO(owner): screenshots
+	},
+	{
+		slug: 'goddess-summoner-katsi-idle',
+		title: 'Goddess Summoner: Katsi Idle, mining mini-game',
+		area: 'game',
+		tech: [], // TODO(owner): tech
+		status: 'tba', // TODO(owner): status
+		summary: 'A mining mini-game designed and built for the idle game Goddess Summoner: Katsi Idle.',
+		role: ['Designed the mini-game', 'Built the mini-game'],
+		links: [], // TODO(owner): link
+		media: [] // TODO(owner): screenshots
+	},
+	{
+		slug: 'zepeto-multiplayer-3d-game',
+		title: 'Zepeto multiplayer 3D game',
+		area: 'game',
+		tech: ['Unity', 'TypeScript'],
+		status: 'tba', // TODO(owner): status
+		summary: 'A multiplayer 3D game built for Zepeto in Unity and TypeScript.',
+		role: ['Built the multiplayer 3D game', 'Gameplay code in TypeScript'],
 		links: [], // TODO(owner): link
 		media: [] // TODO(owner): screenshots
 	},
