@@ -155,7 +155,7 @@
 		inset: auto 0 0 0;
 		width: 100%;
 		height: 41px;
-		fill: var(--paper);
+		fill: var(--black);
 	}
 
 	.featured {
@@ -177,7 +177,7 @@
 	}
 
 	.rows li {
-		border-top: 1px solid var(--divider-paper);
+		border-top: 1px solid var(--divider);
 		padding: var(--gutter) 0;
 	}
 

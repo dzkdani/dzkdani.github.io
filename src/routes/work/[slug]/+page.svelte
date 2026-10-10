@@ -213,8 +213,8 @@
 	.links a {
 		display: inline-block;
 		padding: 12px 20px;
-		border: 1px solid var(--magenta);
-		color: var(--magenta);
+		border: 1px solid var(--pink);
+		color: var(--pink);
 		font-size: var(--text-small);
 		text-decoration: none;
 	}
@@ -235,9 +235,9 @@
 		align-self: start;
 		margin-top: var(--gutter);
 		padding: 12px 20px;
-		border: 1px solid var(--magenta);
+		border: 1px solid var(--pink);
 		background: none;
-		color: var(--magenta);
+		color: var(--pink);
 		font: inherit;
 		font-size: var(--text-small);
 		cursor: pointer;

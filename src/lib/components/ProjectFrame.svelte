@@ -51,9 +51,9 @@
 	.frame {
 		position: relative;
 		width: 100%;
-		background: var(--paper);
-		color: var(--ink);
-		border: 1px solid var(--divider-paper);
+		background: var(--ink);
+		color: var(--paper);
+		border: 1px solid var(--divider);
 		border-radius: var(--radius-phone);
 		overflow: hidden;
 	}

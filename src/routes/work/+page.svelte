@@ -147,7 +147,7 @@
 		background: none;
 		font: inherit;
 		font-size: var(--text-small);
-		color: var(--ink);
+		color: var(--paper);
 		cursor: pointer;
 	}
 
@@ -170,7 +170,7 @@
 		gap: var(--gutter);
 		align-items: start;
 		padding: var(--gutter) 0;
-		border-top: 1px solid var(--divider-paper);
+		border-top: 1px solid var(--divider);
 	}
 
 	.thumb {
@@ -201,7 +201,7 @@
 	}
 
 	.rows h3 a {
-		color: var(--ink);
+		color: var(--paper);
 		text-decoration: none;
 	}
 

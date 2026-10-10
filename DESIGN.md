@@ -1,16 +1,16 @@
 # DESIGN.md: Muhammad Dzaki Adani portfolio
 
-Status: draft v0.2, content updated from Resume.pdf.
+Status: draft v0.3, dark theme.
 Read this before writing any UI. Treat the tokens and rules here as fixed until the owner changes them.
 
-Changes from v0.1 (content only):
+Changes from v0.2 (dark theme):
 
-- §1 rebuilt from the resume: dated experience, education, tools, and updated recognition. It now includes game design work, not only programming.
-- §10 About intro and "What I take on" updated.
-- §11 inventory: added Goddess Summoner and the Zepeto game. Memories role corrected to rework and maintenance, status set to live. Little Muslim Heroes set to wip. Petal Pals corrected to Script Smelter Studio's IP. A Notes column shows where each row came from.
-- §14 open questions updated.
+- §2 and §3: the page background is pitch black and the palette is re-derived around it. The plum band, pink, and magenta carry over. Dividers are light on dark.
+- Frames keep each image's native aspect ratio; the 9:16-only rule is retired.
+- §9: focus ring is pink on all dark surfaces.
+- §13: the near-black avoid note is reworded.
 
-Layout, color, type, motion, media, quality, Svelte notes, and the avoid list are unchanged from v0.1.
+Everything else is unchanged from v0.2.
 
 ---
 
@@ -78,9 +78,9 @@ B.Sc. in Applied Computer Science (S.Tr.Kom.), Politeknik Elektronika Negeri Sur
 
 ## 2. Concept
 
-**The site should look like the deck he already uses.** The plum band and the magenta tab carry over, so his Upwork profile, his deck, and his site read as one person. Nothing else from the deck template comes along: no glow, no slide chrome.
+**The site should look like the deck he already uses.** The plum band, the black page, and the magenta tab carry over, so his Upwork profile, his deck, and his site read as one person. Nothing else from the deck template comes along: no glow, no slide chrome.
 
-**Most of his work is portrait.** Mobile games and AR on phones dominate. So the unit of display is a 9:16 frame everywhere. The hero is never landscape.
+**A black page.** The page is pitch black; the plum band, the paper text, and the pink-magenta accents carry the light. Most of his work is portrait, so the work is shown in frames, and each frame keeps its image's own aspect ratio.
 
 **One bold move.** The hero band has a shallow curved bottom edge, the same arc as the deck's title band. The featured game frame crosses that edge. Everything else stays quiet. Spend the boldness there and nowhere else.
 
@@ -90,18 +90,19 @@ B.Sc. in Applied Computer Science (S.Tr.Kom.), Politeknik Elektronika Negeri Sur
 
 | Token | Hex | Use | Contrast |
 |---|---|---|---|
+| `--black` | #000000 | Page background | Base for light text |
 | `--night` | #1C1229 | Hero band, footer | Base for light text |
-| `--paper` | #F4F2F7 | Page background | Base for dark text |
-| `--ink` | #15101C | Body text on paper | About 17:1 on paper |
-| `--muted` | #6E6578 | Captions, metadata on paper | 5.0:1 on paper |
-| `--magenta` | #B3175E | Links, active nav tab, focus ring on paper | 5.9:1 on paper |
-| `--pink` | #E8457F | Accents, buttons, focus ring on night | 4.8:1 on night |
+| `--paper` | #F4F2F7 | Text and light elements on dark | About 17:1 on black |
+| `--ink` | #15101C | Raised fills: frames, thumbnails | Paper text sits on it |
+| `--muted` | #9A93A5 | Captions, metadata on dark | About 7:1 on black |
+| `--pink` | #E8457F | Links, active nav tab, focus ring on dark | 5.6:1 on black |
+| `--magenta` | #B3175E | Button fills, bars, underlines on dark | 3.2:1 on black; paper on magenta is 5.9:1 |
 
 Rules:
 
 - No gradients. The deck's radial glow is a slide-template effect and stays in the deck.
-- Magenta fails as text on night. Pink fails as text on paper. Use each only on its own surface.
-- Dividers are 1px. On paper: `rgba(21, 16, 28, 0.12)`. On night: `rgba(244, 242, 247, 0.16)`.
+- Pink is the text accent on dark surfaces. Magenta is never body text: it works as fills, bars, and underlines only, with paper text on a magenta fill.
+- Dividers are 1px. On every dark surface: `rgba(244, 242, 247, 0.16)`.
 
 ---
 
@@ -201,11 +202,11 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Nav.** Wordmark "Dzaki Adani" on the left. Links: Work, About, Contact (Contact jumps to the contact block in the footer). The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
 
-**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). The featured 9:16 frame sits on the right and crosses the curve from 960px up. Below 960px, it sits under the text.
+**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). The featured frame sits on the right and crosses the curve from 960px up. Below 960px, it sits under the text.
 
-**Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are rows, not cards: a 72px-wide 9:16 thumbnail, the title as h3, one sentence of summary, area and tech as plain text, and status as text. Rows are separated by 1px lines. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
+**Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are rows, not cards: a 72px-wide thumbnail, the title as h3, one sentence of summary, area and tech as plain text, and status as text. Rows are separated by 1px lines. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
-**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: 9:16 frames in a two-up grid on desktop and one column on mobile. WebGL projects keep the game's native aspect ratio, so landscape games are not forced into 9:16. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
+**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
 **About.** One serif intro paragraph. Then experience (company, role, dates), a "What I take on" list, education, and the recognition list in reverse date order. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
@@ -240,8 +241,8 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 ## 8. Media
 
-- **Thumbnails:** 9:16, 540×960, WebP or AVIF, under 120KB each.
-- **Detail frames:** 1080×1920 at most, under 300KB each.
+- **Thumbnails:** 540px wide at the source image's ratio, WebP or AVIF, under 120KB each.
+- **Detail frames:** 1080px wide at most, under 300KB each.
 - **AR and gameplay clips:** muted, looping, `playsinline`. H.264 MP4 plus WebM, under 2MB each, with a poster image.
 - **WebGL:** iframe with `loading="lazy"`, created only on click. Keep the native aspect ratio.
 - **Alt text** names the project and what is on screen, for example: "AR Magazine: a comic page with an animated carbon cycle explanation overlaid on a table."
@@ -253,7 +254,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 ## 9. Quality floor
 
 - Text meets WCAG AA: 4.5:1 for normal text, 3:1 for large text.
-- Focus ring: 2px outline, 3px offset. Magenta on paper, pink on night.
+- Focus ring: 2px outline, 3px offset, pink on dark surfaces.
 - One h1 per page: the hero name on home, the project title on project pages. h2 for sections, h3 for project titles.
 - Filters and buttons are real `<button>` elements. Links are real `<a>` elements.
 - All text and images work with JavaScript disabled, because routes are prerendered HTML.
@@ -381,7 +382,7 @@ type Project = {
 ## 13. What I deliberately avoided
 
 - Cream background with a serif display face and terracotta accent. A common AI-design look.
-- Near-black with acid green or vermilion. Same problem.
+- Near-black with cold neon accents (acid green, electric cyan). The black here stays plum and pink.
 - A stats row with big numbers and small labels. Nothing here is a number-first story.
 - A card grid with identical rounded corners and soft shadows.
 - Numbered markers (01, 02, 03). Nothing on the site is a sequence.

@@ -39,7 +39,7 @@
 	}
 
 	.wordmark {
-		color: var(--ink);
+		color: var(--paper);
 		font-size: var(--text-body);
 		font-weight: 600;
 		text-decoration: none;
@@ -55,7 +55,7 @@
 	}
 
 	.links a {
-		color: var(--ink);
+		color: var(--paper);
 		font-size: var(--text-small);
 		text-decoration: none;
 	}

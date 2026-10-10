@@ -2,14 +2,14 @@
 
 :root {
 	/* Color (§3) */
+	--black: #000000;
 	--night: #1C1229;
 	--paper: #F4F2F7;
 	--ink: #15101C;
-	--muted: #6E6578;
+	--muted: #9A93A5;
 	--magenta: #B3175E;
 	--pink: #E8457F;
-	--divider-paper: rgba(21, 16, 28, 0.12);
-	--divider-night: rgba(244, 242, 247, 0.16);
+	--divider: rgba(244, 242, 247, 0.16);
 
 	/* Type (§4) */
 	--font-display: 'Familjen Grotesk', system-ui, 'Segoe UI', sans-serif;
@@ -38,8 +38,8 @@
 	--dur-medium: 420ms;
 	--dur-load: 900ms;
 
-	/* Focus (§9): magenta on paper. Night surfaces set --focus-ring: var(--pink). */
-	--focus-ring: var(--magenta);
+	/* Focus (§9): pink on dark surfaces. */
+	--focus-ring: var(--pink);
 }
 
 @media (max-width: 640px) {
@@ -66,8 +66,8 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	min-height: 100dvh;
-	background: var(--paper);
-	color: var(--ink);
+	background: var(--black);
+	color: var(--paper);
 	font-family: var(--font-display);
 	font-size: var(--text-body);
 	line-height: 1.5;
@@ -93,7 +93,7 @@ video {
 }
 
 a {
-	color: var(--magenta);
+	color: var(--pink);
 }
 
 :focus-visible {
