@@ -8,6 +8,7 @@
 	import favicon from '#lib/assets/favicon.png';
 	import Footer from '#lib/components/Footer.svelte';
 	import Nav from '#lib/components/Nav.svelte';
+	import ScrollProgress from '#lib/components/ScrollProgress.svelte';
 	import type { LayoutProps } from './$types';
 
 	let { children }: LayoutProps = $props();
@@ -19,6 +20,8 @@
 </svelte:head>
 
 <a class="skip-link" href="#main">Skip to content</a>
+
+<ScrollProgress />
 
 <Nav />
 
