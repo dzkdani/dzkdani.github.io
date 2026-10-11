@@ -9,6 +9,8 @@
 		aspect?: string;
 		/** Forces one ratio for grids that crop, like the work cards; without it, media keeps its native aspect. */
 		frameRatio?: string;
+		/** Links the frame to the full-size image file, opened in a new tab. Use where the frame is not inside a link. */
+		openFull?: boolean;
 	};
 
 	let {
@@ -16,7 +18,8 @@
 		title = '',
 		area = '',
 		aspect = '9 / 16',
-		frameRatio = ''
+		frameRatio = '',
+		openFull = false
 	}: Props = $props();
 
 	const hasMedia = $derived(media !== null && media.kind !== 'webgl');
@@ -44,7 +47,13 @@
 			{/if}
 		</video>
 	{:else if media && media.kind === 'image'}
-		<img src={url(media.src)} alt={media.alt} />
+		{#if openFull}
+			<a class="frame-link" href={url(media.src)} target="_blank" rel="noopener">
+				<img src={url(media.src)} alt={media.alt} />
+			</a>
+		{:else}
+			<img src={url(media.src)} alt={media.alt} />
+		{/if}
 	{:else}
 		{#if title}
 			<p class="frame-title">{title}</p>
@@ -90,5 +99,11 @@
 	.frame-area {
 		font-size: var(--text-small);
 		color: var(--muted);
+	}
+
+	.frame-link {
+		position: absolute;
+		inset: 0;
+		display: block;
 	}
 </style>
