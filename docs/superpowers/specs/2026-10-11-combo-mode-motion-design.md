@@ -54,7 +54,7 @@ The existing hero load animation and user-triggered filter/player behavior remai
 ## Verification
 
 - `npm run check` and `npm run build`.
-- Inspect all five routes (home, work, project detail, Play, About, Experience; the Experience route is included despite the six page families).
+- Inspect all six route types: home, work, project detail, Play, About, and Experience.
 - Browser check on all six route types at 360px, 960px, and 1280px: no horizontal overflow; scroll meter tracks page progress; reveal groups appear once; cards and controls respond to pointer and keyboard focus.
 - Emulate reduced motion: all content is immediately visible, no reveal transforms/transitions or moving meter.
 - Disable JavaScript / simulate unavailable `IntersectionObserver`: prerendered page content remains visible.
