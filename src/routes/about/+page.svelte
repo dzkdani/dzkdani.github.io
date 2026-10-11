@@ -28,7 +28,7 @@
 		<ul class="certificates">
 			{#each certificates as item (item.caption)}
 				<li>
-					<ProjectFrame media={item.image} />
+					<ProjectFrame media={item.image} zoomable />
 					<p class="cert-caption">{item.caption}</p>
 				</li>
 			{/each}
