@@ -159,7 +159,7 @@ Rules:
 |  Shipped apps, client builds,                                |
 |  and game jam projects.                                      |
 |                                                              |
-|  [See the work]   [Email me]                                 |
+|  [See my work] [Email] [LinkedIn] [Upwork] [GitHub] [itch.io] |
 +--------------------------------------------------------------+
    Bottom edge of the plum band is a shallow curve.
 ```
@@ -203,7 +203,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Experience. The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
 
-**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). Text only: no media in the hero.
+**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Actions: "See my work" (pink fill, night text), then outlined links to every contact channel: Email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
@@ -215,7 +215,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn, all as icon links in the footer.
 
-**Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, Upwork, GitHub, and itch.io. Nothing else.
+**Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, Upwork, GitHub, and itch.io. Hidden on the home page; the hero carries the contact buttons there.
 
 ---
 
@@ -273,7 +273,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 **Headings:** sentence case.
 
-**Buttons** say what happens: "See the work," "Email me," "Play demo," "Open on Google Play."
+**Buttons** say what happens: "See my work," "Email," "Play demo," "Open on Google Play."
 
 **Hero line (owner, from the resume and deck):** "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
 
@@ -353,7 +353,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 - SvelteKit with `adapter-static`. Prerender every route.
 - Use the repo `username.github.io` so the site sits at the root. If it's a project repo, set `paths.base`.
-- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives in the footer on every page.
+- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives in the footer on every page except home, where the hero carries it.
 - Project data lives in `src/lib/data/projects.ts`, typed as below. Pages read from it. No CMS.
 - Global tokens go in `src/app.css` as `:root` custom properties. Component styles stay scoped. No UI component library.
 - Filter state lives in the URL query string.

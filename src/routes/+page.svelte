@@ -1,5 +1,6 @@
 <script lang="ts">
 	import WorkCard from '#lib/components/WorkCard.svelte';
+	import { email, githubUrl, itchUrl, linkedinUrl, upworkUrl } from '#lib/data/about.ts';
 	import { featuredProjects } from '#lib/data/projects.ts';
 </script>
 
@@ -13,8 +14,12 @@
 				where the client allows it.
 			</p>
 			<div class="actions">
-				<a class="fill" href="/work/">See the work</a>
-				<a class="outline" href="mailto:dzaky.adani@gmail.com">Email me</a>
+				<a class="fill" href="/work/">See my work</a>
+				<a class="outline" href={`mailto:${email}`}>Email</a>
+				<a class="outline" href={linkedinUrl}>LinkedIn</a>
+				<a class="outline" href={upworkUrl}>Upwork</a>
+				<a class="outline" href={githubUrl}>GitHub</a>
+				<a class="outline" href={itchUrl}>itch.io</a>
 			</div>
 		</div>
 	</div>
@@ -87,8 +92,8 @@
 
 	.actions a {
 		display: inline-block;
-		padding: 12px 20px;
-		font-size: var(--text-small);
+		padding: 16px 28px;
+		font-size: var(--text-body);
 		text-decoration: none;
 	}
 
