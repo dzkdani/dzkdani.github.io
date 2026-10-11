@@ -4,10 +4,9 @@
 	type NavLink = { label: string; href: string; section?: string };
 
 	const links: NavLink[] = [
-		{ label: 'Work', href: '/work/', section: '/work/' },
-		{ label: 'Experience', href: '/experience/', section: '/experience/' },
 		{ label: 'About', href: '/about/', section: '/about/' },
-		{ label: 'Contact', href: '#contact' }
+		{ label: 'Work', href: '/work/', section: '/work/' },
+		{ label: 'Experience', href: '/experience/', section: '/experience/' }
 	];
 </script>
 

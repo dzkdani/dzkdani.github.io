@@ -424,7 +424,7 @@ export const allProjects: Project[] = [
 	}
 ];
 
-// The home featured trio, in display order. The first one also fills the hero frame.
+// The home featured trio, in display order.
 const featuredSlugs = ['math-adventure', 'petal-pals', 'ar-magazine'];
 export const featuredProjects: Project[] = featuredSlugs
 	.map((slug) => projectBySlug(slug))
@@ -436,7 +436,7 @@ export function projectBySlug(slug: string): Project | undefined {
 
 export const slugs: string[] = allProjects.map((project) => project.slug);
 
-// The still used by the hero frame and the work cards:
+// The still used by the work cards and the project page covers:
 // the first image, or a video's poster when there is no image.
 export function projectStill(project: Project): Media | null {
 	const image = project.media.find((item) => item.kind === 'image');

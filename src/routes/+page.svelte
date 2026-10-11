@@ -1,19 +1,6 @@
 <script lang="ts">
-	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
 	import WorkCard from '#lib/components/WorkCard.svelte';
-	import { featuredProjects, projectStill, type Project } from '#lib/data/projects.ts';
-
-	const areaLabels: Record<Project['area'], string> = {
-		edtech: 'EdTech',
-		ar: 'AR',
-		vr: 'VR',
-		webgl: 'WebGL',
-		game: 'Games',
-		other: 'Other'
-	};
-
-	const heroFrame = featuredProjects[0];
-	const heroStill = projectStill(heroFrame);
+	import { featuredProjects } from '#lib/data/projects.ts';
 </script>
 
 <section class="hero">
@@ -29,15 +16,6 @@
 				<a class="fill" href="/work/">See the work</a>
 				<a class="outline" href="mailto:dzaky.adani@gmail.com">Email me</a>
 			</div>
-		</div>
-
-		<!-- TODO(owner): screenshots. The featured frame is a neutral placeholder until real media exists (DESIGN §8). -->
-		<div class="hero-frame">
-			<ProjectFrame
-				media={heroStill}
-				title={heroFrame.title}
-				area={areaLabels[heroFrame.area]}
-			/>
 		</div>
 	</div>
 
@@ -124,13 +102,6 @@
 		color: var(--pink);
 	}
 
-	.hero-frame {
-		width: 280px;
-		max-width: 100%;
-		position: relative;
-		z-index: 1;
-	}
-
 	.curve {
 		display: block;
 		position: absolute;
@@ -161,18 +132,6 @@
 		padding: 0;
 	}
 
-	@media (min-width: 960px) {
-		.hero .inner {
-			grid-template-columns: minmax(0, 1fr) auto;
-			gap: clamp(24px, 4vw, 64px);
-		}
-
-		.hero-frame {
-			/* Crosses the curved bottom edge (DESIGN §5 and §6). */
-			margin-bottom: -90px;
-		}
-	}
-
 	@media (prefers-reduced-motion: no-preference) {
 		.hero {
 			animation: hero-band-in 600ms var(--ease-out) both;
@@ -180,10 +139,6 @@
 
 		.hero h1 {
 			animation: hero-name-in var(--dur-medium) var(--ease-out) 120ms both;
-		}
-
-		.hero-frame {
-			animation: frame-in var(--dur-load) var(--ease-out) 240ms both;
 		}
 
 		@keyframes hero-band-in {
@@ -206,15 +161,5 @@
 			}
 		}
 
-		@keyframes frame-in {
-			from {
-				opacity: 0;
-				transform: translateY(40px);
-			}
-			to {
-				opacity: 1;
-				transform: none;
-			}
-		}
 	}
 </style>

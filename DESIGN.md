@@ -82,7 +82,7 @@ B.Sc. in Applied Computer Science (S.Tr.Kom.), Politeknik Elektronika Negeri Sur
 
 **A black page.** The page is pitch black; the plum band, the paper text, and the pink-magenta accents carry the light. Most of his work is portrait, so the work is shown in frames, and each frame keeps its image's own aspect ratio.
 
-**One bold move.** The hero band has a shallow curved bottom edge, the same arc as the deck's title band. The featured game frame crosses that edge. Everything else stays quiet. Spend the boldness there and nowhere else.
+**One bold move.** The hero band has a shallow curved bottom edge, the same arc as the deck's title band. Everything else stays quiet. Spend the boldness there and nowhere else.
 
 ---
 
@@ -148,19 +148,17 @@ Rules:
 
 ```
 +--------------------------------------------------------------+
-| Dzaki Adani                        Work   About   Contact    |
+| Dzaki Adani                        About   Work   Experience |
 |                                                              |
-|  I build educational games,                                  |
-|  AR and WebGL projects in Unity.       +-------------+       |
-|                                        |             |       |
-|  Shipped apps, client builds,          |  featured   |       |
-|  and game jam projects.                |    9:16     |       |
-|                                        |   frame     |       |
-|  [See the work]   [Email me]           |             |       |
-|                                        +-------------+       |
+|  I build educational games, AR and VR apps,                  |
+|  and WebGL builds for studios and freelance clients.         |
+|                                                              |
+|  Shipped apps, client builds,                                |
+|  and game jam projects.                                      |
+|                                                              |
+|  [See the work]   [Email me]                                 |
 +--------------------------------------------------------------+
    Bottom edge of the plum band is a shallow curve.
-   The featured frame's lower part sits over that curve.
 ```
 
 **Work index, desktop**
@@ -200,9 +198,9 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 ## 6. Components
 
-**Nav.** Wordmark "Dzaki Adani" on the left. Links: Work, Experience, About, Contact (Contact jumps to the contact block in the footer). The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. On narrow screens the links wrap under the wordmark, so there is no hamburger.
+**Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Experience. The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
 
-**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). The featured frame sits on the right and crosses the curve from 960px up. Below 960px, it sits under the text.
+**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Two actions: "See the work" (pink fill, night text) and "Email me" (outlined). Text only: no media in the hero.
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
@@ -214,7 +212,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn if he wants them. The footer repeats the email.
 
-**Footer.** `--night` background. Name, year, and links. Nothing else.
+**Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, and Upwork. Nothing else.
 
 ---
 
@@ -222,7 +220,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 Motion appears in three places only.
 
-1. **Load moment (once).** The hero band fades in over 600ms. The name rises 16px and fades in over 420ms, starting at 120ms. The featured frame rises 40px and fades in over 900ms, starting at 240ms. Use `--ease-out` and CSS keyframes with `animation-fill-mode: both`. Svelte's `in:` transitions do not run on first render by default, so keyframes are simpler here.
+1. **Load moment (once).** The hero band fades in over 600ms. The name rises 16px and fades in over 420ms, starting at 120ms. Use `--ease-out` and CSS keyframes with `animation-fill-mode: both`. Svelte's `in:` transitions do not run on first render by default, so keyframes are simpler here.
 2. **User-triggered UI (Svelte transitions).** Filter results fade over 180ms. The demo player opens with a height and opacity transition over 420ms. Nothing else animates on click.
 3. **Hover, work cards.** The title gets a magenta underline that draws left to right over 180ms. Cover images stay still.
 
@@ -249,7 +247,6 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - **WebGL:** iframe with `loading="lazy"`, created only on click. Keep the native aspect ratio.
 - **Alt text** names the project and what is on screen, for example: "AR Magazine: a comic page with an animated carbon cycle explanation overlaid on a table."
 - **Client-restricted projects** get a neutral placeholder frame with the project name and area. No client UI screenshots.
-- **Hero frame:** preload it. It is the largest element on the page.
 
 ---
 
@@ -353,7 +350,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 - SvelteKit with `adapter-static`. Prerender every route.
 - Use the repo `username.github.io` so the site sits at the root. If it's a project repo, set `paths.base`.
-- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives on `/about` and in the footer.
+- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives in the footer on every page, and About repeats the links.
 - Project data lives in `src/lib/data/projects.ts`, typed as below. Pages read from it. No CMS.
 - Global tokens go in `src/app.css` as `:root` custom properties. Component styles stay scoped. No UI component library.
 - Filter state lives in the URL query string.
