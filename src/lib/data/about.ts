@@ -7,26 +7,20 @@ export type Experience = {
 	company: string;
 	role: string;
 	years: string;
+	/** Group heading on the Experience page: the start year, or "Ongoing". */
+	group: string;
 	location?: string;
 	points: string[];
 };
 
-// The 8 roles from the resume (DESIGN §1), newest first.
+// The roles from the resume and deck (DESIGN §1), newest first, grouped by start
+// year for the Experience page ("Ongoing" for continuing freelance work).
 export const experience: Experience[] = [
-	{
-		company: 'Edufic',
-		role: 'Freelance web game developer',
-		years: 'Sept 2025 to present',
-		location: 'Surabaya',
-		points: [
-			'Developing Little Muslim Heroes, a gamified web platform',
-			'Part-time coding tutor for elementary students, using Scratch'
-		]
-	},
 	{
 		company: 'Upwork and others',
 		role: 'Freelance game developer',
 		years: 'Ongoing',
+		group: 'Ongoing',
 		points: [
 			'Far From Shore, from proof of concept to demo',
 			'Mining mini-game for the idle game Goddess Summoner: Katsi Idle',
@@ -36,9 +30,21 @@ export const experience: Experience[] = [
 		]
 	},
 	{
+		company: 'Edufic',
+		role: 'Freelance web game developer',
+		years: 'Sept 2025 to Aug 2026',
+		group: '2025',
+		location: 'Surabaya',
+		points: [
+			'Developing Little Muslim Heroes, a gamified web platform',
+			'Part-time coding tutor for elementary students, using Scratch'
+		]
+	},
+	{
 		company: 'Script Smelter Studio',
 		role: 'Unity programmer',
 		years: 'Apr 2025 to Sept 2025',
+		group: '2025',
 		location: 'remote',
 		points: [
 			"Petal Pals, the studio's own IP",
@@ -50,6 +56,7 @@ export const experience: Experience[] = [
 		company: 'Shireishi Production',
 		role: 'Game programmer',
 		years: 'Nov 2023 to Apr 2024',
+		group: '2023',
 		location: 'Malang',
 		points: [
 			"Fast prototypes for the studio's B2B services",
@@ -58,9 +65,21 @@ export const experience: Experience[] = [
 		]
 	},
 	{
+		company: 'Coding Collective',
+		role: 'Game developer (freelance)',
+		years: 'Sept 2023 to Oct 2023',
+		group: '2023',
+		location: 'remote',
+		points: [
+			'A 3D interactive web project for B2B clients',
+			'A 2D interactive hot-pot game for B2B clients'
+		]
+	},
+	{
 		company: 'Agate International',
 		role: 'Game programmer',
 		years: 'June 2022 to Nov 2023',
+		group: '2022',
 		location: 'Bandung',
 		points: [
 			'Researched Photon Fusion and wrote internal documentation',
@@ -69,19 +88,10 @@ export const experience: Experience[] = [
 		]
 	},
 	{
-		company: 'Coding Collective',
-		role: 'Game developer (freelance)',
-		years: 'Sept 2023 to Oct 2023',
-		location: 'remote',
-		points: [
-			'A 3D interactive web project for B2B clients',
-			'A 2D interactive hot-pot game for B2B clients'
-		]
-	},
-	{
 		company: 'Falkana Studio',
 		role: 'Game developer',
 		years: 'Aug 2021 to July 2022',
+		group: '2021',
 		location: 'Surabaya',
 		points: [
 			'Math-Adventure, a 2D interactive educational game for learning-course clients',
@@ -93,6 +103,7 @@ export const experience: Experience[] = [
 		company: 'TicTech Studio',
 		role: 'Unity developer intern',
 		years: 'Jan 2020 to Feb 2020',
+		group: '2020',
 		location: 'Surabaya',
 		points: [
 			'An interactive AR app, with game-world layout in Unity',
@@ -104,6 +115,7 @@ export const experience: Experience[] = [
 		company: 'PT Solusi Inovasi Mandiri',
 		role: 'Intern',
 		years: 'Jan 2018 (1 month)',
+		group: '2018',
 		points: []
 	}
 ];

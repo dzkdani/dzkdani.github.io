@@ -44,7 +44,7 @@ Show that he has shipped working Unity builds in these areas. A visitor should b
 
 ### Experience (from the resume, newest first)
 
-- **Freelance Web Game Developer, Edufic.** Sept 2025 to present, Surabaya. Developing Little Muslim Heroes, a gamified web platform about the journey of the Prophet Muhammad. Part-time coding tutor for elementary students using Scratch.
+- **Freelance Web Game Developer, Edufic.** Sept 2025 to Aug 2026, Surabaya. Developing Little Muslim Heroes, a gamified web platform about the journey of the Prophet Muhammad. Part-time coding tutor for elementary students using Scratch.
 - **Freelance Game Developer, Upwork and others.** Dates: ongoing. Far From Shore, from proof of concept to demo. Mining mini-game for the idle game Goddess Summoner: Katsi Idle. Proof of concept for 3D character customization with UMA 2.
 - **Unity Programmer, Script Smelter Studio.** Apr 2025 to Sept 2025, remote. Petal Pals, a desktop companion monster-collection game, the studio's own IP. Feature updates and bug fixes during playtests. Helped design features such as gacha and evolution.
 - **Game Programmer, Shireishi Production.** Nov 2023 to Apr 2024, Malang. Fast prototypes for the studio's B2B services. Several game genres in Unity. Worked with game designers and artists.
@@ -210,7 +210,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **About.** One serif intro paragraph. Then a "What I take on" list, the recognition list in reverse date order, and the certificate gallery. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
-**Experience.** Route `/experience`. The full role list (role and company as the heading, years and location, short bullets) followed by education.
+**Experience.** Route `/experience`. A plain timeline: roles grouped under band headings by start year ("Ongoing" for continuing freelance work), each entry with role and company, years and location, and short bullets. Education closes the page as the last band. A 1px divider tops each band.
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn if he wants them. The footer repeats the email.
 
@@ -327,7 +327,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | Forestdom | Trivia | Unity 2D, AdMob | live | confirm | Deck only. |
 | Memories: My Story My Choices | Visual novel | Unity 2D, API integration | live | resume link | Resume: Agate International, 2022 to 2023. Reworked UI with the UI/UX designer and maintained the game for Majamojo. Status set to live based on maintenance; verify. |
 | Far From Shore | Narrative survival | Unity, WebGL | demo | resume link | Resume: freelance, from proof of concept to demo. |
-| Little Muslim Heroes, Edufic | Islamic EdTech | Unity WebGL | wip | resume link | Resume: Edufic, Sept 2025 to present, web platform. Status changed from tba. |
+| Little Muslim Heroes, Edufic | Islamic EdTech | Unity WebGL | wip | resume link | Resume: Edufic, Sept 2025 to Aug 2026, web platform. Status changed from tba. |
 | Purring Post & Delivery | Management, narrative | Unity 2D | wip | resume link | GameJam+ Best Pitch nominee (2023). Deck: in progress. |
 | Petal Pals | Desktop companion, monster collection | Unity 2D | wip | resume link | Resume: Script Smelter Studio's IP, not freelance. In playtests. Deck said TBA. |
 | Goddess Summoner: Katsi Idle, mining mini-game | Idle game mini-game | Unity | live | resume link | Resume: designed and built the mini-game, Upwork freelance. Added from resume. |

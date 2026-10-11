@@ -1,34 +1,49 @@
 <script lang="ts">
-	import { education, experience } from '#lib/data/about.ts';
+	import { education, experience, type Experience } from '#lib/data/about.ts';
+
+	// Rows are stored newest first and grouped consecutively by their group label,
+	// so the order in about.ts is the order on the page.
+	const groups: { label: string; jobs: Experience[] }[] = [];
+	for (const job of experience) {
+		const last = groups[groups.length - 1];
+		if (last && last.label === job.group) {
+			last.jobs.push(job);
+		} else {
+			groups.push({ label: job.group, jobs: [job] });
+		}
+	}
 </script>
 
 <section class="page">
 	<div class="inner">
 		<h1>Experience</h1>
 
-		<ul class="experience">
-			{#each experience as job (job.company)}
-				<li>
-					<h2>{job.role}, {job.company}</h2>
-					<p class="meta">
-						<span>{job.years}</span>
-						{#if job.location}
-							<span>{job.location}</span>
+		{#each groups as group (group.label)}
+			<h2 class="group">{group.label}</h2>
+			<ul class="roles">
+				{#each group.jobs as job (job.company)}
+					<li>
+						<h3>{job.role}, {job.company}</h3>
+						<p class="meta">
+							<span>{job.years}</span>
+							{#if job.location}
+								<span>{job.location}</span>
+							{/if}
+						</p>
+						{#if job.points.length > 0}
+							<ul class="points">
+								{#each job.points as point (point)}
+									<li>{point}</li>
+								{/each}
+							</ul>
 						{/if}
-					</p>
-					{#if job.points.length > 0}
-						<ul class="points">
-							{#each job.points as point (point)}
-								<li>{point}</li>
-							{/each}
-						</ul>
-					{/if}
-				</li>
-			{/each}
-		</ul>
+					</li>
+				{/each}
+			</ul>
+		{/each}
 
-		<h2 class="education">Education</h2>
-		<p>{education}</p>
+		<h2 class="group">Education</h2>
+		<p class="education">{education}</p>
 	</div>
 </section>
 
@@ -50,28 +65,27 @@
 		letter-spacing: -0.02em;
 	}
 
-	h2 {
-		font-size: var(--text-body);
+	.group {
+		margin-top: 48px;
+		padding-top: 20px;
+		border-top: 1px solid var(--divider);
+		font-size: var(--text-h3);
 		font-weight: 600;
 	}
 
-	.education {
-		margin-top: 64px;
-		font-size: var(--text-h3);
-	}
-
-	.education + p {
-		margin-top: 32px;
-	}
-
-	.experience {
-		margin: 32px 0 0;
+	.roles {
+		margin: 24px 0 0;
 		padding: 0;
 		list-style: none;
 	}
 
-	.experience > li + li {
+	.roles > li + li {
 		margin-top: 32px;
+	}
+
+	h3 {
+		font-size: var(--text-body);
+		font-weight: 600;
 	}
 
 	.meta {
@@ -85,5 +99,9 @@
 
 	.points {
 		margin: var(--gutter) 0 0;
+	}
+
+	.education {
+		margin-top: 24px;
 	}
 </style>
