@@ -121,6 +121,10 @@
 
 	/* The full-screen game stage (DESIGN §6, §8): a native dialog, so Esc and
 	   focus come for free; the iframe is only created while a game is open. */
+	.stage:not([open]) {
+		display: none;
+	}
+
 	.stage {
 		display: flex;
 		flex-direction: column;
