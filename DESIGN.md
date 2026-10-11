@@ -305,7 +305,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
-**Featured on home:** Math-Adventure (EdTech), Petal Pals (Games), and AR Magazine (AR).
+**Featured on home:** Paradixe City (Games), Math-Adventure (EdTech), AR Magazine (AR), Zepeto (Games), Petal Pals (Games), and Purring Post & Delivery (Games).
 
 **Inventory.** The Notes column shows the source of each row. "Deck only" means the resume doesn't mention it, so the owner should confirm it. Rows marked "confirm" in the Link column were shown as "Access here" hyperlinks in the deck, and the URLs were not readable. Rows marked "resume link" have a link on the resume, but the URL was not readable either.
 

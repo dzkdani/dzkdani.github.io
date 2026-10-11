@@ -424,8 +424,15 @@ export const allProjects: Project[] = [
 	}
 ];
 
-// The home featured trio, in display order.
-const featuredSlugs = ['math-adventure', 'petal-pals', 'ar-magazine'];
+// The home featured list, in display order.
+const featuredSlugs = [
+	'paradixe-city',
+	'math-adventure',
+	'ar-magazine',
+	'zepeto-multiplayer-3d-game',
+	'petal-pals',
+	'purring-post-and-delivery'
+];
 export const featuredProjects: Project[] = featuredSlugs
 	.map((slug) => projectBySlug(slug))
 	.filter((project): project is Project => project !== undefined);
