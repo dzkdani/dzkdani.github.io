@@ -99,11 +99,14 @@ export const experience: Experience[] = [
 			'A B2B AR/VR app',
 			'A social media filter'
 		]
+	},
+	{
+		company: 'PT Solusi Inovasi Mandiri',
+		role: 'Intern',
+		years: 'Jan 2018 (1 month)',
+		points: []
 	}
 ];
-
-// Deck-only entry, kept out of the rendered page until DESIGN §14 is decided:
-// TODO(owner): §14 #8 — Agate Academy (trainer line, dates unknown).
 
 // About intro (draft v0.2, DESIGN §10).
 export const intro =
@@ -130,27 +133,18 @@ export type RecognitionItem = {
 	confirmed: boolean;
 };
 
-// Newest first (DESIGN §1). Items with confirmed: false are deck-only or still TODO(owner),
-// so the About page leaves them out for now.
+// Newest first (DESIGN §1).
 export const recognition: RecognitionItem[] = [
 	{ text: 'GameJam+ Indonesia 23/24: Best Pitch nominee, for Purring Post & Delivery', confirmed: true },
 	{ text: 'Penerima Pendanaan Program Kewirausahaan Mahasiswa Vokasi (PKMV) 2020, for Sepay Games', confirmed: true },
-	{
-		text: 'Masterclass for Game Developers: Game Design, Ministry of Tourism and Creative Economy (Aug 2020)',
-		confirmed: false
-	},
+	{ text: 'Masterclass for Game Developers: Game Design, Ministry of Tourism and Creative Economy (Aug 2020)', confirmed: true },
 	{ text: 'MAGE 2017: finalist, student Game Dev Competition', confirmed: true },
 	{ text: 'FTIf GameDeff 2017: top 20', confirmed: true },
-	{
-		text: 'Gameloft Indonesia workshop on producership and project management (Oct 2016)',
-		confirmed: false
-	},
-	// Undated items go last. Chief of Tabletop Community is undated; details still TODO(owner).
+	{ text: 'Gameloft Indonesia workshop on producership and project management (Oct 2016)', confirmed: true },
+	{ text: 'Trainer at Agate Academy', confirmed: true },
+	// Undated items go last. Chief of Tabletop Community has no date.
 	{ text: 'Chief of Tabletop Community', confirmed: true }
 ];
-
-// Deck-only recognition line, held back until DESIGN §14 #8 is decided:
-// TODO(owner): §14 #8 — 'Trainer at Agate Academy'.
 
 // Certificate images from the deck, newest first, matching the recognition list.
 // The images stay visible even where the matching text line is still TODO(owner).

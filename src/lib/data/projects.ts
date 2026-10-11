@@ -21,7 +21,7 @@ export type Project = {
 	title: string;
 	area: 'edtech' | 'ar' | 'vr' | 'webgl' | 'game' | 'other';
 	tech: string[];
-	status: 'live' | 'demo' | 'preview' | 'restricted' | 'prototype' | 'wip' | 'tba';
+	status: 'live' | 'demo' | 'preview' | 'restricted' | 'wip' | 'tba';
 	client?: string;
 	summary: string;
 	role: string[];
@@ -409,7 +409,7 @@ export const allProjects: Project[] = [
 		title: 'Love Wars',
 		area: 'other',
 		tech: [], // Love Wars is not digital, so there is no tech stack.
-		status: 'prototype',
+		status: 'wip',
 		summary: 'A tabletop card game, not a digital build.',
 		role: ['Game designer'],
 		links: [

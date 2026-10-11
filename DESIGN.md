@@ -302,7 +302,6 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `demo`: playable in browser, may be partial
 - `preview`: preview link only
 - `restricted`: client work, no build shown
-- `prototype`: an early or paper build, not the final game
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
@@ -338,7 +337,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | Paradixe City | Local co-op shooter | Construct 2 | live | confirm | Deck only. MAGE 2017 finalist. |
 | FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | live | confirm | Deck only. Released; the Google Play listing is gone. |
 | G-Escape | Action shooter, client work | Unity 2D, IAP | live | confirm | Deck only. Released; the Google Play listing is gone. |
-| Love Wars | Tabletop card game | Not digital | prototype | rulebook link | Deck only. Resume lists Chief of Tabletop Community. |
+| Love Wars | Tabletop card game | Not digital | wip | rulebook link | Deck only. Resume lists Chief of Tabletop Community. |
 
 **Client work without a public build** (experience only, not in the inventory):
 
@@ -366,7 +365,7 @@ type Project = {
   title: string;
   area: 'edtech' | 'ar' | 'vr' | 'webgl' | 'game' | 'other';
   tech: string[];            // e.g. ['Unity 2D', 'AdMob']
-  status: 'live' | 'demo' | 'preview' | 'restricted' | 'prototype' | 'wip' | 'tba';
+  status: 'live' | 'demo' | 'preview' | 'restricted' | 'wip' | 'tba';
   client?: string;           // only if the client allows naming them
   summary: string;           // one sentence, plain language
   role: string[];            // what I built, short bullets
@@ -396,9 +395,9 @@ type Project = {
 1. **Name spelling.** Resolved: Dzaki Adani everywhere on the site. The email stays dzaky.adani@gmail.com.
 2. **Contact and location.** Resolved: dzaky.adani@gmail.com is public (the footer, About, and the home "Email me" button). The location stays off the site. (LinkedIn and Upwork are wired.)
 3. **Hero line.** Resolved: replaced with the owner's line, summarized from the resume and deck: "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
-4. **Work missing from the resume.** Resolved: the deck-only projects are freelance work, not another employer. Their lines sit under the ongoing freelance entry on About; no dates were given, so none are shown.
+4. **Work missing from the resume.** Resolved: the deck-only projects are freelance work, not another employer. Their lines sit under the ongoing freelance entry on About; no dates were given, so none are shown. The deck's PT Solusi Inovasi Mandiri internship (Jan 2018, one month) is added to the Experience page.
 5. **Client names.** Resolved: no projects are restricted. The About freelance entry names PT Kuark International, PT Senalapan Perkasa, PT Bersama Kreatif Teknologi, and GIZ.
 6. **Math-Adventure.** Resolved: Math-Adventure is the Falkana Studio game.
 7. **Links.** The deck supplied the missing URLs. The Google Play listings for FlappyRabbit, WonderWord, Guess Color Quiz, Explore Math, Juggler, G-Escape, and Memories return Not Found (checked October 2026), so their link buttons are stripped, and no recovery links exist, so they stay stripped. Goddess Summoner's developer-page button stays as the only link for that mini-game. Re-add any listing link once it is live again.
-8. **Recognition and dates.** Keep the deck-only certificates (Gameloft 2016, Kemenparekraf 2020) and the Agate trainer line? Resolved: FTIf 2017 is "top 20"; the Upwork freelance work is ongoing.
+8. **Recognition and dates.** Resolved: the Gameloft 2016, Kemenparekraf 2020, and Trainer at Agate Academy lines are confirmed and shown on About. FTIf 2017 is "top 20"; the Upwork freelance work is ongoing.
 9. **Language.** Resolved: English only.

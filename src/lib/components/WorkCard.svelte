@@ -22,7 +22,6 @@
 		demo: 'Demo',
 		preview: 'Preview',
 		restricted: 'Restricted',
-		prototype: 'Prototype',
 		wip: 'In progress',
 		tba: 'In development'
 	};
