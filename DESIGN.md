@@ -215,7 +215,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn, all as icon links in the footer.
 
-**Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, and Upwork. Nothing else.
+**Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, Upwork, GitHub, and itch.io. Nothing else.
 
 ---
 

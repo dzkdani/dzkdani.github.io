@@ -240,7 +240,10 @@ export const certificates: Certificate[] = [
 	}
 ];
 
-// Contact. The email, Upwork, and LinkedIn come from the resume and the owner's §14 #2 answer.
+// Contact. The email, Upwork, and LinkedIn come from the resume and the owner's §14 #2 answer;
+// GitHub and itch.io come from the owner (October 2026).
 export const email = 'dzaky.adani@gmail.com';
 export const upworkUrl = 'https://www.upwork.com/freelancers/~0158789aca333502f2?mp_source=share';
 export const linkedinUrl = 'https://www.linkedin.com/in/dzkdani/';
+export const githubUrl = 'https://github.com/dzkdani';
+export const itchUrl = 'https://dzkdani.itch.io/';
