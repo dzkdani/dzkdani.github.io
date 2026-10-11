@@ -209,7 +209,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **About.** One serif intro paragraph. Then a "What I take on" list, the recognition list in reverse date order, and the certificate gallery (each certificate links to its full-size file in a new tab). An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
-**Experience.** Route `/experience`. A plain timeline: roles grouped under band headings by start year ("Ongoing" for continuing freelance work), each entry with role and company, years and location, and short bullets. Education closes the page as the last band. A 1px divider tops each band.
+**Experience.** Route `/experience`. Roles are grouped under band headings by start year ("Ongoing" for continuing freelance work), beside one dotted vertical rail with a dot for each role. Each entry shows role and company, years and location, short bullets, and square tech tags where project data records the stack. Education closes the page.
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn, all as icon links in the footer.
 

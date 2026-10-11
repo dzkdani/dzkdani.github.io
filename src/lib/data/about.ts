@@ -11,6 +11,7 @@ export type Experience = {
 	group: string;
 	location?: string;
 	points: string[];
+	tags?: string[];
 };
 
 // The roles from the resume and deck (DESIGN §1), newest first, grouped by start
@@ -27,7 +28,8 @@ export const experience: Experience[] = [
 			'3D character customization proof of concept, with UMA 2',
 			'AR client builds, including AR Magazine for PT Kuark International',
 			'AR and VR builds for PT Bersama Kreatif Teknologi and GIZ'
-		]
+		],
+		tags: ['Unity', 'WebGL', 'Vuforia', 'Unity AR Foundation', 'Unity VR']
 	},
 	{
 		company: 'Edufic',
@@ -38,7 +40,8 @@ export const experience: Experience[] = [
 		points: [
 			'Developing Little Muslim Heroes, a gamified web platform',
 			'Part-time coding tutor for elementary students, using Scratch'
-		]
+		],
+		tags: ['Unity WebGL']
 	},
 	{
 		company: 'Script Smelter Studio',
@@ -50,7 +53,8 @@ export const experience: Experience[] = [
 			"Petal Pals, the studio's own IP",
 			'Feature updates and bug fixes during playtests',
 			'Helped design features such as gacha and evolution'
-		]
+		],
+		tags: ['Unity 2D']
 	},
 	{
 		company: 'Shireishi Production',
@@ -85,7 +89,8 @@ export const experience: Experience[] = [
 			'Researched Photon Fusion and wrote internal documentation',
 			'Reworked and maintained Memories: My Story My Choices, including a UI rework and QC bug fixes',
 			'Built a multiplayer 3D game for Zepeto in Unity and TypeScript'
-		]
+		],
+		tags: ['Unity 2D', 'API integration', 'Unity', 'TypeScript']
 	},
 	{
 		company: 'Falkana Studio',
@@ -97,7 +102,8 @@ export const experience: Experience[] = [
 			'Math-Adventure, a 2D interactive educational game for learning-course clients',
 			'Designed mechanics, game flow, and UI/UX',
 			'Integrated REST APIs into Unity'
-		]
+		],
+		tags: ['Unity 2D', 'Addressables', 'IAP']
 	},
 	{
 		company: 'TicTech Studio',
@@ -109,7 +115,8 @@ export const experience: Experience[] = [
 			'An interactive AR app, with game-world layout in Unity',
 			'A B2B AR/VR app',
 			'A social media filter'
-		]
+		],
+		tags: ['Unity', 'Vuforia', 'AR marker']
 	},
 	{
 		company: 'PT Solusi Inovasi Mandiri',
