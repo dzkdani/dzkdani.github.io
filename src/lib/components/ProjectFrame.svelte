@@ -106,4 +106,16 @@
 		inset: 0;
 		display: block;
 	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.frame img,
+		.frame video {
+			transition: transform var(--dur-medium) var(--ease-out);
+		}
+
+		.frame:hover img,
+		.frame:hover video {
+			transform: scale(1.04);
+		}
+	}
 </style>
