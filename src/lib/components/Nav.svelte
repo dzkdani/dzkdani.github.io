@@ -6,6 +6,7 @@
 	const links: NavLink[] = [
 		{ label: 'About', href: '/about/', section: '/about/' },
 		{ label: 'Work', href: '/work/', section: '/work/' },
+		{ label: 'Play', href: '/play/', section: '/play/' },
 		{ label: 'Experience', href: '/experience/', section: '/experience/' }
 	];
 </script>

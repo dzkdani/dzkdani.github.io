@@ -26,6 +26,8 @@ export type Project = {
 	summary: string;
 	role: string[];
 	links: { label: string; url: string }[];
+	/** itch.io embed URL, shown on the Play page. */
+	playUrl?: string;
 	media: Media[];
 };
 
@@ -167,6 +169,7 @@ export const allProjects: Project[] = [
 		summary: 'An educational chemistry game built in Unity 2D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/running-chem' }],
+		playUrl: 'https://itch.io/embed-upload/17826198?color=d5c04f',
 		media: [
 			{ kind: 'image', src: 'media/chem/shot-1.webp', aspect: 0.564, thumb: 'media/chem/shot-1-thumb.webp', alt: 'Chem: a classroom scene with the dialogue box open.' },
 			{ kind: 'image', src: 'media/chem/shot-2.webp', aspect: 0.556, alt: 'Chem: the running level with the score and item counters.' }
@@ -181,6 +184,7 @@ export const allProjects: Project[] = [
 		summary: 'An educational quiz game built in Construct 2 with JSON-driven content.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/quiz-kimia' }],
+		playUrl: 'https://itch.io/embed-upload/629368?color=eee38c',
 		media: [
 			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-1.webp', aspect: 0.561, thumb: 'media/simple-mini-quiz-game/shot-1-thumb.webp', alt: 'Simple Mini Quiz Game: a dialogue scene with a student and an element tile.' },
 			{ kind: 'image', src: 'media/simple-mini-quiz-game/shot-2.webp', aspect: 0.542, alt: 'Simple Mini Quiz Game: a quiz screen with three answer buttons.' }
@@ -251,6 +255,7 @@ export const allProjects: Project[] = [
 		summary: 'A narrative survival game that plays in the browser, built in Unity with WebGL.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/ffs-demo' }],
+		playUrl: 'https://itch.io/embed-upload/17827058?color=000000',
 		media: [
 			{ kind: 'image', src: 'media/far-from-shore/shot-1.webp', aspect: 1.794, thumb: 'media/far-from-shore/shot-1-thumb.webp', alt: 'Far From Shore: the starting room with the main character on day one.' }
 		]
@@ -281,6 +286,7 @@ export const allProjects: Project[] = [
 		links: [
 			{ label: 'Open on itch.io', url: 'https://dhaniy.itch.io/purring-post-and-delivery' }
 		],
+		playUrl: 'https://itch.io/embed-upload/17873342?color=b86f50',
 		media: [
 			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-1.webp', aspect: 1.778, thumb: 'media/purring-post-and-delivery/shot-1-thumb.webp', alt: 'Purring Post & Delivery: a delivery request card for Tashi the rabbit.' },
 			{ kind: 'image', src: 'media/purring-post-and-delivery/shot-2.webp', aspect: 1.779, alt: 'Purring Post & Delivery: the post office with the cat clerk.' },
@@ -355,6 +361,7 @@ export const allProjects: Project[] = [
 		summary: 'A music shooter built in Unity 2D.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/buto-beat' }],
+		playUrl: 'https://itch.io/embed-upload/17826634?color=2b253f',
 		media: [
 			{ kind: 'image', src: 'media/buto-beat/shot-1.webp', aspect: 1.985, thumb: 'media/buto-beat/shot-1-thumb.webp', alt: 'Buto Beat: the menu and two gameplay runs with monster faces.' }
 		]
@@ -368,6 +375,7 @@ export const allProjects: Project[] = [
 		summary: 'A local co-op shooter built in Construct 2.',
 		role: ['Scenario code', 'Asset integration', 'Scene mapping', 'Gameplay flow'],
 		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/p-tank' }],
+		playUrl: 'https://itch.io/embed-upload/631090?color=000000',
 		media: [
 			{ kind: 'image', src: 'media/paradixe-city/shot-1.webp', aspect: 1.767, thumb: 'media/paradixe-city/shot-1-thumb.webp', alt: 'Paradixe City: the glitched logo over a neon block skyline.' }
 		]
@@ -420,6 +428,34 @@ export const allProjects: Project[] = [
 		],
 		media: [
 			{ kind: 'image', src: 'media/love-wars/shot-1.webp', aspect: 0.988, thumb: 'media/love-wars/shot-1-thumb.webp', alt: 'Love Wars: the game logo on a pastel sky.' }
+		]
+	},
+	{
+		slug: 'just-spin',
+		title: 'Just Spin',
+		area: 'game',
+		tech: [], // TODO(owner): tech
+		status: 'wip',
+		summary: 'A game about spinning things, made for a game jam.',
+		role: ['Game designer', 'Game programmer'],
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/spin' }],
+		playUrl: 'https://itch.io/embed-upload/18199351?color=b86f50',
+		media: [
+			{ kind: 'image', src: 'media/just-spin/shot-1.webp', aspect: 1.795, thumb: 'media/just-spin/shot-1-thumb.webp', alt: 'Just Spin: the title screen with the game logo and the new game, continue, option, and quit buttons.' }
+		]
+	},
+	{
+		slug: 'deside',
+		title: 'Deside',
+		area: 'game',
+		tech: [], // TODO(owner): tech
+		status: 'live',
+		summary: 'A game about deciding things.',
+		role: ['Game designer', 'Game programmer'],
+		links: [{ label: 'Open on itch.io', url: 'https://dzkdani.itch.io/deside' }],
+		playUrl: 'https://itch.io/embed-upload/17864857?color=e53b44',
+		media: [
+			{ kind: 'image', src: 'media/deside/shot-1.webp', aspect: 0.558, thumb: 'media/deside/shot-1-thumb.webp', alt: 'Deside: a kingdom screen with army, people, church, and gold meters, a king card asking for a sanctuary, and the choice to build a fortress or erect a temple.' }
 		]
 	}
 ];
