@@ -11,18 +11,18 @@
 		<p class="intro">{intro}</p>
 
 		<h2>What I take on</h2>
-		<ul class="takeon">
+		<ol class="takeon">
 			{#each whatITakeOn as item (item)}
 				<li>{item}</li>
 			{/each}
-		</ul>
+		</ol>
 
 		<h2>Recognition</h2>
-		<ul class="recognition">
+		<ol class="recognition">
 			{#each recognition.filter((item) => item.confirmed) as item (item.text)}
 				<li>{item.text}</li>
 			{/each}
-		</ul>
+		</ol>
 
 		<h2>Certificates</h2>
 		<ul class="certificates">

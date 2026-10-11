@@ -31,11 +31,11 @@
 							{/if}
 						</p>
 						{#if job.points.length > 0}
-							<ul class="points">
+							<ol class="points">
 								{#each job.points as point (point)}
 									<li>{point}</li>
 								{/each}
-							</ul>
+							</ol>
 						{/if}
 					</li>
 				{/each}
