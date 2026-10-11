@@ -84,7 +84,7 @@ Use `base` from `$app/paths` for every media URL, so the site also works if it i
 
 ## Motion rules
 
-- Only the three patterns in DESIGN §7 are allowed. Anything else needs owner approval.
+- Only the four patterns in DESIGN §7 are allowed. Anything else needs owner approval.
 - The load moment uses CSS keyframes. Svelte transitions are for user-triggered UI only.
 - Every transform and keyframe sits inside `@media (prefers-reduced-motion: no-preference)`.
 

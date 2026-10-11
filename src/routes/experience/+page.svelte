@@ -168,13 +168,13 @@
 		color: var(--night);
 	}
 
-	.role-entry:hover::before {
-		transform: scale(1.15);
-	}
-
 	@media (prefers-reduced-motion: no-preference) {
 		.role-entry::before {
 			transition: transform var(--dur-quick) var(--ease-out);
+		}
+
+		.role-entry:hover::before {
+			transform: scale(1.15);
 		}
 	}
 

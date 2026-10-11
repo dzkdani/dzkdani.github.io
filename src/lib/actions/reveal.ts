@@ -11,6 +11,14 @@ export function reveal(node: HTMLElement, delayMs = 0) {
 	}
 
 	const delay = Math.min(Math.max(delayMs, 0), MAX_DELAY);
+
+	// Only hide what starts below the fold. Above-fold content is already
+	// visible at load; hiding it after hydration would blink it out.
+	const rect = node.getBoundingClientRect();
+	if (rect.top < window.innerHeight && rect.bottom > 0) {
+		return;
+	}
+
 	let observer: IntersectionObserver | null = new IntersectionObserver((entries) => {
 		if (!entries.some((entry) => entry.isIntersecting)) return;
 		observer?.disconnect();
