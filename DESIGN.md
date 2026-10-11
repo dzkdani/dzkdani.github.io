@@ -153,13 +153,9 @@ Rules:
 +--------------------------------------------------------------+
 | Dzaki Adani                        About   Work   Experience |
 |                                                              |
-|  I build educational games, AR and VR apps,                  |
-|  and WebGL builds for studios and freelance clients.         |
+|  Game Programmer | Game Designer                             |
 |                                                              |
-|  Shipped apps, client builds,                                |
-|  and game jam projects.                                      |
-|                                                              |
-|  [See my work] [Email] [LinkedIn] [Upwork] [GitHub] [itch.io] |
+|  [See my work]  [contact icons]                              |
 +--------------------------------------------------------------+
    Bottom edge of the plum band is a shallow curve.
 ```
@@ -203,7 +199,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Experience. The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
 
-**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Actions: "See my work" (pink fill, night text), then outlined icon buttons for every contact channel: email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
+**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. Under the name, one role line: "Game Programmer | Game Designer". Actions: "See my work" (pink fill, night text), then outlined icon buttons for every contact channel: email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
@@ -275,9 +271,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 **Buttons** say what happens: "See my work," "Email," "Play demo," "Open on Google Play."
 
-**Hero line (owner, from the resume and deck):** "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
-
-**Support line:** "Shipped apps, client builds, and game jam projects. Each one links to a build or a preview where the client allows it."
+**Hero line:** "Game Programmer | Game Designer".
 
 **About intro (draft v0.2):** "I'm a Unity developer, and I've been building games since 2020. Most of my work is educational games, browser builds, and multiplayer, for studios, clients, and my own projects. On client projects I write the gameplay and scenario code, and I design mechanics and game flow when a brief needs it."
 
@@ -394,7 +388,7 @@ type Project = {
 
 1. **Name spelling.** Resolved: Dzaki Adani everywhere on the site. The email stays dzaky.adani@gmail.com.
 2. **Contact and location.** Resolved: dzaky.adani@gmail.com is public (the footer and the home "Email me" button). The location stays off the site. (LinkedIn and Upwork are wired.)
-3. **Hero line.** Resolved: replaced with the owner's line, summarized from the resume and deck: "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
+3. **Hero line.** Resolved: the hero reads "Game Programmer | Game Designer" under the name.
 4. **Work missing from the resume.** Resolved: the deck-only projects are freelance work, not another employer. Their lines sit under the ongoing freelance entry on About; no dates were given, so none are shown. The deck's PT Solusi Inovasi Mandiri internship (Jan 2018, one month) is added to the Experience page.
 5. **Client names.** Resolved: no projects are restricted. The About freelance entry names PT Kuark International, PT Senalapan Perkasa, PT Bersama Kreatif Teknologi, and GIZ.
 6. **Math-Adventure.** Resolved: Math-Adventure is the Falkana Studio game.

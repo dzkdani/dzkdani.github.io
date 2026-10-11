@@ -9,11 +9,7 @@
 	<div class="inner">
 		<div class="copy">
 			<h1>Dzaki Adani</h1>
-			<p class="lead">I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients.</p>
-			<p class="support">
-				Shipped apps, client builds, and game jam projects. Each one links to a build or a preview
-				where the client allows it.
-			</p>
+			<p class="lead">Game Programmer | Game Designer</p>
 			<div class="actions">
 				<a class="fill" href="/work/">See my work</a>
 				<a class="outline" href={`mailto:${email}`} aria-label="Email"><Icon name="email" /></a>
@@ -77,11 +73,6 @@
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 		max-width: 30ch;
-	}
-
-	.support {
-		margin-top: var(--gutter);
-		max-width: 68ch;
 	}
 
 	.actions {
