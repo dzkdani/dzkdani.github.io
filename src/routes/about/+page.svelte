@@ -1,13 +1,5 @@
 <script lang="ts">
-	import {
-		certificates,
-		email,
-		intro,
-		linkedinUrl,
-		recognition,
-		upworkUrl,
-		whatITakeOn
-	} from '#lib/data/about.ts';
+	import { certificates, intro, recognition, whatITakeOn } from '#lib/data/about.ts';
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
 </script>
 
@@ -42,25 +34,6 @@
 			{/each}
 		</ul>
 
-		<h2>Other</h2>
-		<ul class="other">
-			<li><a href="/work/love-wars/">Love Wars</a>, a tabletop card game, not a digital build.</li>
-		</ul>
-
-		<h2>Contact</h2>
-		<p class="contact">
-			{#if email}
-				<a href={`mailto:${email}`}>{email}</a>
-			{:else}
-				<span>Email</span>
-			{/if}
-			{#if upworkUrl}
-				<a href={upworkUrl}>Upwork</a>
-			{/if}
-			{#if linkedinUrl}
-				<a href={linkedinUrl}>LinkedIn</a>
-			{/if}
-		</p>
 	</div>
 </section>
 
@@ -98,8 +71,7 @@
 	}
 
 	.takeon,
-	.recognition,
-	.other {
+	.recognition {
 		margin: 32px 0 0;
 	}
 
@@ -118,13 +90,4 @@
 		color: var(--muted);
 	}
 
-	.contact {
-		margin-top: 32px;
-	}
-
-	.contact {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--gutter);
-	}
 </style>

@@ -210,7 +210,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Experience.** Route `/experience`. A plain timeline: roles grouped under band headings by start year ("Ongoing" for continuing freelance work), each entry with role and company, years and location, and short bullets. Education closes the page as the last band. A 1px divider tops each band.
 
-**Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn if he wants them. The footer repeats the email.
+**Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn, all as icon links in the footer.
 
 **Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, and Upwork. Nothing else.
 
@@ -350,7 +350,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 
 - SvelteKit with `adapter-static`. Prerender every route.
 - Use the repo `username.github.io` so the site sits at the root. If it's a project repo, set `paths.base`.
-- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives in the footer on every page, and About repeats the links.
+- Routes: `/`, `/work`, `/work/[slug]`, `/experience`, `/about`. Contact lives in the footer on every page.
 - Project data lives in `src/lib/data/projects.ts`, typed as below. Pages read from it. No CMS.
 - Global tokens go in `src/app.css` as `:root` custom properties. Component styles stay scoped. No UI component library.
 - Filter state lives in the URL query string.
@@ -390,7 +390,7 @@ type Project = {
 ## 14. Open questions for the owner
 
 1. **Name spelling.** Resolved: Dzaki Adani everywhere on the site. The email stays dzaky.adani@gmail.com.
-2. **Contact and location.** Resolved: dzaky.adani@gmail.com is public (the footer, About, and the home "Email me" button). The location stays off the site. (LinkedIn and Upwork are wired.)
+2. **Contact and location.** Resolved: dzaky.adani@gmail.com is public (the footer and the home "Email me" button). The location stays off the site. (LinkedIn and Upwork are wired.)
 3. **Hero line.** Resolved: replaced with the owner's line, summarized from the resume and deck: "I build educational games, AR and VR apps, and WebGL builds for studios and freelance clients."
 4. **Work missing from the resume.** Resolved: the deck-only projects are freelance work, not another employer. Their lines sit under the ongoing freelance entry on About; no dates were given, so none are shown. The deck's PT Solusi Inovasi Mandiri internship (Jan 2018, one month) is added to the Experience page.
 5. **Client names.** Resolved: no projects are restricted. The About freelance entry names PT Kuark International, PT Senalapan Perkasa, PT Bersama Kreatif Teknologi, and GIZ.
