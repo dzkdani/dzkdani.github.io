@@ -104,7 +104,6 @@
 							title={project.title}
 							area={areaLabels[project.area]}
 							aspect="16 / 9"
-							zoomable
 						/>
 						{#if demoUrl}
 							{#if playing}
@@ -121,7 +120,7 @@
 					{:else if project.media.length > 0}
 						<div class="frames">
 							{#each project.media as item (item.src)}
-								<ProjectFrame media={item} zoomable />
+								<ProjectFrame media={item} />
 							{/each}
 						</div>
 					{:else}

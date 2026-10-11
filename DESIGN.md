@@ -204,7 +204,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
-**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio, each opening the zoom viewer on click. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
+**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
 **About.** One serif intro paragraph. Then a "What I take on" list, the recognition list in reverse date order, and the certificate gallery. An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
@@ -214,8 +214,6 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Footer.** `--night` background. Name and year on the left; icon links on the right: email (mailto), LinkedIn, and Upwork. Nothing else.
 
-**Image zoom.** Every image scales to 1.04 on hover over 420ms, inside the reduced-motion guard. Images that are not inside a link open a full-screen viewer on click: fit to the screen, click the image to see it at full resolution (pan by scrolling), click again to fit, and close with Esc, the close button, or a click outside. The viewer is a native `<dialog>`, so focus is handled while it is open. Work-card covers keep opening their project page.
-
 ---
 
 ## 7. Motion
@@ -224,7 +222,7 @@ Motion appears in three places only.
 
 1. **Load moment (once).** The hero band fades in over 600ms. The name rises 16px and fades in over 420ms, starting at 120ms. Use `--ease-out` and CSS keyframes with `animation-fill-mode: both`. Svelte's `in:` transitions do not run on first render by default, so keyframes are simpler here.
 2. **User-triggered UI (Svelte transitions).** Filter results fade over 180ms. The demo player opens with a height and opacity transition over 420ms. Nothing else animates on click.
-3. **Hover.** Work-card titles get a magenta underline that draws left to right over 180ms, and images scale to 1.04 over 420ms inside their frames.
+3. **Hover, work cards.** The title gets a magenta underline that draws left to right over 180ms. Cover images stay still.
 
 Not allowed: fade-up on every section, scroll-triggered reveals, parallax, hover lifts on every card, and looping background motion.
 
