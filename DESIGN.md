@@ -134,7 +134,7 @@ Rules:
 - No arrows (→) in links or buttons.
 - No middle-dot strings ("AR · Unity · Live").
 - Headings use `--pink`.
-- Lists are numbered, not bulleted.
+- Numbered lists only on About; other lists are bulleted.
 
 ---
 
@@ -207,11 +207,11 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
-**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 numbered items), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio and each linking to its full-size file in a new tab. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
+**Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio and each linking to its full-size file in a new tab. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
 **About.** One serif intro paragraph. Then a "What I take on" list, the recognition list in reverse date order, and the certificate gallery (each certificate links to its full-size file in a new tab). An optional 1:1 portrait, about 320px, sits beside the intro. No photo grid.
 
-**Experience.** Route `/experience`. A plain timeline: roles grouped under band headings by start year ("Ongoing" for continuing freelance work), each entry with role and company, years and location, and numbered items. Education closes the page as the last band. A 1px divider tops each band.
+**Experience.** Route `/experience`. A plain timeline: roles grouped under band headings by start year ("Ongoing" for continuing freelance work), each entry with role and company, years and location, and short bullets. Education closes the page as the last band. A 1px divider tops each band.
 
 **Contact.** No form in v1. Email as a `mailto:` link, plus the Upwork profile and LinkedIn, all as icon links in the footer.
 
@@ -368,7 +368,7 @@ type Project = {
   status: 'live' | 'demo' | 'preview' | 'restricted' | 'wip' | 'tba';
   client?: string;           // only if the client allows naming them
   summary: string;           // one sentence, plain language
-  role: string[];            // what I built, numbered items
+  role: string[];            // what I built, short bullets
   links: { label: string; url: string }[];
   media: { src: string; alt: string; kind: 'image' | 'video' | 'webgl' }[];
 };

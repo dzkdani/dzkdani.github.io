@@ -73,11 +73,11 @@
 						<p class="client">{project.client}</p>
 					{/if}
 					<h2>My role</h2>
-					<ol class="role">
+					<ul class="role">
 						{#each project.role as item (item)}
 							<li>{item}</li>
 						{/each}
-					</ol>
+					</ul>
 					{#if project.tech.length > 0}
 						<ul class="tech">
 							{#each project.tech as item (item)}
