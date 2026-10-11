@@ -107,3 +107,18 @@ a {
 	outline: 2px solid var(--focus-ring);
 	outline-offset: 3px;
 }
+
+/* Scroll reveals (§7): groups fade up once as they enter view. Applied by
+   the use:reveal action; without JavaScript the content renders final. */
+@media (prefers-reduced-motion: no-preference) {
+	.reveal-pending {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+
+	.reveal-visible {
+		transition:
+			opacity var(--dur-medium) var(--ease-out),
+			transform var(--dur-medium) var(--ease-out);
+	}
+}
