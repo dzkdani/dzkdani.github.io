@@ -56,4 +56,10 @@
 		padding: 8px;
 		margin: -8px;
 	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.contact a:active {
+			transform: translateY(1px);
+		}
+	}
 </style>

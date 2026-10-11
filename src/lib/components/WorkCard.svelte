@@ -50,6 +50,12 @@
 		text-decoration: none;
 	}
 
+	/* Combo feedback (DESIGN §7): the frame border flips to pink with the card. */
+	.card a:hover,
+	.card a:focus-visible {
+		--divider: var(--pink);
+	}
+
 	h3 {
 		margin-top: var(--gutter);
 		font-size: var(--text-h3);

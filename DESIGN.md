@@ -223,9 +223,10 @@ Motion appears in three places only.
 
 1. **Load moment (once).** The hero band fades in over 600ms. The name rises 16px and fades in over 420ms, starting at 120ms. Use `--ease-out` and CSS keyframes with `animation-fill-mode: both`. Svelte's `in:` transitions do not run on first render by default, so keyframes are simpler here.
 2. **User-triggered UI (Svelte transitions).** Filter results fade over 180ms. The demo player opens with a height and opacity transition over 420ms. Nothing else animates on click.
-3. **Hover.** Work-card titles get a magenta underline that draws left to right over 180ms, and images scale to 1.04 over 420ms inside their frames.
+3. **Hover.** Work-card titles get a magenta underline that draws left to right over 180ms, and images scale to 1.04 over 420ms inside their frames. Cards also flip their frame border to pink and their tags take the pink fill; buttons press down 1px on `:active`.
+4. **Scroll reveals, once.** Content groups fade up 16px over 420ms as they enter the viewport, staggered 60ms per sibling up to 240ms, and never replay. A 2px pink meter at the top edge tracks real document scroll.
 
-Not allowed: fade-up on every section, scroll-triggered reveals, parallax, hover lifts on every card, and looping background motion.
+Not allowed: parallax, hover lifts on every card, and looping background motion. Reveals are the only scroll-triggered motion, and they are enhancement-only: without JavaScript, or under reduced motion, content renders in its final state and the meter is hidden.
 
 Tokens:
 

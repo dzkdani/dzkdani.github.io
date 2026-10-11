@@ -162,6 +162,22 @@
 		line-height: 1.4;
 	}
 
+	/* Combo feedback (DESIGN §7): the entry's dot and tags react together. */
+	.role-entry:hover .tags li {
+		background: var(--pink);
+		color: var(--night);
+	}
+
+	.role-entry:hover::before {
+		transform: scale(1.15);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.role-entry::before {
+			transition: transform var(--dur-quick) var(--ease-out);
+		}
+	}
+
 	.education-heading {
 		margin-top: 48px;
 		padding-top: 20px;

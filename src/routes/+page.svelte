@@ -134,6 +134,10 @@
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
+		.actions a:active {
+			transform: translateY(1px);
+		}
+
 		.hero {
 			animation: hero-band-in 600ms var(--ease-out) both;
 		}

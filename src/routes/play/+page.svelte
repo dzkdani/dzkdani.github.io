@@ -120,6 +120,12 @@
 		cursor: pointer;
 	}
 
+	/* Combo feedback (DESIGN §7): the cover frame flips to pink with the card. */
+	.games li:hover,
+	.games li:focus-within {
+		--divider: var(--pink);
+	}
+
 	/* The full-screen game stage (DESIGN §6, §8): a native dialog, so Esc and
 	   focus come for free; the iframe is only created while a game is open. */
 	.stage:not([open]) {

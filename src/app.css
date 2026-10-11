@@ -121,4 +121,9 @@ a {
 			opacity var(--dur-medium) var(--ease-out),
 			transform var(--dur-medium) var(--ease-out);
 	}
+
+	/* Combo feedback (§7): controls press down 1px. */
+	button:active {
+		transform: translateY(1px);
+	}
 }

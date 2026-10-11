@@ -225,6 +225,12 @@
 		color: var(--paper);
 	}
 
+	@media (prefers-reduced-motion: no-preference) {
+		.links a:active {
+			transform: translateY(1px);
+		}
+	}
+
 	.frames {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);

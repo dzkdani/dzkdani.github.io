@@ -95,4 +95,10 @@
 		color: var(--muted);
 	}
 
+	/* Combo feedback (DESIGN §7): the certificate frame flips to pink. */
+	.certificates li:hover,
+	.certificates li:focus-within {
+		--divider: var(--pink);
+	}
+
 </style>
