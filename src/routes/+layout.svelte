@@ -5,7 +5,7 @@
 	import '@fontsource/roboto/400.css';
 	import '@fontsource/roboto/600.css';
 	import { page } from '$app/state';
-	import favicon from '#lib/assets/favicon.svg';
+	import favicon from '#lib/assets/favicon.png';
 	import Footer from '#lib/components/Footer.svelte';
 	import Nav from '#lib/components/Nav.svelte';
 	import type { LayoutProps } from './$types';
