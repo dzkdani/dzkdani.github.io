@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { tick } from 'svelte';
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { reveal } from '#lib/actions/reveal.ts';
 	import { allProjects, projectStill, type Project } from '#lib/data/projects.ts';
 
 	// Every project with an itch.io embed URL, in work-index order.
@@ -27,8 +28,8 @@
 		<h1>Play</h1>
 
 		<ul class="games">
-			{#each playable as project (project.slug)}
-				<li>
+			{#each playable as project, i (project.slug)}
+				<li use:reveal={Math.min(i * 60, 240)}>
 					<ProjectFrame media={projectStill(project)} frameRatio="16 / 10" />
 					<h2><a href={`/work/${project.slug}/`}>{project.title}</a></h2>
 					<p class="toggle">

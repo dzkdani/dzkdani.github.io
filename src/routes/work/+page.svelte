@@ -61,9 +61,9 @@
 		</div>
 
 		<ul class="cards">
-			{#each visible as project (project.slug)}
+			{#each visible as project, i (project.slug)}
 				<li in:fade={fadeOptions}>
-					<WorkCard {project} />
+					<WorkCard {project} revealDelay={Math.min(i * 60, 240)} />
 				</li>
 			{/each}
 		</ul>

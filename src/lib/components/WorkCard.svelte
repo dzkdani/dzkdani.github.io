@@ -1,12 +1,14 @@
 <script lang="ts">
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { reveal } from '#lib/actions/reveal.ts';
 	import { projectStill, type Project } from '#lib/data/projects.ts';
 
 	type Props = {
 		project: Project;
+		revealDelay?: number;
 	};
 
-	let { project }: Props = $props();
+	let { project, revealDelay = 0 }: Props = $props();
 
 	const areaLabels: Record<Project['area'], string> = {
 		edtech: 'EdTech',
@@ -29,7 +31,7 @@
 	const still = $derived(projectStill(project));
 </script>
 
-<div class="card">
+<div class="card" use:reveal={revealDelay}>
 	<a href={`/work/${project.slug}/`}>
 		<!-- One ratio for every cover; screenshots crop to fill it (DESIGN §5). -->
 		<ProjectFrame media={still} frameRatio="16 / 10" />

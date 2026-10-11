@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { education, experience, type Experience } from '#lib/data/about.ts';
+	import { reveal } from '#lib/actions/reveal.ts';
 
 	// Rows are stored newest first and grouped consecutively by their group label,
 	// so the order in about.ts is the order on the page.
@@ -24,8 +25,8 @@
 				<section class="year-group">
 					<h2 class="group">{group.label}</h2>
 					<ul class="roles">
-						{#each group.jobs as job (job.company)}
-							<li class="role-entry">
+						{#each group.jobs as job, i (job.company)}
+							<li class="role-entry" use:reveal={Math.min(i * 60, 240)}>
 								<h3>{job.role}, {job.company}</h3>
 								<p class="meta">
 									<span>{job.years}</span>

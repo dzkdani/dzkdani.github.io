@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { certificates, intro, recognition, whatITakeOn } from '#lib/data/about.ts';
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { reveal } from '#lib/actions/reveal.ts';
 </script>
 
 <section class="about">
@@ -8,31 +9,37 @@
 		<h1>About</h1>
 
 		<!-- TODO(owner): portrait (optional, DESIGN §6). -->
-		<p class="intro">{intro}</p>
+		<p class="intro" use:reveal>{intro}</p>
 
-		<h2>What I take on</h2>
-		<ol class="takeon">
-			{#each whatITakeOn as item (item)}
-				<li>{item}</li>
-			{/each}
-		</ol>
+		<section use:reveal={60}>
+			<h2>What I take on</h2>
+			<ol class="takeon">
+				{#each whatITakeOn as item (item)}
+					<li>{item}</li>
+				{/each}
+			</ol>
+		</section>
 
-		<h2>Recognition</h2>
-		<ol class="recognition">
-			{#each recognition.filter((item) => item.confirmed) as item (item.text)}
-				<li>{item.text}</li>
-			{/each}
-		</ol>
+		<section use:reveal={120}>
+			<h2>Recognition</h2>
+			<ol class="recognition">
+				{#each recognition.filter((item) => item.confirmed) as item (item.text)}
+					<li>{item.text}</li>
+				{/each}
+			</ol>
+		</section>
 
-		<h2>Certificates</h2>
-		<ul class="certificates">
-			{#each certificates as item (item.caption)}
-				<li>
-					<ProjectFrame media={item.image} openFull />
-					<p class="cert-caption">{item.caption}</p>
-				</li>
-			{/each}
-		</ul>
+		<section use:reveal={180}>
+			<h2>Certificates</h2>
+			<ul class="certificates">
+				{#each certificates as item (item.caption)}
+					<li>
+						<ProjectFrame media={item.image} openFull />
+						<p class="cert-caption">{item.caption}</p>
+					</li>
+				{/each}
+			</ul>
+		</section>
 
 	</div>
 </section>

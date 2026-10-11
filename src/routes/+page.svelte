@@ -30,8 +30,8 @@
 	<div class="inner">
 		<h2>Featured work</h2>
 		<ul class="cards">
-			{#each featuredProjects as project (project.slug)}
-				<li><WorkCard {project} /></li>
+			{#each featuredProjects as project, i (project.slug)}
+				<li><WorkCard {project} revealDelay={Math.min(i * 60, 240)} /></li>
 			{/each}
 		</ul>
 	</div>

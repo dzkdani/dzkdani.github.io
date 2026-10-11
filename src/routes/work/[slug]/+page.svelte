@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
+	import { reveal } from '#lib/actions/reveal.ts';
 	import { projectBySlug, projectStill, type Project } from '#lib/data/projects.ts';
 
 	const project = $derived(projectBySlug(page.params.slug ?? ''));
@@ -66,7 +67,7 @@
 	<section class="page">
 		<div class="inner">
 			<div class="layout">
-				<div class="details">
+				<div class="details" use:reveal>
 					<h1>{project.title}</h1>
 					<p class="summary">{project.summary}</p>
 					{#if project.client}
@@ -96,7 +97,7 @@
 					{/if}
 				</div>
 
-				<div class="media">
+				<div class="media" use:reveal={60}>
 					{#if project.area === 'webgl'}
 						<!-- TODO(owner): screenshots. Neutral placeholder cover until media exists (DESIGN §8). -->
 						<ProjectFrame
