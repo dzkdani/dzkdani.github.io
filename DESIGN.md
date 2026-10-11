@@ -197,13 +197,13 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 ## 6. Components
 
-**Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Play, Experience. The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. On narrow screens the links wrap under the wordmark, so there is no hamburger.
+**Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Experience, and Play on the far right as a filled pink tab with black text. The active section is marked by a 3px × 18px magenta bar to the left of its link (the Play tab is always filled, so it skips the bar). On narrow screens the links wrap under the wordmark, so there is no hamburger.
 
 **Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. Under the name, one role line: "Game Programmer | Game Designer". Actions: "See my work" (pink fill, night text), then outlined icon buttons for every contact channel: email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 
-**Play page.** Route `/play`. One card per playable game: the cover in the usual frame, the title linking to its project page, and a Play button. Play swaps the cover for the itch.io player, created on click like every embed; Stop unloads it. One game plays at a time.
+**Play page.** Route `/play`. One card per playable game: the cover in the usual frame, the title linking to its project page, and a Play button. Play opens a full-screen dialog with the itch.io player, created on click like every embed, with the game's itch page as the fallback link. Esc or the close button ends the session and unloads the player.
 
 **Project page.** Route `/work/[slug]`. Left column: title, one-sentence summary, client name only if the client allows it, "My role" (3 to 5 short bullets), tech list, and links. Right column: frames in a two-up grid on desktop and one column on mobile, each at its image's native aspect ratio and each linking to its full-size file in a new tab. Show a cover image and a "Play demo" button, and load the iframe only after the click. Restricted projects keep the same layout with role text and a plain note: "Client project. The build can't be shown under the client's agreement. Details on request."
 
@@ -246,7 +246,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - **Detail frames:** 1080px wide at most, under 300KB each.
 - **AR and gameplay clips:** muted, looping, `playsinline`. H.264 MP4 plus WebM, under 2MB each, with a poster image.
 - **WebGL:** iframe with `loading="lazy"`, created only on click. Keep the native aspect ratio.
-- **Playable games:** itch.io embeds on `/play`, created on click, one at a time.
+- **Playable games:** itch.io embeds in a full-screen dialog on `/play`, created on click, with `allowfullscreen` and the itch page as the fallback link.
 - **Alt text** names the project and what is on screen, for example: "AR Magazine: a comic page with an animated carbon cycle explanation overlaid on a table."
 - **Client-restricted projects** get a neutral placeholder frame with the project name and area. No client UI screenshots.
 

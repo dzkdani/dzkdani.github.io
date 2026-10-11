@@ -1,12 +1,25 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import ProjectFrame from '#lib/components/ProjectFrame.svelte';
-	import { allProjects, projectStill } from '#lib/data/projects.ts';
+	import { allProjects, projectStill, type Project } from '#lib/data/projects.ts';
 
 	// Every project with an itch.io embed URL, in work-index order.
 	const playable = allProjects.filter((project) => project.playUrl);
 
-	// The slug of the one game currently loaded; null when none is.
-	let playing = $state<string | null>(null);
+	let dialogEl: HTMLDialogElement | undefined = $state();
+	let playing: Project | null = $state(null);
+
+	async function open(project: Project) {
+		if (!dialogEl) return;
+		playing = project;
+		// Let the dialog content render first, so the close button takes focus.
+		await tick();
+		dialogEl.showModal();
+	}
+
+	function close() {
+		dialogEl?.close();
+	}
 </script>
 
 <section class="page">
@@ -16,27 +29,11 @@
 		<ul class="games">
 			{#each playable as project (project.slug)}
 				<li>
-					{#if playing === project.slug && project.playUrl}
-						<div class="player">
-							<iframe
-								src={project.playUrl}
-								title={`Playable embed of ${project.title}`}
-								loading="lazy"
-							></iframe>
-						</div>
-					{:else}
-						<ProjectFrame media={projectStill(project)} frameRatio="16 / 10" />
-					{/if}
+					<ProjectFrame media={projectStill(project)} frameRatio="16 / 10" />
 					<h2><a href={`/work/${project.slug}/`}>{project.title}</a></h2>
 					<p class="toggle">
-						<button
-							type="button"
-							aria-label={playing === project.slug
-								? `Stop ${project.title}`
-								: `Play ${project.title}`}
-							onclick={() => (playing = playing === project.slug ? null : project.slug)}
-						>
-							{playing === project.slug ? 'Stop' : 'Play'}
+						<button type="button" aria-label={`Play ${project.title}`} onclick={() => open(project)}>
+							Play
 						</button>
 					</p>
 				</li>
@@ -44,6 +41,30 @@
 		</ul>
 	</div>
 </section>
+
+<dialog
+	bind:this={dialogEl}
+	class="stage"
+	aria-label={playing ? `Playing ${playing.title}` : 'Game player'}
+	onclose={() => (playing = null)}
+>
+	{#if playing}
+		<div class="stage-head">
+			<p class="stage-title">{playing.title}</p>
+			<button type="button" class="stage-close" aria-label="Close the game" onclick={close}>×</button>
+		</div>
+		<iframe
+			src={playing.playUrl}
+			title={`Playable embed of ${playing.title}`}
+			loading="lazy"
+			allowfullscreen
+		>
+			{#if playing.links[0]}
+				<a href={playing.links[0].url}>Play {playing.title} on itch.io</a>
+			{/if}
+		</iframe>
+	{/if}
+</dialog>
 
 <style>
 	.page {
@@ -98,22 +119,56 @@
 		cursor: pointer;
 	}
 
-	/* The itch.io player, in the same frame styling as the covers (DESIGN §6, §8). */
-	.player {
-		position: relative;
-		width: 100%;
-		aspect-ratio: 16 / 10;
-		background: var(--ink);
-		border: 1px solid var(--divider);
-		border-radius: var(--radius-phone);
-		overflow: hidden;
+	/* The full-screen game stage (DESIGN §6, §8): a native dialog, so Esc and
+	   focus come for free; the iframe is only created while a game is open. */
+	.stage {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		width: 100vw;
+		max-width: none;
+		height: 100dvh;
+		max-height: none;
+		margin: 0;
+		padding: 16px;
+		border: 0;
+		background: transparent;
 	}
 
-	.player iframe {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
+	.stage::backdrop {
+		background: var(--night);
+	}
+
+	.stage-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--gutter);
+	}
+
+	.stage-title {
+		font-size: var(--text-h3);
+		font-weight: 600;
+		color: var(--paper);
+	}
+
+	.stage-close {
+		width: 44px;
+		height: 44px;
+		padding: 0;
 		border: 0;
+		background: none;
+		color: var(--pink);
+		font-size: 28px;
+		line-height: 1;
+		cursor: pointer;
+	}
+
+	.stage iframe {
+		flex: 1;
+		width: 100%;
+		border: 0;
+		background: var(--ink);
+		border-radius: var(--radius-phone);
 	}
 </style>

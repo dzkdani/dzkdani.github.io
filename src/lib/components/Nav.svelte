@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 
-	type NavLink = { label: string; href: string; section?: string };
+	type NavLink = { label: string; href: string; section?: string; highlight?: boolean };
 
 	const links: NavLink[] = [
 		{ label: 'About', href: '/about/', section: '/about/' },
 		{ label: 'Work', href: '/work/', section: '/work/' },
-		{ label: 'Play', href: '/play/', section: '/play/' },
-		{ label: 'Experience', href: '/experience/', section: '/experience/' }
+		{ label: 'Experience', href: '/experience/', section: '/experience/' },
+		{ label: 'Play', href: '/play/', section: '/play/', highlight: true }
 	];
 </script>
 
@@ -21,6 +21,7 @@
 					<a
 						href={link.href}
 						class:active={link.section ? page.url.pathname.startsWith(link.section) : false}
+						class:play={link.highlight}
 					>
 						{link.label}
 					</a>
@@ -75,5 +76,15 @@
 
 	.links a.active::before {
 		background: var(--magenta);
+	}
+
+	.links a.play {
+		padding: 6px 14px;
+		background: var(--pink);
+		color: var(--black);
+	}
+
+	.links a.play::before {
+		display: none;
 	}
 </style>
