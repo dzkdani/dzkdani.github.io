@@ -203,7 +203,7 @@ Text column is about 40% wide and sticky on desktop. Media takes the rest. Every
 
 **Nav.** Wordmark "Dzaki Adani" on the left. Links: About, Work, Experience. The active section is marked by a 3px × 18px magenta bar to the left of its link. This is the deck's tab, reused as a location marker. The three links fit on one row on mobile, so there is no hamburger.
 
-**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Actions: "See my work" (pink fill, night text), then outlined links to every contact channel: Email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
+**Hero.** Full width on `--night`. Bottom edge curved, about 40px deep at the center. Draw it with an SVG or `clip-path`, not an image. Name as the h1 at `--text-hero`, two lines at most. One line of support text. Actions: "See my work" (pink fill, night text), then outlined icon buttons for every contact channel: email, LinkedIn, Upwork, GitHub, and itch.io. Text only: no media in the hero.
 
 **Work index.** Filters are plain buttons in one row, with `aria-pressed`. The active filter gets a 2px magenta underline. Results are cards in a fluid grid: one column on phones, two from 640px, three or more from 960px. Each card is one link: a 16:10 cover with the screenshot cropped to fill it, the title as h3, then area and status as plain text. Filter state lives in the URL (`/work?area=ar`) so links can be shared.
 

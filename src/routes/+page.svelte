@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '#lib/components/Icon.svelte';
 	import WorkCard from '#lib/components/WorkCard.svelte';
 	import { email, githubUrl, itchUrl, linkedinUrl, upworkUrl } from '#lib/data/about.ts';
 	import { featuredProjects } from '#lib/data/projects.ts';
@@ -15,11 +16,11 @@
 			</p>
 			<div class="actions">
 				<a class="fill" href="/work/">See my work</a>
-				<a class="outline" href={`mailto:${email}`}>Email</a>
-				<a class="outline" href={linkedinUrl}>LinkedIn</a>
-				<a class="outline" href={upworkUrl}>Upwork</a>
-				<a class="outline" href={githubUrl}>GitHub</a>
-				<a class="outline" href={itchUrl}>itch.io</a>
+				<a class="outline" href={`mailto:${email}`} aria-label="Email"><Icon name="email" /></a>
+				<a class="outline" href={linkedinUrl} aria-label="LinkedIn"><Icon name="linkedin" /></a>
+				<a class="outline" href={upworkUrl} aria-label="Upwork"><Icon name="upwork" /></a>
+				<a class="outline" href={githubUrl} aria-label="GitHub"><Icon name="github" /></a>
+				<a class="outline" href={itchUrl} aria-label="itch.io"><Icon name="itch" /></a>
 			</div>
 		</div>
 	</div>
@@ -86,6 +87,7 @@
 	.actions {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		gap: var(--gutter);
 		margin-top: 32px;
 	}
@@ -103,6 +105,9 @@
 	}
 
 	.actions .outline {
+		/* Square icon buttons for the contact channels. */
+		padding: 16px;
+		font-size: 24px;
 		border: 1px solid var(--pink);
 		color: var(--pink);
 	}
