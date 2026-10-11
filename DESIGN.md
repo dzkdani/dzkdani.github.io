@@ -302,6 +302,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 - `demo`: playable in browser, may be partial
 - `preview`: preview link only
 - `restricted`: client work, no build shown
+- `prototype`: an early or paper build, not the final game
 - `wip`: in progress
 - `tba`: in development, nothing public yet
 
@@ -337,7 +338,7 @@ Reduced motion: wrap all transforms and keyframe animations in `@media (prefers-
 | Paradixe City | Local co-op shooter | Construct 2 | live | confirm | Deck only. MAGE 2017 finalist. |
 | FlappyRabbit | Hypercasual | Unity 2D, IAP, AdMob | live | confirm | Deck only. Released; the Google Play listing is gone. |
 | G-Escape | Action shooter, client work | Unity 2D, IAP | live | confirm | Deck only. Released; the Google Play listing is gone. |
-| Love Wars | Tabletop card game | Not digital | rulebook link | confirm | Deck only. Resume lists Chief of Tabletop Community. |
+| Love Wars | Tabletop card game | Not digital | prototype | rulebook link | Deck only. Resume lists Chief of Tabletop Community. |
 
 **Client work without a public build** (experience only, not in the inventory):
 
@@ -365,7 +366,7 @@ type Project = {
   title: string;
   area: 'edtech' | 'ar' | 'vr' | 'webgl' | 'game' | 'other';
   tech: string[];            // e.g. ['Unity 2D', 'AdMob']
-  status: 'live' | 'demo' | 'preview' | 'restricted' | 'wip' | 'tba';
+  status: 'live' | 'demo' | 'preview' | 'restricted' | 'prototype' | 'wip' | 'tba';
   client?: string;           // only if the client allows naming them
   summary: string;           // one sentence, plain language
   role: string[];            // what I built, short bullets
