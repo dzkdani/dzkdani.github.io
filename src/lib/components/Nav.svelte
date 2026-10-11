@@ -41,6 +41,7 @@
 
 	.wordmark {
 		color: var(--paper);
+		font-family: var(--font-display);
 		font-size: var(--text-body);
 		font-weight: 600;
 		text-decoration: none;

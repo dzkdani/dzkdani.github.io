@@ -164,9 +164,7 @@
 
 	.summary {
 		margin-top: var(--gutter);
-		/* Source Serif 4 is the face for project descriptions (DESIGN §4). */
-		font-family: var(--font-serif);
-		font-size: var(--text-body-serif);
+		font-size: var(--text-body-lg);
 		line-height: 1.6;
 		max-width: 62ch;
 	}

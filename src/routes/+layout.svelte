@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource/familjen-grotesk/400.css';
-	import '@fontsource/familjen-grotesk/600.css';
-	import '@fontsource/source-serif-4/400.css';
-	import '@fontsource/source-serif-4/600.css';
+	import '@fontsource/orbitron/400.css';
+	import '@fontsource/orbitron/600.css';
+	import '@fontsource/roboto/400.css';
+	import '@fontsource/roboto/600.css';
 	import favicon from '#lib/assets/favicon.svg';
 	import Footer from '#lib/components/Footer.svelte';
 	import Nav from '#lib/components/Nav.svelte';

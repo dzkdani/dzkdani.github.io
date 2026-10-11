@@ -108,10 +108,10 @@ Rules:
 
 ## 4. Type
 
-Two families with clearly different voices:
+Two families:
 
-- **Familjen Grotesk** for headings, navigation, UI, and captions. Weights 400 and 600.
-- **Source Serif 4** for the About text and project descriptions. Weights 400 and 600.
+- **Orbitron** for headings and the wordmark. Weights 400 and 600.
+- **Roboto** for body text, navigation, UI, and captions. Weights 400 and 600.
 
 Scale, roughly a 1.25 ratio from a 17px base:
 
@@ -119,15 +119,16 @@ Scale, roughly a 1.25 ratio from a 17px base:
 |---|---|---|
 | `--text-caption` | 13px | Captions, tags, metadata |
 | `--text-small` | 15px | UI labels, nav |
-| `--text-body` | 17px grotesk / 18px serif | Body text |
+| `--text-body` | 17px | Body text |
+| `--text-body-lg` | 18px | About intro, project descriptions |
 | `--text-h3` | 21px | Project titles in lists |
 | `--text-h2` | clamp(28px, 4vw, 40px) | Section headings |
 | `--text-hero` | clamp(52px, 9vw, 120px) | Hero name. Tracking -0.035em, line-height 0.95 |
 
 Rules:
 
-- Serif prose: line-height 1.6, max width 62ch.
-- Grotesk body: line-height 1.5, max width 68ch.
+- Intro and description copy: line-height 1.6, max width 62ch.
+- Body: line-height 1.5, max width 68ch.
 - No all-caps labels.
 - No single-word accent in a headline (no italic or colored word).
 - No arrows (→) in links or buttons.

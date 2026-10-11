@@ -23,7 +23,7 @@ Read only the DESIGN.md sections your task touches. Before UI work, that is usua
 - `@sveltejs/adapter-static`. Every route is prerendered. Output goes to `build/`.
 - Plain CSS: custom properties in `src/app.css`, scoped `<style>` blocks in components.
 - No UI component library, no CSS framework, no analytics, no third-party scripts.
-- Fonts are self-hosted with `@fontsource/familjen-grotesk` and `@fontsource/source-serif-4`. Do not link Google Fonts.
+- Fonts are self-hosted with `@fontsource/orbitron` and `@fontsource/roboto`. Do not link Google Fonts.
 - Node LTS (20 or newer). Pin the version in `.nvmrc`.
 
 Approved dependencies: the packages above plus whatever `sv create` installs. Anything else needs owner approval first.

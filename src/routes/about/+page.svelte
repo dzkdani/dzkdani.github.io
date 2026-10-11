@@ -57,9 +57,7 @@
 
 	.intro {
 		margin-top: var(--gutter);
-		/* Source Serif 4 is the face for the About text (DESIGN §4). */
-		font-family: var(--font-serif);
-		font-size: var(--text-body-serif);
+		font-size: var(--text-body-lg);
 		line-height: 1.6;
 		max-width: 62ch;
 	}
